@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA6ACE18-0BCB-47FF-A163-91159F1169CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>crtcpl</RootNamespace>
+    <AssemblyName>crtcpl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>crtcpl.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ImageRes\APPICON.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\signing.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancedPage.Designer.cs">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppletForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppletForm.Designer.cs">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorsPage.Designer.cs">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="PageEventArgs.cs" />
+    <Compile Include="GeometryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeometryPage.Designer.cs">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ImageRes\ImageRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScreenPage.Designer.cs">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorGradient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StringRes\StringRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPatternForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPatternForm.Designer.cs">
+      <DependentUpon>TestPatternForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCom.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdvancedPage.de.resx">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPage.fr.resx">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPage.ja.resx">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPage.resx">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppletForm.de.resx">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppletForm.fr.resx">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppletForm.ja.resx">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppletForm.resx">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorsPage.de.resx">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorsPage.fr.resx">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorsPage.ja.resx">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorsPage.resx">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPage.de.resx">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPage.fr.resx">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPage.ja.resx">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPage.resx">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageRes\ImageRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenPage.de.resx">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenPage.fr.resx">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenPage.ja.resx">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenPage.resx">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorGradient.resx">
+      <DependentUpon>ColorGradient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringRes\StringRes.de.resx" />
+    <EmbeddedResource Include="StringRes\StringRes.fr.resx" />
+    <EmbeddedResource Include="StringRes\StringRes.ja.resx" />
+    <EmbeddedResource Include="StringRes\StringRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPatternForm.resx">
+      <DependentUpon>TestPatternForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\signing.snk">
+      <Link>signing.snk</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="install.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="uninstall.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImageRes\APPICON.ICO" />
+    <Content Include="ImageRes\IMAC.png" />
+    <Content Include="ImageRes\RES001.PNG" />
+    <Content Include="ImageRes\RES002.PNG" />
+    <Content Include="ImageRes\RES003.PNG" />
+    <Content Include="ImageRes\RES004.PNG" />
+    <Content Include="ImageRes\RES005.PNG" />
+    <Content Include="ImageRes\RES006.PNG" />
+    <Content Include="ImageRes\RES007.PNG" />
+    <Content Include="ImageRes\RES008.PNG" />
+    <Content Include="ImageRes\RES009.PNG" />
+    <Content Include="ImageRes\RES010.PNG" />
+    <Content Include="ImageRes\RES011.PNG" />
+    <Content Include="ImageRes\RES012.PNG" />
+    <Content Include="ImageRes\RES013.PNG" />
+    <Content Include="ImageRes\RES014.PNG" />
+    <Content Include="ImageRes\RES015.PNG" />
+    <Content Include="ImageRes\RES016.PNG" />
+    <Content Include="ImageRes\RES017.PNG" />
+    <Content Include="ImageRes\RES018.PNG" />
+    <Content Include="ImageRes\RES019.PNG" />
+    <Content Include="ImageRes\RES020.PNG" />
+    <Content Include="ImageRes\SCREEN.png" />
+    <Content Include="ImageRes\TAB1.png" />
+    <Content Include="ImageRes\TAB2.png" />
+    <Content Include="ImageRes\TAB3.png" />
+    <Content Include="ImageRes\TAB4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>
