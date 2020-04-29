@@ -11,13 +11,17 @@ Most of what you see here unfortunately won't work with the above out of the box
 
 ## What's Here
 
-Project|Description
--------|-----------
-crtcpl|The main **CRT** **C**ontrol **P**ane**l** applet. It allows you to configure the CRT picture size, etc. on Windows. It requires the IVAD board to be driven by an Arduino or similar.
-crtcplres|A resource-only DLL that contains a string table used for Windows Control Panel integration.
-ejectcd|A small command line program that ejects all CD-ROM drives in the system. Designed to be run as a scheduled task on system shutdown to emulate the behavior of classic MacOS on an iMac G3.
-rightclickassist|A mouse hook that allows Windows to be used with a one-button mouse like the one that shipped with the iMac G3. It remaps the right mouse button to CTRL+ Left Click. This works on any Windows system and with any mouse. It's probably also very nice for laptops with awkward touchpads.
-sketch|An Arduino sketch that can drive the IVAD board of a slot-loading iMac G3 to use the built-in CRT as a standard VGA monitor. The CRT Control Panel Applet communicates with an Arduino running this sketch using the serial port.
+Project|Language|Description
+-------|--------|-----------
+crtcpl|C#|The main **CRT** **C**ontrol **P**ane**l** applet. It allows you to configure the CRT picture size, etc. on Windows. It requires the IVAD board to be driven by an Arduino or similar.
+crtcplres|-|A resource-only DLL that contains a string table used for Windows Control Panel integration.
+ejectcd|C#|A small command line program that ejects all CD-ROM drives in the system. Designed to be run as a scheduled task on system shutdown to emulate the behavior of classic MacOS on an iMac G3.
+rightclickassist|C++|A mouse hook that allows Windows to be used with a one-button mouse like the one that shipped with the iMac G3. It remaps the right mouse button to CTRL+ Left Click. This works on any Windows system and with any mouse. It's probably also very nice for laptops with awkward touchpads.
+sketch|C|An Arduino sketch that can drive the IVAD board of a slot-loading iMac G3 to use the built-in CRT as a standard VGA monitor. The CRT control panel applet communicates with an Arduino running this sketch using the serial port.
+
+Compile the Windows code with Visual Studio 2019. The solution file should open fine and everything should just compile without errors once you create your own `signing.snk` strong key file or disable the signing of the .NET assemblies in the build properties.
+
+The Arduino code complies with the standard Arduino development tools.
 
 ## Translations
 
