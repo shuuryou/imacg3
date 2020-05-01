@@ -23,6 +23,7 @@ const byte              IMAC_G3_SCREEN_EDID[128] = { EDID_IMAC_G3_OPTIMIZED_1_4 
 volatile unsigned short VSYNC_PULSES_RECEIVED    = 0;
 volatile unsigned long  VSYNC_LAST               = 0;
 unsigned long           LED_ORANGE_LAST_UPDATE   = 0;
+byte                    CRT_MASTER_OFF           = 0;
 
 SoftwareWire            IVAD_I2C_BUS(PIN_IVAD_SDA, PIN_IVAD_SCL);
 
@@ -99,17 +100,25 @@ void loop()
   POWER_BUTTON.loop();
 
   // XXX TODO
-  if (SIDE_BUTTON_1.getState() == LOW)
+  if (SIDE_BUTTON_1.isReleased())
   {
+    if (CRT_MASTER_OFF == 0)
+      CRT_MASTER_OFF = 1;
+    else
+      CRT_MASTER_OFF = 0;
+
 #ifdef DEBUG
-    Serial.println("SIDE BUTTON 1");
+    Serial.println(CRT_MASTER_OFF == 0 ? "CRT MASTER OFF: 0" : "CRT MASTER OFF: 1");
 #endif
   }
-  // XXX TODO
-  if (SIDE_BUTTON_2.getState() == LOW)
+
+  if (SIDE_BUTTON_2.isReleased())
   {
+    // Turn off CRT and reset settings to default
+    emergency_reset();
+
 #ifdef DEBUG
-    Serial.println("SIDE BUTTON 2");
+    Serial.println("EMERGENCY RESET");
 #endif
   }
 
@@ -193,6 +202,12 @@ skipHeadphone:
     if (last == 0)
       goto skipVSYNC;
 
+    if (CRT_MASTER_OFF == 1 && digitalRead(PIN_RELAY_CRT) == LOW)
+    {
+      digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+      goto skipVSYNC;
+    }
+
     if (millis() - last < VSYNC_TIMEOUT)
     {
       // Turn ON CRT
@@ -248,6 +263,14 @@ skipVSYNC:
 
       digitalWrite(PIN_LED_GREEN, LOW);
 
+      if (CRT_MASTER_OFF == 1)
+      {
+        // CRT master off is indicated with a permanent orange LED
+        digitalWrite(PIN_LED_ORANGE, HIGH);
+        goto skipLED;
+      }
+
+      // CRT in standby mode is indicated with a flashing orange LED
       if (LED_ORANGE_LAST_UPDATE == 0)
       {
         LED_ORANGE_LAST_UPDATE = millis();
@@ -266,7 +289,7 @@ skipVSYNC:
     }
 
     // digitalRead(PIN_RELAY_CRT) != HIGH) from here
-    // CRT is ON
+    // CRT is ON, which is indicated by a permanent green LED
 
     digitalWrite(PIN_LED_ORANGE, LOW);
     digitalWrite(PIN_LED_GREEN, HIGH);
@@ -289,6 +312,49 @@ skipLED:
   */
 
   serial_processing();
+}
+
+void emergency_reset()
+{
+  // Reset power off CRT and reset settings to default
+
+  digitalWrite(PIN_LED_GREEN, LOW);
+  digitalWrite(PIN_LED_ORANGE, LOW);
+
+  digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+  digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
+
+  settings_reset_default();
+  ivad_write_settings();
+  settings_store();
+
+  // 10 seconds should be enough to pull the power plug in case
+  // magic smoke starts coming out. It also gives the CRT some
+  // time to settle after being powered off.
+  
+  byte c = 0;
+  for (int i = 0; i < 100; i++)
+  {
+    if (c == 0)
+    {
+      digitalWrite(PIN_LED_ORANGE, LOW);
+      digitalWrite(PIN_LED_GREEN, HIGH);
+      c = 1;
+    }
+    else
+    {
+      digitalWrite(PIN_LED_GREEN, LOW);
+      digitalWrite(PIN_LED_ORANGE, HIGH);
+      c = 0;
+    }
+
+    delay(100);
+  }
+
+  digitalWrite(PIN_LED_GREEN, LOW);
+  digitalWrite(PIN_LED_ORANGE, LOW);
+
+  delay(1000);
 }
 
 void serial_processing()

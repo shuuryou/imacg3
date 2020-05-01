@@ -1,10 +1,10 @@
 // If you turn on DEBUG then you will not be able to use crtcpl.
 // It is possible to debug the serial protocol with DEBUG active
 // using software like the excellent SUDT AccessPort 1.37.
-// #define DEBUG
+//#define DEBUG
 
-#define PIN_SIDE_BUTTON_1         48
-#define PIN_SIDE_BUTTON_2         49
+#define PIN_SIDE_BUTTON_1         49
+#define PIN_SIDE_BUTTON_2         48
 #define PIN_POWER_BUTTON          50
 
 #define PIN_LED_ORANGE            52
