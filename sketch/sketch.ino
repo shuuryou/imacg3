@@ -99,7 +99,6 @@ void loop()
   SIDE_BUTTON_2.loop();
   POWER_BUTTON.loop();
 
-  // XXX TODO
   if (SIDE_BUTTON_1.isReleased())
   {
     if (CRT_MASTER_OFF == 0)
@@ -202,9 +201,11 @@ skipHeadphone:
     if (last == 0)
       goto skipVSYNC;
 
-    if (CRT_MASTER_OFF == 1 && digitalRead(PIN_RELAY_CRT) == LOW)
+    if (CRT_MASTER_OFF == 1)
     {
-      digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+      if (digitalRead(PIN_RELAY_CRT) == LOW)
+        digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+        
       goto skipVSYNC;
     }
 
@@ -331,7 +332,7 @@ void emergency_reset()
   // 10 seconds should be enough to pull the power plug in case
   // magic smoke starts coming out. It also gives the CRT some
   // time to settle after being powered off.
-  
+
   byte c = 0;
   for (int i = 0; i < 100; i++)
   {
