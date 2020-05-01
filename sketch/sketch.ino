@@ -162,6 +162,7 @@ void loop()
 #ifdef DEBUG
         Serial.println("HEADPHONE DISCONNECTED");
 #endif
+
         // Turn ON amplifier
         digitalWrite(PIN_RELAY_SPK_AMP, LOW); // ON
         goto skipHeadphone;
