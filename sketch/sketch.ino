@@ -332,7 +332,7 @@ void emergency_reset()
   // 10 seconds should be enough to pull the power plug in case
   // magic smoke starts coming out. It also gives the CRT some
   // time to settle after being powered off.
-
+  
   byte c = 0;
   for (int i = 0; i < 100; i++)
   {

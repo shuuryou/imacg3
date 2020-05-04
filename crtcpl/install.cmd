@@ -72,11 +72,22 @@ SCHTASKS /CREATE /TN "Eject iMac G3 CD-ROM Drive" /TR "'%INSTALLDIR%\ejectcd.exe
 IF ERRORLEVEL 1 GOTO ERROR
 
 ECHO.
+ECHO Configuring Right Click Assist to start on user logon.
+REG ADD "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run" /v "Right Click Assist" /t REG_SZ /d "\"%INSTALLDIR%\rightclickassist.exe\"" /f
+IF ERRORLEVEL 1 GOTO ERROR
+
+ECHO.
 ECHO Installation succeeded.
 ECHO.
 ECHO You can find the "iMac G3 Screen Settings" applet in your Control
 ECHO Panel under "Hardware and Sound". If you use Windows 10, look for
 ECHO it in the classic Control Panel.
+ECHO.
+ECHO To use Right Click Assist, log off and back on, or restart your
+ECHO computer. You can then press CTRL + Left Mouse Button to right click
+ECHO in any Windows application. It will probably not work in games, etc.
+ECHO To close Right Click Assist, press CTRL+F2 and press the left Mouse
+ECHO button.
 ECHO.
 ECHO Enjoy!
 ECHO.
