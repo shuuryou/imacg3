@@ -19,9 +19,31 @@ ejectcd|C#|A small command line program that ejects all CD-ROM drives in the sys
 rightclickassist|C++|A mouse hook that allows Windows to be used with a one-button mouse like the one that shipped with the iMac G3. It remaps the right mouse button to CTRL+ Left Click. This works on any Windows system and with any mouse. It's probably also very nice for laptops with awkward touchpads.
 sketch|C|An Arduino sketch that can drive the IVAD board of a slot-loading iMac G3 to use the built-in CRT as a standard VGA monitor. The CRT control panel applet communicates with an Arduino running this sketch using the serial port.
 
+### Building the Projects on Windows
+
 Compile the Windows code with Visual Studio 2019. The solution file should open fine and everything should just compile without errors once you create your own `signing.snk` strong key file or disable the signing of the .NET assemblies in the build properties.
 
-The Arduino code complies with the standard Arduino development tools.
+### Building the GUI on Linux
+
+**Don't bother. It's broken. Seriously.**
+
+Still reading? Fine. To compile using Linux (tested using Debian Buster with Mono 5.18.0.240), you can try the following commands. This will build an executable in the `crtcpl/bin/Mono` folder that can be run using Mono.
+
+```bash
+apt-get install mono-runtime mono-devel
+sn -k signing.snk
+xbuild /p:Configuration=Mono crtcpl.sln
+```
+
+You should get a few warnings, but no errors.
+
+Caveats:
+* Only `crtcpl` is built. The other projects do not support Linux and no Linux support is planned.
+* A window will open but the controls will be largely unusable due to bugs in Mono's WinForms implementation. Short of building an entirely new GUI for Mono that doesn't use any automatic layouting, I see no easy way to fix this.
+
+### Building the Sketch
+
+The Arduino sketch complies with the standard Arduino development tools. It will run on an Arduino Mega 2560 Rev3 or a compatible clone.
 
 ## Translations
 
