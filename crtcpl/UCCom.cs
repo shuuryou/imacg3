@@ -21,10 +21,9 @@ namespace crtcpl
         private static readonly byte[] s_ResponseBuffer = new byte[255];
         private static int s_ResponseBufferLength = 0;
 
-        public static ReadOnlyCollection<string> AvailablePorts => new ReadOnlyCollection<string>(SerialPort.GetPortNames());
-
+        public static ReadOnlyCollection<string> AvailablePorts =
+            new ReadOnlyCollection<string>(SerialPort.GetPortNames());
         public static bool IsOpen { get; private set; }
-
         public static void Open(string port)
         {
             if (port == null)
@@ -56,62 +55,62 @@ namespace crtcpl
                 throw new UCComException(StringRes.StringRes.UCComIOError, e);
             }
 
-            void kickoffRead()
-            {
-                byte[] buf = new byte[255];
-
-                s_SerialPort.BaseStream.BeginRead(buf, 0, buf.Length, delegate (IAsyncResult ar)
-                {
-                    int actualLength;
-
-                    try
-                    {
-                        actualLength = s_SerialPort.BaseStream.EndRead(ar);
-                    }
-                    catch (Exception)
-                    {
-                        if (!IsOpen)
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
-
-                    Buffer.BlockCopy(buf, 0, s_ResponseBuffer, s_ResponseBufferLength, actualLength);
-                    s_ResponseBufferLength += actualLength;
-
-                    if (s_ResponseBufferLength < 7) // Smallest possible response
-                    {
-                        goto done;
-                    }
-
-                    int length = s_ResponseBuffer[2];
-
-                    if (s_ResponseBufferLength < 7 + length)
-                    {
-                        goto done;
-                    }
-
-                    if (buf[actualLength - 1] != '\n')
-                    {
-                        goto done;
-                    }
-
-                    s_GotResponse.Set();
-
-                done:
-                    kickoffRead();
-                }, null);
-            }
-
             kickoffRead();
 
             IsOpen = true;
 
             ConnectionOpened?.Invoke(null, EventArgs.Empty);
+        }
+
+        private static void kickoffRead()
+        {
+            byte[] buf = new byte[255];
+
+            s_SerialPort.BaseStream.BeginRead(buf, 0, buf.Length, delegate (IAsyncResult ar)
+            {
+                int actualLength;
+
+                try
+                {
+                    actualLength = s_SerialPort.BaseStream.EndRead(ar);
+                }
+                catch (Exception)
+                {
+                    if (!IsOpen)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                Buffer.BlockCopy(buf, 0, s_ResponseBuffer, s_ResponseBufferLength, actualLength);
+                s_ResponseBufferLength += actualLength;
+
+                if (s_ResponseBufferLength < 7) // Smallest possible response
+                    {
+                    goto done;
+                }
+
+                int length = s_ResponseBuffer[2];
+
+                if (s_ResponseBufferLength < 7 + length)
+                {
+                    goto done;
+                }
+
+                if (buf[actualLength - 1] != '\n')
+                {
+                    goto done;
+                }
+
+                s_GotResponse.Set();
+
+            done:
+                kickoffRead();
+            }, null);
         }
 
         public static void Close()

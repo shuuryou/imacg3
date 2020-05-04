@@ -59,7 +59,6 @@ namespace crtcpl
             base.Dispose(disposing);
         }
 
-
         private void Applet_Load(object sender, EventArgs e)
         {
             this.SCREEN.Visible = this.GEOMETRY.Visible = this.COLORS.Visible = this.ADVANCED.Visible = false;
@@ -131,7 +130,8 @@ namespace crtcpl
 
         private void defaultsButton_Click(object sender, EventArgs e)
         {
-            Trace.Assert(UCCom.IsOpen, "UCCom has no connection at the moment!");
+            if (!UCCom.IsOpen)
+                return;
 
             try
             {
@@ -171,7 +171,8 @@ namespace crtcpl
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            Trace.Assert(UCCom.IsOpen, "UCCom has no connection at the moment!");
+            if (!UCCom.IsOpen)
+                return;
 
             try
             {
@@ -200,6 +201,9 @@ namespace crtcpl
 
         private void GEOMETRY_GeometryChanged(object sender, GeometryPageEventArgs e)
         {
+            if (!UCCom.IsOpen)
+                return;
+
             byte what;
 
             switch (e.What)
@@ -250,6 +254,9 @@ namespace crtcpl
 
         private void COLORS_ColorChanged(object sender, ColorsPageEventArgs e)
         {
+            if (!UCCom.IsOpen)
+                return;
+
             byte what;
 
             switch (e.Color)
@@ -285,6 +292,9 @@ namespace crtcpl
 
         private void SCREEN_ContrastChanged(object sender, ScreenPageEventArgs e)
         {
+            if (!UCCom.IsOpen)
+                return;
+
             try
             {
                 UCCom.SendCommand(3, Constants.IVAD_SETTING_CONTRAST, (byte)e.NewValue);
@@ -302,6 +312,9 @@ namespace crtcpl
 
         private void SCREEN_BrightnessChanged(object sender, ScreenPageEventArgs e)
         {
+            if (!UCCom.IsOpen)
+                return;
+
             try
             {
                 UCCom.SendCommand(3, Constants.IVAD_SETTING_BRIGHTNESS, (byte)e.NewValue);

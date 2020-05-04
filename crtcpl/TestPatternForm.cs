@@ -14,6 +14,7 @@ namespace crtcpl
 
         protected override bool ShowWithoutActivation => true;
 
+#if !MONO
         protected override void WndProc(ref Message m)
         {
             const int WM_ACTIVATE = 6;
@@ -41,6 +42,7 @@ namespace crtcpl
         done:
             base.WndProc(ref m);
         }
+#endif
 
         protected override CreateParams CreateParams
         {
@@ -58,6 +60,10 @@ namespace crtcpl
         public TestPatternForm()
         {
             InitializeComponent();
+
+#if MONO
+            Activated += TestPatternForm_Activated;
+#endif
 
             SetStyle(ControlStyles.ResizeRedraw, true);
             SetStyle(ControlStyles.UserPaint, true);
@@ -83,6 +89,18 @@ namespace crtcpl
                 }
             }
         }
+
+#if MONO
+        private void TestPatternForm_Activated(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+                if (f.GetType() ==typeof(AppletForm))
+                {
+                    f.Focus();
+                    return;
+                }
+        }
+#endif
 
         protected override void Dispose(bool disposing)
         {
