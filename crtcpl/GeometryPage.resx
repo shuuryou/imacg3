@@ -121,13 +121,13 @@
   <data name="geometryGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="geometryGroupBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="geometryGroupBox.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="geometryTableLayoutPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="geometryTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -135,7 +135,7 @@
     <value>2</value>
   </data>
   <data name="adjustmentTableLayoutPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Right</value>
+    <value>None</value>
   </data>
   <data name="adjustmentTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -304,7 +304,7 @@
     <value>5</value>
   </data>
   <data name="adjustmentTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 5</value>
+    <value>104, 3</value>
   </data>
   <data name="adjustmentTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
@@ -535,7 +535,7 @@
     <value>TopDown</value>
   </data>
   <data name="categoryFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 20</value>
+    <value>3, 18</value>
   </data>
   <data name="categoryFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 183</value>
@@ -555,9 +555,6 @@
   <data name="&gt;&gt;categoryFlowLayoutPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="geometryTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="geometryTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
@@ -565,7 +562,7 @@
     <value>1</value>
   </data>
   <data name="geometryTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 223</value>
+    <value>335, 219</value>
   </data>
   <data name="geometryTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -612,6 +609,9 @@
   <data name="&gt;&gt;geometryGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="showTestPatternToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
@@ -627,6 +627,9 @@
   <data name="&gt;&gt;contextMenuStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -648,10 +651,4 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

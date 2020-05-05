@@ -173,15 +173,12 @@
   <data name="tableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="GEOMETRY.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>343, 242</value>
-  </data>
   <data name="imageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABq
-        DgAAAk1TRnQBSQFMAgEBBAEAAaQBAAGsAQABEAEAARABAAT/ASEBEAj/AUIBTQE2BwABNgMAASgDAAFA
+        DgAAAk1TRnQBSQFMAgEBBAEAAaQBAAGwAQABEAEAARABAAT/ASEBEAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABIAMAAQEBAAEgBgABIP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8APgADiAH/A4gB/y8A
         Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wOIAf8DqgH/A7sB/wwAA4gB/wMPAf8DAAH/
         A0IB/wPMAf8DzAH/A0IB/wMAAf8DDwH/A4gB/x8AAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
@@ -260,6 +257,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Screen Settings</value>
   </data>
+  <data name="&gt;&gt;imageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;geometryRadioButton.Name" xml:space="preserve">
     <value>geometryRadioButton</value>
   </data>
@@ -272,9 +272,6 @@
   </data>
   <data name="&gt;&gt;applyButton.Name" xml:space="preserve">
     <value>applyButton</value>
-  </data>
-  <data name="colorsRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
   </data>
   <data name="&gt;&gt;ADVANCED.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -305,6 +302,9 @@
   </data>
   <data name="&gt;&gt;GEOMETRY.Type" xml:space="preserve">
     <value>crtcpl.GeometryPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  </data>
+  <data name="&gt;&gt;COLORS.Type" xml:space="preserve">
+    <value>crtcpl.ColorsPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
   </data>
   <data name="colorsRadioButton.Text" xml:space="preserve">
     <value>&amp;Colors</value>
@@ -423,9 +423,6 @@
   <data name="GEOMETRY.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 32</value>
   </data>
-  <data name="buttonTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="cancelButton.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -434,6 +431,9 @@
   </data>
   <data name="geometryRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="GEOMETRY.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;ADVANCED.Name" xml:space="preserve">
     <value>ADVANCED</value>
@@ -462,8 +462,8 @@
   <data name="&gt;&gt;GEOMETRY.Name" xml:space="preserve">
     <value>GEOMETRY</value>
   </data>
-  <data name="advancedRadioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
+  <data name="&gt;&gt;defaultsButton.Parent" xml:space="preserve">
+    <value>buttonTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;SCREEN.Parent" xml:space="preserve">
     <value>pagePanel</value>
@@ -471,8 +471,8 @@
   <data name="geometryRadioButton.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;defaultsButton.Parent" xml:space="preserve">
-    <value>buttonTableLayoutPanel</value>
+  <data name="&gt;&gt;geometryRadioButton.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
   </data>
   <data name="buttonTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -497,9 +497,6 @@
   </data>
   <data name="buttonTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="applyButton.Text" xml:space="preserve">
-    <value>&amp;Apply</value>
   </data>
   <data name="&gt;&gt;geometryRadioButton.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1025,11 +1022,14 @@
   <data name="&gt;&gt;advancedRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;COLORS.Type" xml:space="preserve">
-    <value>crtcpl.ColorsPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  <data name="advancedRadioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="screenRadioButton.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1073,8 +1073,8 @@
   <data name="&gt;&gt;imageList.Name" xml:space="preserve">
     <value>imageList</value>
   </data>
-  <data name="GEOMETRY.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="applyButton.Text" xml:space="preserve">
+    <value>&amp;Apply</value>
   </data>
   <data name="&gt;&gt;defaultsButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1091,11 +1091,11 @@
   <data name="SCREEN.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 16</value>
   </data>
-  <data name="&gt;&gt;geometryRadioButton.Parent" xml:space="preserve">
-    <value>tableLayoutPanel</value>
+  <data name="GEOMETRY.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>343, 242</value>
   </data>
-  <data name="&gt;&gt;imageList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="colorsRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="screenRadioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -1103,8 +1103,8 @@
   <data name="&gt;&gt;GEOMETRY.Parent" xml:space="preserve">
     <value>pagePanel</value>
   </data>
-  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="geometryRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 3</value>
@@ -1114,9 +1114,6 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
   </metadata>
   <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

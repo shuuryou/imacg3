@@ -112,7 +112,6 @@
     <Compile Include="GeometryPage.Designer.cs">
       <DependentUpon>GeometryPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ImageRes\ImageRes.Designer.cs">

@@ -200,7 +200,6 @@
             this.categoryFlowLayoutPanel.PerformLayout();
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

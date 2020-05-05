@@ -36,20 +36,20 @@
             this.blueTrackBar = new System.Windows.Forms.TrackBar();
             this.greenGroupBox = new System.Windows.Forms.GroupBox();
             this.greenTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.greenTrackBar = new System.Windows.Forms.TrackBar();
             this.redGroupBox = new System.Windows.Forms.GroupBox();
             this.redTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.redTrackBar = new System.Windows.Forms.TrackBar();
+            this.greenTrackBar = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel.SuspendLayout();
             this.blueGroupBox.SuspendLayout();
             this.blueTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.blueTrackBar)).BeginInit();
             this.greenGroupBox.SuspendLayout();
             this.greenTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
             this.redGroupBox.SuspendLayout();
             this.redTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -68,8 +68,8 @@
             // 
             // blueGroupBox
             // 
-            this.blueGroupBox.Controls.Add(this.blueTableLayoutPanel);
             resources.ApplyResources(this.blueGroupBox, "blueGroupBox");
+            this.blueGroupBox.Controls.Add(this.blueTableLayoutPanel);
             this.blueGroupBox.Name = "blueGroupBox";
             this.blueGroupBox.TabStop = false;
             // 
@@ -89,8 +89,8 @@
             // 
             // greenGroupBox
             // 
-            this.greenGroupBox.Controls.Add(this.greenTableLayoutPanel);
             resources.ApplyResources(this.greenGroupBox, "greenGroupBox");
+            this.greenGroupBox.Controls.Add(this.greenTableLayoutPanel);
             this.greenGroupBox.Name = "greenGroupBox";
             this.greenGroupBox.TabStop = false;
             // 
@@ -99,14 +99,6 @@
             resources.ApplyResources(this.greenTableLayoutPanel, "greenTableLayoutPanel");
             this.greenTableLayoutPanel.Controls.Add(this.greenTrackBar, 0, 0);
             this.greenTableLayoutPanel.Name = "greenTableLayoutPanel";
-            // 
-            // greenTrackBar
-            // 
-            resources.ApplyResources(this.greenTrackBar, "greenTrackBar");
-            this.greenTrackBar.Maximum = 50;
-            this.greenTrackBar.Name = "greenTrackBar";
-            this.greenTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.greenTrackBar.Scroll += new System.EventHandler(this.greenTrackBar_Scroll);
             // 
             // redGroupBox
             // 
@@ -129,6 +121,14 @@
             this.redTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.redTrackBar.Scroll += new System.EventHandler(this.redTrackBar_Scroll);
             // 
+            // greenTrackBar
+            // 
+            resources.ApplyResources(this.greenTrackBar, "greenTrackBar");
+            this.greenTrackBar.Maximum = 50;
+            this.greenTrackBar.Name = "greenTrackBar";
+            this.greenTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.greenTrackBar.Scroll += new System.EventHandler(this.greenTrackBar_Scroll);
+            // 
             // ColorsPage
             // 
             resources.ApplyResources(this, "$this");
@@ -144,11 +144,11 @@
             this.greenGroupBox.ResumeLayout(false);
             this.greenGroupBox.PerformLayout();
             this.greenTableLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
             this.redGroupBox.ResumeLayout(false);
             this.redGroupBox.PerformLayout();
             this.redTableLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,9 +162,9 @@
         private System.Windows.Forms.TableLayoutPanel blueTableLayoutPanel;
         private System.Windows.Forms.TrackBar blueTrackBar;
         private System.Windows.Forms.TableLayoutPanel greenTableLayoutPanel;
-        private System.Windows.Forms.TrackBar greenTrackBar;
         private System.Windows.Forms.TableLayoutPanel redTableLayoutPanel;
         private System.Windows.Forms.TrackBar redTrackBar;
         private ColorGradient colorGradient;
+        private System.Windows.Forms.TrackBar greenTrackBar;
     }
 }

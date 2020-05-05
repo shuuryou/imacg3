@@ -140,7 +140,6 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "ScreenPage";
             this.tableLayoutPanel.ResumeLayout(false);
-            this.tableLayoutPanel.PerformLayout();
             this.contrastGroupBox.ResumeLayout(false);
             this.contrastGroupBox.PerformLayout();
             this.constrastTableLayoutPanel.ResumeLayout(false);
