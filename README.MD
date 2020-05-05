@@ -25,9 +25,7 @@ Compile the Windows code with Visual Studio 2019. The solution file should open 
 
 ### Building the GUI on Linux
 
-**Don't bother. It's broken. Seriously.**
-
-Still reading? Fine. To compile using Linux (tested using Debian Buster with Mono 5.18.0.240), you can try the following commands. This will build an executable in the `crtcpl/bin/Mono` folder that can be run using Mono.
+To compile using Linux (tested using Debian Buster with Mono 5.18.0.240), you can try the following commands. This will build an executable in the `crtcpl/bin/Mono` folder that can be run using Mono.
 
 ```bash
 apt-get install mono-runtime mono-devel
@@ -37,9 +35,9 @@ xbuild /p:Configuration=Mono crtcpl.sln
 
 You should get a few warnings, but no errors.
 
-Caveats:
+Please note:
 * Only `crtcpl` is built. The other projects do not support Linux and no Linux support is planned.
-* A window will open but the controls will be largely unusable due to bugs in Mono's WinForms implementation. Short of building an entirely new GUI for Mono that doesn't use any automatic layouting, I see no easy way to fix this.
+* There are rendering bugs in Mono's WinForms implementation. Most of them have been mitigated to make the program usable but a few visual glitches remain.
 
 ### Building the Sketch
 
