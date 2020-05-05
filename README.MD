@@ -17,6 +17,7 @@ crtcpl|C#|The main **CRT** **C**ontrol **P**ane**l** applet. It allows you to co
 crtcplres|-|A resource-only DLL that contains a string table used for Windows Control Panel integration.
 ejectcd|C#|A small command line program that ejects all CD-ROM drives in the system. Designed to be run as a scheduled task on system shutdown to emulate the behavior of classic MacOS on an iMac G3.
 rightclickassist|C++|A mouse hook that allows Windows to be used with a one-button mouse like the one that shipped with the iMac G3. It remaps the right mouse button to CTRL+ Left Click. This works on any Windows system and with any mouse. It's probably also very nice for laptops with awkward touchpads.
+setup|Inno Script|A setup program that installs the above components on a Windows computer.
 sketch|C|An Arduino sketch that can drive the IVAD board of a slot-loading iMac G3 to use the built-in CRT as a standard VGA monitor. The CRT control panel applet communicates with an Arduino running this sketch using the serial port.
 
 ### Building the Projects on Windows

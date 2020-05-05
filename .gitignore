@@ -353,3 +353,4 @@ MigrationBackup/
 .ionide/
 *.snk
 *.filters
+setup/Output/install_imac_g3_tools.exe
