@@ -62,6 +62,31 @@ Below are screenshots of the control panel applet.  The other projects don't hav
 
 ![](https://raw.githubusercontent.com/shuuryou/imacg3/master/screenshots/screenshot5.png)
 
+## Videos
+
+Because seeing is believing...
+
+### Demo After Closing Up
+[![My iMac G3 Mod: Demo After Closing Up](https://res.cloudinary.com/marcomontalbano/image/upload/v1588750730/video_to_markdown/images/vimeo--415400271-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415400271 "My iMac G3 Mod: Demo After Closing Up")
+
+### Side Button Demo
+[![My iMac G3 Mod: Side Button Demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1588751025/video_to_markdown/images/vimeo--415301822-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415301822 "My iMac G3 Mod: Side Button Demo")
+
+### Amplifier Working
+[![My iMac G3 Mod: Amplifier Working](https://res.cloudinary.com/marcomontalbano/image/upload/v1588751064/video_to_markdown/images/vimeo--415301287-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415301287 "My iMac G3 Mod: Amplifier Working")
+
+### CRT Control Panel Applet
+[![My iMac G3 Mod: CRT Control Panel Applet](https://res.cloudinary.com/marcomontalbano/image/upload/v1588750923/video_to_markdown/images/vimeo--415301897-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415301897 "My iMac G3 Mod: CRT Control Panel Applet")
+
+### Turning on the CRT
+[![My iMac G3 Mod: Turning on the CRT](https://res.cloudinary.com/marcomontalbano/image/upload/v1588750799/video_to_markdown/images/vimeo--415404947-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415404947 "My iMac G3 Mod: Turning on the CRT")
+
+### Testing the Relay Board
+[![My iMac G3 Mod: Testing the Relay Board](https://res.cloudinary.com/marcomontalbano/image/upload/v1588751098/video_to_markdown/images/vimeo--415405680-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415405680 "My iMac G3 Mod: Testing the Relay Board")
+
+### Testing an Amplifier Board
+[![My iMac G3 Mod:  Testing an Amplifier Board](https://res.cloudinary.com/marcomontalbano/image/upload/v1588751119/video_to_markdown/images/vimeo--415405633-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415405633 "My iMac G3 Mod:  Testing an Amplifier Board")
+
 ## Legal
 
 "Apple" and "iMac" are registered trademarks of Apple, Inc. All other trademarks used in this application are the property of their respective owners.
