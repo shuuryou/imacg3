@@ -227,33 +227,33 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ImageRes\APPICON.ICO" />
-    <Content Include="ImageRes\IMAC.png" />
-    <Content Include="ImageRes\RES001.PNG" />
-    <Content Include="ImageRes\RES002.PNG" />
-    <Content Include="ImageRes\RES003.PNG" />
-    <Content Include="ImageRes\RES004.PNG" />
-    <Content Include="ImageRes\RES005.PNG" />
-    <Content Include="ImageRes\RES006.PNG" />
-    <Content Include="ImageRes\RES007.PNG" />
-    <Content Include="ImageRes\RES008.PNG" />
-    <Content Include="ImageRes\RES009.PNG" />
-    <Content Include="ImageRes\RES010.PNG" />
-    <Content Include="ImageRes\RES011.PNG" />
-    <Content Include="ImageRes\RES012.PNG" />
-    <Content Include="ImageRes\RES013.PNG" />
-    <Content Include="ImageRes\RES014.PNG" />
-    <Content Include="ImageRes\RES015.PNG" />
-    <Content Include="ImageRes\RES016.PNG" />
-    <Content Include="ImageRes\RES017.PNG" />
-    <Content Include="ImageRes\RES018.PNG" />
-    <Content Include="ImageRes\RES019.PNG" />
-    <Content Include="ImageRes\RES020.PNG" />
-    <Content Include="ImageRes\SCREEN.png" />
-    <Content Include="ImageRes\TAB1.png" />
-    <Content Include="ImageRes\TAB2.png" />
-    <Content Include="ImageRes\TAB3.png" />
-    <Content Include="ImageRes\TAB4.png" />
+    <Content Include="ImageRes\appicon.ico" />
+    <Content Include="ImageRes\imac.png" />
+    <Content Include="ImageRes\res001.png" />
+    <Content Include="ImageRes\res002.png" />
+    <Content Include="ImageRes\res003.png" />
+    <Content Include="ImageRes\res004.png" />
+    <Content Include="ImageRes\res005.png" />
+    <Content Include="ImageRes\res006.png" />
+    <Content Include="ImageRes\res007.png" />
+    <Content Include="ImageRes\res008.png" />
+    <Content Include="ImageRes\res009.png" />
+    <Content Include="ImageRes\res010.png" />
+    <Content Include="ImageRes\res011.png" />
+    <Content Include="ImageRes\res012.png" />
+    <Content Include="ImageRes\res013.png" />
+    <Content Include="ImageRes\res014.png" />
+    <Content Include="ImageRes\res015.png" />
+    <Content Include="ImageRes\res016.png" />
+    <Content Include="ImageRes\res017.png" />
+    <Content Include="ImageRes\res018.png" />
+    <Content Include="ImageRes\res019.png" />
+    <Content Include="ImageRes\res020.png" />
+    <Content Include="ImageRes\screen.png" />
+    <Content Include="ImageRes\tab1.png" />
+    <Content Include="ImageRes\tab2.png" />
+    <Content Include="ImageRes\tab3.png" />
+    <Content Include="ImageRes\tab4.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
