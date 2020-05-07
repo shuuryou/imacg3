@@ -118,7 +118,7 @@ namespace crtcpl
         {
             if (this.hwRadioButton.Checked)
             {
-                this.m_CurrentHeight = Math.Max(this.m_CurrentHeight - 1, Constants.IVAD_HEIGHT_MIN);
+                this.m_CurrentHeight = Math.Min(this.m_CurrentHeight + 1, Constants.IVAD_HEIGHT_MAX);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Height, this.m_CurrentHeight));
                 return;
             }
@@ -135,7 +135,7 @@ namespace crtcpl
         {
             if (this.hwRadioButton.Checked)
             {
-                this.m_CurrentHeight = Math.Min(this.m_CurrentHeight + 1, Constants.IVAD_HEIGHT_MAX);
+                this.m_CurrentHeight = Math.Max(this.m_CurrentHeight - 1, Constants.IVAD_HEIGHT_MIN);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Height, this.m_CurrentHeight));
                 return;
             }
