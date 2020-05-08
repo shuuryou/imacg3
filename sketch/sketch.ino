@@ -205,7 +205,7 @@ skipHeadphone:
     {
       if (digitalRead(PIN_RELAY_CRT) == LOW)
         digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
-        
+
       goto skipVSYNC;
     }
 
@@ -326,13 +326,13 @@ void emergency_reset()
   digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
 
   settings_reset_default();
-  ivad_write_settings();
+  ivad_write_settings(false);
   settings_store();
 
   // 10 seconds should be enough to pull the power plug in case
   // magic smoke starts coming out. It also gives the CRT some
   // time to settle after being powered off.
-  
+
   byte c = 0;
   for (int i = 0; i < 100; i++)
   {
@@ -472,7 +472,7 @@ void serial_processing()
     case 0x04: // IVAD Reset from EEPROM
       {
         settings_load();
-        ivad_write_settings();
+        ivad_write_settings(false);
 
         byte ret[7] { 0x06, id, 0x00, 0x03, 0xFF, 0x04, SERIAL_EOL_MARKER };
         ret[4] = checksum(ret, 4);
@@ -482,7 +482,7 @@ void serial_processing()
     case 0x05: // EEPROM Reset to Default
       {
         settings_reset_default();
-        ivad_write_settings();
+        ivad_write_settings(false);
         settings_store();
 
         byte ret[7] { 0x06, id, 0x00, 0x03, 0xFF, 0x04, SERIAL_EOL_MARKER };
@@ -601,137 +601,44 @@ void ivad_read(byte address, byte read_max)
 
 void ivad_initialize()
 {
-  /* I cannot get this compact Rocky Hill sequence to degauss the CRT on turn-on.
+  ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x00);
+  ivad_read(IVAD_REGISTER_PROPERTY, 1);
 
-    ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x00);
-    ivad_read(IVAD_REGISTER_PROPERTY, 1);
-    ivad_write(0x53, 0x33);
-    ivad_read(0x53, 1);
-    ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x0B);
-    ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_CONTRAST, 0x00); // If this line is missing, you get no image.
-    ivad_write(0x53, 0x00);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x0A);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x14);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x1E);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x28);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x32);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x3C);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x46);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x50);
-    ivad_read(0x53, 10);
-    ivad_write(0x53, 0x5A);
-    ivad_read(0x53, 2);
+  ivad_write(IVAD_REGISTER_PROPERTY, 0x09, IVAD_SETTING_VERTICAL_POS); // Required for DEGAUSS
 
-    ivad_write(IVAD_REGISTER_PROPERTY, 0x0A, 0x9E);
-    ivad_write(IVAD_REGISTER_PROPERTY, 0x0E, 0xC0);
-    ivad_write(IVAD_REGISTER_PROPERTY, 0x10, 0x40);
-  */
-
-  // This "anotherelise" sequence does degauss the CRT
-  ivad_write( 0x46, 0x13, 0x00);
-  ivad_write(0x46, 0x13, 0x00);
-  ivad_read(0x46, 1);
-  ivad_write(0x46, 0x09, 0x00);
   ivad_write(0x53, 0x33);
   ivad_read(0x53, 1);
-  ivad_write(0x46, 0x13, 0x0b);
-  ivad_write(0x46, 0x00, 0x00);
-  ivad_write(0x46, 0x08, 0xe4);
-  ivad_write(0x46, 0x12, 0xc9);
+  ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x0B);
+  ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_CONTRAST, 0x00); // If this line is missing, you get no image.
+
+  ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_HEIGHT, 0xE4); // Required for DEGAUSS
+  ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_ROTATION, 0xC9); // Required for DEGAUSS
+
   ivad_write(0x53, 0x00);
   ivad_read(0x53, 10);
-  ivad_write(0x53, 0x0a);
+  ivad_write(0x53, 0x0A);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x14);
   ivad_read(0x53, 10);
-  ivad_write(0x53, 0x1e);
+  ivad_write(0x53, 0x1E);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x28);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x32);
   ivad_read(0x53, 10);
-  ivad_write(0x53, 0x3c);
+  ivad_write(0x53, 0x3C);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x46);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x50);
   ivad_read(0x53, 10);
-  ivad_write(0x53, 0x5a);
+  ivad_write(0x53, 0x5A);
   ivad_read(0x53, 10);
-  ivad_write(0x46, 0x01, 0x82);
-  ivad_write(0x46, 0x02, 0x82);
-  ivad_write(0x46, 0x03, 0x82);
-  ivad_write(0x46, 0x04, 0xa0);
-  ivad_write(0x46, 0x05, 0xa0);
-  ivad_write(0x46, 0x06, 0xa0);
-  ivad_write(0x46, 0x07, 0xad);
-  ivad_write(0x46, 0x08, 0xe4);
-  ivad_write(0x46, 0x09, 0x3d);
-  ivad_write(0x46, 0x0a, 0x9e);
-  ivad_write(0x46, 0x0b, 0xb4);
-  ivad_write(0x46, 0x0c, 0xc4);
-  ivad_write(0x46, 0x0d, 0x27);
-  ivad_write(0x46, 0x0e, 0xbf);
-  ivad_write(0x46, 0x0f, 0xc0);
-  ivad_write(0x46, 0x10, 0x40);
-  ivad_write(0x46, 0x11, 0x0a);
-  ivad_write(0x46, 0x12, 0x5b);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x53, 0x00);
-  ivad_read(0x53, 10);
-  ivad_write(0x53, 0x10);
-  ivad_read(0x53, 10);
-  ivad_write(0x53, 0x20);
-  ivad_read(0x53, 10);
-  ivad_write(0x53, 0x30);
-  ivad_read(0x53, 10);
-  ivad_write(0x46, 0x11, 0x05);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x46, 0x00, 0x00);
-  ivad_write(0x46, 0x07, 0xb1);
-  ivad_write(0x46, 0x0d, 0x10);
-  ivad_write(0x46, 0x0c, 0xc7);
-  ivad_write(0x46, 0x09, 0x4a);
-  ivad_write(0x46, 0x08, 0xea);
-  ivad_write(0x46, 0x0f, 0xc0);
-  ivad_write(0x46, 0x0b, 0xae);
-  ivad_write(0x46, 0x12, 0x5b);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x46, 0x11, 0x05);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x46, 0x10, 0x40);
-  ivad_write(0x46, 0x06, 0xa0);
-  ivad_write(0x46, 0x05, 0xa0);
-  ivad_write(0x46, 0x04, 0xa0);
-  ivad_write(0x46, 0x03, 0x82);
-  ivad_write(0x46, 0x02, 0x82);
-  ivad_write(0x46, 0x01, 0x82);
-  ivad_write(0x46, 0x11, 0x05);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x46, 0x11, 0x05);
-  ivad_write(0x46, 0x00, 0xff);
-  ivad_write(0x46, 0x10, 0x40);
-  ivad_write(0x46, 0x06, 0xa0);
-  ivad_write(0x46, 0x05, 0xa0);
-  ivad_write(0x46, 0x04, 0xa0);
-  ivad_write(0x46, 0x03, 0x82);
-  ivad_write(0x46, 0x02, 0x82);
-  ivad_write(0x46, 0x01, 0x82);
-  ivad_write(0x46, 0x11, 0x05);
-  ivad_write(0x46, 0x00, 0xff);
 
-  ivad_write_settings();
+  ivad_write_settings(true);
 }
 
-void ivad_write_settings()
+void ivad_write_settings(bool for_init)
 {
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_RED, CURRENT_CONFIG[CONFIG_OFFSET_RED]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_GREEN, CURRENT_CONFIG[CONFIG_OFFSET_GREEN]);
@@ -739,10 +646,22 @@ void ivad_write_settings()
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_HORIZONTAL_POS, CURRENT_CONFIG[CONFIG_OFFSET_HORIZONTAL_POS]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_HEIGHT, CURRENT_CONFIG[CONFIG_OFFSET_HEIGHT]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_VERTICAL_POS, CURRENT_CONFIG[CONFIG_OFFSET_VERTICAL_POS]);
+
+  if (for_init)
+    ivad_write(IVAD_REGISTER_PROPERTY, 0x0A, 0x9E);
+
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_KEYSTONE, CURRENT_CONFIG[CONFIG_OFFSET_KEYSTONE]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_PINCUSHION, CURRENT_CONFIG[CONFIG_OFFSET_PINCUSHION]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_WIDTH, CURRENT_CONFIG[CONFIG_OFFSET_WIDTH]);
+
+  if (for_init)
+    ivad_write(IVAD_REGISTER_PROPERTY, 0x0E, 0xC0);
+
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_PARALLELOGRAM, CURRENT_CONFIG[CONFIG_OFFSET_PARALLELOGRAM]);
+
+  if (for_init)
+    ivad_write(IVAD_REGISTER_PROPERTY, 0x10, 0x40);
+
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_BRIGHTNESS, CURRENT_CONFIG[CONFIG_OFFSET_BRIGHTNESS]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_ROTATION, CURRENT_CONFIG[CONFIG_OFFSET_ROTATION]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_CONTRAST, CURRENT_CONFIG[CONFIG_OFFSET_CONTRAST]);
@@ -761,7 +680,7 @@ int ivad_change_setting(const byte ivad_setting, const byte value)
      could be commented out or removed, but by just telling GCC to shut
      the fuck up here, the checks will automatically apply if the limits
      in config.h ever change in the future. Until then, GCC silently
-     optimizes them away, so they do not impact the size of this program.
+     optimizes them away, so they do not impact the size of this sketch.
   */
 
   switch (ivad_setting)
