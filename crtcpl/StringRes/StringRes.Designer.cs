@@ -61,7 +61,25 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while instructing the IVAD to make all changes permanent. {0}.
+        ///   Looks up a localized string similar to Another Instance of this program is already running.
+        /// </summary>
+        internal static string AlreadyRunning {
+            get {
+                return ResourceManager.GetString("AlreadyRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screen Settings.
+        /// </summary>
+        internal static string AlreadyRunningTitle {
+            get {
+                return ResourceManager.GetString("AlreadyRunningTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while instructing the IVAD controller to make all changes permanent. {0}.
         /// </summary>
         internal static string CantApplyChanges {
             get {
@@ -70,7 +88,7 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while instructing the IVAD to make the requested change. {0}.
+        ///   Looks up a localized string similar to An error occurred while instructing the IVAD controller to make the requested change. {0}.
         /// </summary>
         internal static string CantPerformChange {
             get {
@@ -169,7 +187,7 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Access is denied to the port. Another program probably already has the specified COM port open..
+        ///   Looks up a localized string similar to Access is denied to the COM port. Another program probably already has the specified COM port open..
         /// </summary>
         internal static string UCComUnauthorizedAccess {
             get {

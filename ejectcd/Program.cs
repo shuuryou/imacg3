@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace ejectcd
 {
@@ -9,61 +10,79 @@ namespace ejectcd
     {
         public static int Main(string[] args)
         {
-            DriveInfo[] drives;
+            bool result;
+            Mutex m = new Mutex(true, "ejectcd", out result);
+
+            if (!result)
+            {
+                Console.Error.Write("Another instance is already running.");
+                return 1;
+            }
 
             try
             {
-                drives = DriveInfo.GetDrives();
-            }
-            catch (IOException e)
-            {
-                Console.Error.WriteLine(e.Message);
-                return 1;
-            }
-            catch (UnauthorizedAccessException e)
-            {
-                Console.Error.WriteLine(e.Message);
-                return 1;
-            }
-
-            foreach (DriveInfo drive in drives)
-            {
-                if (drive.DriveType != DriveType.CDRom)
-                    continue;
-
-                Console.WriteLine("Eject CD-ROM drive {0}.", drive.Name);
-
-                IntPtr hDrive = new IntPtr(INVALID_HANDLE_VALUE);
+                DriveInfo[] drives;
 
                 try
                 {
-                    // Open the device
-                    hDrive = CreateFile(@"\\.\" + drive.Name[0] + ':', FileAccess.Read, FileShare.ReadWrite | FileShare.Delete,
-                        IntPtr.Zero, FileMode.Open, 0, IntPtr.Zero);
-
-                    if ((int)hDrive == INVALID_HANDLE_VALUE) { throw new Win32Exception(); }
-
-                    // Try and eject
-                    int dummy = 0;
-                    bool ejected = DeviceIoControl(hDrive, IOCTL_STORAGE_EJECT_MEDIA, IntPtr.Zero, 0,
-                        IntPtr.Zero, 0, ref dummy, IntPtr.Zero);
-
-                    if (!ejected) { throw new Win32Exception(); }
-
+                    drives = DriveInfo.GetDrives();
                 }
-                catch (Win32Exception e)
+                catch (IOException e)
                 {
                     Console.Error.WriteLine(e.Message);
                     return 1;
                 }
-                finally
+                catch (UnauthorizedAccessException e)
                 {
-                    if (hDrive.ToInt32() != INVALID_HANDLE_VALUE)
-                        CloseHandle(hDrive);
+                    Console.Error.WriteLine(e.Message);
+                    return 1;
                 }
+
+                foreach (DriveInfo drive in drives)
+                {
+                    if (drive.DriveType != DriveType.CDRom)
+                        continue;
+
+                    Console.WriteLine("Eject CD-ROM drive {0}.", drive.Name);
+
+                    IntPtr hDrive = new IntPtr(INVALID_HANDLE_VALUE);
+
+                    try
+                    {
+                        // Open the device
+                        hDrive = CreateFile(@"\\.\" + drive.Name[0] + ':', FileAccess.Read, FileShare.ReadWrite | FileShare.Delete,
+                            IntPtr.Zero, FileMode.Open, 0, IntPtr.Zero);
+
+                        if ((int)hDrive == INVALID_HANDLE_VALUE) { throw new Win32Exception(); }
+
+                        // Try and eject
+                        int dummy = 0;
+                        bool ejected = DeviceIoControl(hDrive, IOCTL_STORAGE_EJECT_MEDIA, IntPtr.Zero, 0,
+                            IntPtr.Zero, 0, ref dummy, IntPtr.Zero);
+
+                        if (!ejected) { throw new Win32Exception(); }
+
+                    }
+                    catch (Win32Exception e)
+                    {
+                        Console.Error.WriteLine(e.Message);
+                        return 1;
+                    }
+                    finally
+                    {
+                        if (hDrive.ToInt32() != INVALID_HANDLE_VALUE)
+                            CloseHandle(hDrive);
+                    }
+                }
+
+                Console.WriteLine("Done.");
+            }
+            finally
+            {
+                m.ReleaseMutex();
+                m.Dispose();
             }
 
-            Console.WriteLine("Done.");
             return 0;
         }
 

@@ -156,4 +156,10 @@
   <data name="UCComUnauthorizedAccess" xml:space="preserve">
     <value>COMポートへのアクセスが拒否されました。 別のプログラムが指定されたCOMポートを既に開いている可能性があります。</value>
   </data>
+  <data name="AlreadyRunning" xml:space="preserve">
+    <value>このプログラムの他のインスタンスが既に実行されています。</value>
+  </data>
+  <data name="AlreadyRunningTitle" xml:space="preserve">
+    <value>画面設定</value>
+  </data>
 </root>

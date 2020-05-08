@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlreadyRunning" xml:space="preserve">
+    <value>Another Instance of this program is already running</value>
+  </data>
+  <data name="AlreadyRunningTitle" xml:space="preserve">
+    <value>Screen Settings</value>
+  </data>
   <data name="CantApplyChanges" xml:space="preserve">
     <value>An error occurred while instructing the IVAD controller to make all changes permanent. {0}</value>
   </data>

@@ -8,6 +8,13 @@ namespace crtcpl
     {
         [DllImport("user32.dll")]
         internal static extern IntPtr SetActiveWindow(IntPtr hWnd);
+
+
+        [DllImport("user32.dll")]
+        internal static extern IntPtr SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        internal static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
     }
 #endif
 }
