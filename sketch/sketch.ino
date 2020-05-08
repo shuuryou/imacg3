@@ -603,17 +603,12 @@ void ivad_initialize()
 {
   ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x00);
   ivad_read(IVAD_REGISTER_PROPERTY, 1);
-
-  ivad_write(IVAD_REGISTER_PROPERTY, 0x09, IVAD_SETTING_VERTICAL_POS); // Required for DEGAUSS
-
   ivad_write(0x53, 0x33);
   ivad_read(0x53, 1);
   ivad_write(IVAD_REGISTER_PROPERTY, 0x13, 0x0B);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_CONTRAST, 0x00); // If this line is missing, you get no image.
-
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_HEIGHT, 0xE4); // Required for DEGAUSS
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_ROTATION, 0xC9); // Required for DEGAUSS
-
   ivad_write(0x53, 0x00);
   ivad_read(0x53, 10);
   ivad_write(0x53, 0x0A);
