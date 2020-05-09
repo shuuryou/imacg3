@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AlreadyRunning" xml:space="preserve">
-    <value>Une autre instance de ce programme est déjà en cours d'exécution</value>
+    <value>Une autre instance de ce programme est déjà en cours d'exécution.</value>
   </data>
   <data name="AlreadyRunningTitle" xml:space="preserve">
     <value>Paramètres de l’écran</value>

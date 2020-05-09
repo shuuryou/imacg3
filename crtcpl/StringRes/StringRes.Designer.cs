@@ -61,7 +61,7 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Another Instance of this program is already running.
+        ///   Looks up a localized string similar to Another Instance of this program is already running..
         /// </summary>
         internal static string AlreadyRunning {
             get {
