@@ -7,13 +7,27 @@ INPUT input;
 
 void WinMainCRTStartup()
 {
-    int Result = WinMain(GetModuleHandle(0), 0, 0, 0);
-    ExitProcess(Result);
+    int ret = WinMain(GetModuleHandle(0), 0, 0, 0);
+    ExitProcess(ret);
 }
 
 int CALLBACK WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
     InitCommonControls();
+
+    HANDLE mutex = CreateMutexA(0, FALSE, "Local\\$rightclickassist$");
+
+    if (GetLastError() == ERROR_ALREADY_EXISTS)
+    {
+        WCHAR msg[1000];
+        WCHAR title[1000];
+
+        LoadString(hInst, IDS_RUNNING_MSG, msg, sizeof(msg));
+        LoadString(hInst, IDS_RUNNING_TITLE, title, sizeof(title));
+
+        MessageBox(NULL, msg, title, MB_OK);
+        return 1;
+    }
 
     input.type = INPUT_MOUSE;
 
@@ -32,12 +46,14 @@ int CALLBACK WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
         DispatchMessage(&msg);
     }
 
+    CloseHandle(mutex);
+
     return (int)msg.wParam;
 }
 
-LRESULT CALLBACK hook_proc(int code, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK hook_proc(int nCode, WPARAM wParam, LPARAM lParam)
 {
-    if (code == HC_ACTION && (wParam == WM_LBUTTONDOWN || wParam == WM_LBUTTONUP))
+    if (nCode == HC_ACTION && (wParam == WM_LBUTTONDOWN || wParam == WM_LBUTTONUP))
     {
         if ((GetAsyncKeyState(VK_CONTROL) & 0x8000) == 0)
             return false;
@@ -61,11 +77,12 @@ LRESULT CALLBACK hook_proc(int code, WPARAM wParam, LPARAM lParam)
             input.mi.dwFlags = MOUSEEVENTF_RIGHTUP;
         else
             input.mi.dwFlags = MOUSEEVENTF_RIGHTDOWN;
-        
+
         SendInput(1, &input, sizeof(INPUT));
+        return 1000;
     }
 
-    return CallNextHookEx(hHook, code, wParam, lParam);
+    return CallNextHookEx(hHook, nCode, wParam, lParam);
 
 end:
     ;

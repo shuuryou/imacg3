@@ -28,6 +28,8 @@ STRINGTABLE
 BEGIN
     IDS_QUIT_TITLE          "‰EƒNƒŠƒbƒN ƒAƒVƒXƒg"
     IDS_QUIT_MSG            "‰EƒNƒŠƒbƒN ƒAƒVƒXƒg‚ğI—¹‚µ‚Ü‚µ‚½B"
+    IDS_RUNNING_MSG         "‚±‚ÌƒvƒƒOƒ‰ƒ€‚Ì‘¼‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªŠù‚ÉÀs‚³‚ê‚Ä‚¢‚Ü‚·B"
+    IDS_RUNNING_TITLE       "‰EƒNƒŠƒbƒN ƒAƒVƒXƒg"
 END
 
 #endif    // Japanese resources
@@ -128,10 +130,10 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// 24
+// RT_MANIFEST
 //
 
-IDR_241                 24                      "rightclickassist.manifest"
+IDR_241                 RT_MANIFEST             "rightclickassist.manifest"
 
 #endif    // Japanese (Japan) resources
 /////////////////////////////////////////////////////////////////////////////
@@ -153,6 +155,8 @@ STRINGTABLE
 BEGIN
     IDS_QUIT_TITLE          "Rechtsklickunterstützung"
     IDS_QUIT_MSG            "Die Rechtsklickunterstützung wird jetzt beendet."
+    IDS_RUNNING_MSG         "Es wird bereits eine weitere Instanz dieses Programms ausgeführt."
+    IDS_RUNNING_TITLE       "Rechtsklickunterstützung"
 END
 
 #endif    // German resources
@@ -175,6 +179,8 @@ STRINGTABLE
 BEGIN
     IDS_QUIT_TITLE          "Right Click Assist"
     IDS_QUIT_MSG            "Right Click Assist will now terminate."
+    IDS_RUNNING_MSG         "Another Instance of this program is already running."
+    IDS_RUNNING_TITLE       "Right Click Assist"
 END
 
 #endif    // English resources
@@ -197,6 +203,8 @@ STRINGTABLE
 BEGIN
     IDS_QUIT_TITLE          "Aide au clic droit"
     IDS_QUIT_MSG            "L'aide au clic droit est terminé."
+    IDS_RUNNING_MSG         "Une autre instance de ce programme est déjà en cours d'exécution."
+    IDS_RUNNING_TITLE       "Aide au clic droit"
 END
 
 #endif    // French resources

@@ -6,6 +6,8 @@
 #define IDS_QUIT_TITLE                  103
 #define IDS_QUIT_MSG                    104
 #define IDR_241                         104
+#define IDS_RUNNING_MSG                 105
+#define IDS_RUNNING_TITLE               106
 
 // Next default values for new objects
 // 
