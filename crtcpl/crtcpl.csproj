@@ -221,6 +221,8 @@
       <Link>signing.snk</Link>
     </None>
     <None Include="app.config" />
+    <None Include="ImageRes\fubk.emf" />
+    <None Include="ImageRes\smpte.emf" />
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

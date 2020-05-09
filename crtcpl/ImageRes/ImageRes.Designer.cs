@@ -73,6 +73,16 @@ namespace crtcpl.ImageRes {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FUBKCARD {
+            get {
+                object obj = ResourceManager.GetObject("FUBKCARD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMAC {
             get {
                 object obj = ResourceManager.GetObject("IMAC", resourceCulture);
@@ -286,6 +296,16 @@ namespace crtcpl.ImageRes {
         internal static System.Drawing.Bitmap SCREEN {
             get {
                 object obj = ResourceManager.GetObject("SCREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SMPTECARD {
+            get {
+                object obj = ResourceManager.GetObject("SMPTECARD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
