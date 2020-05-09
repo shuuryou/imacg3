@@ -15,7 +15,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeometryPage));
             this.geometryGroupBox = new System.Windows.Forms.GroupBox();
             this.geometryTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -33,14 +32,11 @@
             this.rotRadioButton = new System.Windows.Forms.RadioButton();
             this.trapRadioButton = new System.Windows.Forms.RadioButton();
             this.paraRadioButton = new System.Windows.Forms.RadioButton();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showTestPatternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geometryGroupBox.SuspendLayout();
             this.geometryTableLayoutPanel.SuspendLayout();
             this.adjustmentTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenPictureBox)).BeginInit();
             this.categoryFlowLayoutPanel.SuspendLayout();
-            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // geometryGroupBox
@@ -165,30 +161,14 @@
             this.paraRadioButton.UseVisualStyleBackColor = true;
             this.paraRadioButton.CheckedChanged += new System.EventHandler(this.paraRadioButton_CheckedChanged);
             // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showTestPatternToolStripMenuItem});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
-            // 
-            // showTestPatternToolStripMenuItem
-            // 
-            this.showTestPatternToolStripMenuItem.Name = "showTestPatternToolStripMenuItem";
-            resources.ApplyResources(this.showTestPatternToolStripMenuItem, "showTestPatternToolStripMenuItem");
-            this.showTestPatternToolStripMenuItem.Click += new System.EventHandler(this.showTestPatternToolStripMenuItem_Click);
-            // 
             // GeometryPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ContextMenuStrip = this.contextMenuStrip;
             this.Controls.Add(this.geometryGroupBox);
             this.MinimumSize = new System.Drawing.Size(343, 242);
             this.Name = "GeometryPage";
             this.Load += new System.EventHandler(this.GeometryPage_Load);
-            this.VisibleChanged += new System.EventHandler(this.GeometryPage_VisibleChanged);
             this.geometryGroupBox.ResumeLayout(false);
             this.geometryGroupBox.PerformLayout();
             this.geometryTableLayoutPanel.ResumeLayout(false);
@@ -198,12 +178,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.screenPictureBox)).EndInit();
             this.categoryFlowLayoutPanel.ResumeLayout(false);
             this.categoryFlowLayoutPanel.PerformLayout();
-            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         private System.Windows.Forms.GroupBox geometryGroupBox;
         private System.Windows.Forms.TableLayoutPanel geometryTableLayoutPanel;
@@ -221,7 +213,5 @@
         private System.Windows.Forms.RadioButton trapRadioButton;
         private System.Windows.Forms.RadioButton paraRadioButton;
         private System.Windows.Forms.Label spacerLabel;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem showTestPatternToolStripMenuItem;
     }
 }

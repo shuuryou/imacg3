@@ -681,4 +681,43 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Bildschirmeinstellungen</value>
   </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
+    <value>Te&amp;stbild einblenden</value>
+  </data>
+  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stan&amp;dard</value>
+  </data>
+  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;SMPTE-Testbild</value>
+  </data>
+  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;FuBK-Testbild</value>
+  </data>
+  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>S/W (&amp;vertikal)</value>
+  </data>
+  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>S/W (&amp;horizontal)</value>
+  </data>
+  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;RGB (vertikal)</value>
+  </data>
+  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>R&amp;GB (horizontal)</value>
+  </data>
+  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rot&amp;er Bildschirm</value>
+  </data>
+  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Grün&amp;er Bildschirm</value>
+  </data>
+  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>B&amp;lauer Bildschirm</value>
+  </data>
+  <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Testbild-Auswahl</value>
+  </data>
 </root>

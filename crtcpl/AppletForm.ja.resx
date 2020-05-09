@@ -144,4 +144,40 @@
   <data name="$this.Text" xml:space="preserve">
     <value>画面設定</value>
   </data>
+  <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
+    <value>テストパターンを表示(&amp;S)</value>
+  </data>
+  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
+    <value>既定のパターン(&amp;D)</value>
+  </data>
+  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>SMPTEのカラーバー(&amp;S)</value>
+  </data>
+  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
+    <value>FuBKのテストパターン(&amp;F)</value>
+  </data>
+  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>水平の白黒バー(&amp;B)</value>
+  </data>
+  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>垂直の白黒バー(&amp;B)</value>
+  </data>
+  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>水平のRGBバー(&amp;R)</value>
+  </data>
+  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>垂直のRGBバー(&amp;G)</value>
+  </data>
+  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>赤(&amp;E)</value>
+  </data>
+  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>緑(&amp;N)</value>
+  </data>
+  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>青(&amp;L)</value>
+  </data>
+  <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>テストパターンの選択(&amp;T)</value>
+  </data>
 </root>

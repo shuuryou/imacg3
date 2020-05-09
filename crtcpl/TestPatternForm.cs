@@ -11,55 +11,36 @@ namespace crtcpl
     public partial class TestPatternForm : Form
     {
         private Bitmap m_TestPattern;
-        private int m_TestPatternMode = 0;
+
+        public enum TestPatternMode
+        {
+            ScreenAdjust = 0,
+            SMPTE = 1,
+            FuBK = 2,
+            VBW = 3,
+            HBW = 4,
+            VRGB = 5,
+            HRGB = 6,
+            RED = 7,
+            GREEN = 8,
+            BLUE = 9
+        }
+
+        private TestPatternMode m_TestPatternMode;
 
         public TestPatternForm()
         {
             InitializeComponent();
-
-#if MONO
-            Activated += TestPatternForm_Activated;
-#endif
+            SetTestPattern(TestPatternMode.ScreenAdjust);
 
             SetStyle(ControlStyles.ResizeRedraw, true);
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.Selectable, false);
-
-            SetTestPattern();
         }
 
         protected override bool ShowWithoutActivation => true;
 
-#if !MONO
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_ACTIVATE = 6;
-            const int WA_INACTIVE = 0;
-
-            if (m.Msg != WM_ACTIVATE)
-            {
-                goto done;
-            }
-
-            if (((int)m.WParam & 0xFFFF) == WA_INACTIVE)
-            {
-                return;
-            }
-
-            if (m.LParam != IntPtr.Zero)
-            {
-                NativeMethods.SetActiveWindow(m.LParam);
-            }
-            else
-            {
-                NativeMethods.SetActiveWindow(IntPtr.Zero);
-            }
-
-        done:
-            base.WndProc(ref m);
-        }
-#endif
 
         protected override CreateParams CreateParams
         {
@@ -73,20 +54,6 @@ namespace crtcpl
                 return cp;
             }
         }
-
-
-#if MONO
-        private void TestPatternForm_Activated(object sender, EventArgs e)
-        {
-            foreach (Form f in Application.OpenForms)
-                if (f.GetType() == typeof(AppletForm))
-                {
-                    f.Focus();
-                    return;
-                }
-        }
-#endif
-
         protected override void Dispose(bool disposing)
         {
             if (disposing && (this.components != null))
@@ -111,7 +78,7 @@ namespace crtcpl
 
             switch (this.m_TestPatternMode)
             {
-                case 0:
+                case TestPatternMode.ScreenAdjust:
                     if (this.m_TestPattern == null)
                     {
                         return;
@@ -128,8 +95,8 @@ namespace crtcpl
                     }
 
                     return;
-                case 1:
-                case 2:
+                case TestPatternMode.SMPTE:
+                case TestPatternMode.FuBK:
                     if (this.m_TestPattern == null)
                     {
                         return;
@@ -137,7 +104,7 @@ namespace crtcpl
 
                     e.Graphics.DrawImage(this.m_TestPattern, 0, 0, this.Width, this.Height);
                     return;
-                case 3:
+                case TestPatternMode.VBW:
                     using (SolidBrush b = new SolidBrush(Color.Black))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width / 2, this.Height);
@@ -149,7 +116,7 @@ namespace crtcpl
                     }
 
                     return;
-                case 4:
+                case TestPatternMode.HBW:
                     using (SolidBrush b = new SolidBrush(Color.Black))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height / 2);
@@ -161,7 +128,7 @@ namespace crtcpl
                     }
 
                     return;
-                case 5:
+                case TestPatternMode.VRGB:
                     using (SolidBrush b = new SolidBrush(Color.Red))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height / 3);
@@ -178,7 +145,7 @@ namespace crtcpl
                     }
 
                     return;
-                case 6:
+                case TestPatternMode.HRGB:
                     using (SolidBrush b = new SolidBrush(Color.Red))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width / 3, this.Height);
@@ -195,21 +162,21 @@ namespace crtcpl
                     }
 
                     return;
-                case 7:
+                case TestPatternMode.RED:
                     using (SolidBrush b = new SolidBrush(Color.Red))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height);
                     }
 
                     return;
-                case 8:
+                case TestPatternMode.GREEN:
                     using (SolidBrush b = new SolidBrush(Color.Lime))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height);
                     }
 
                     return;
-                case 9:
+                case TestPatternMode.BLUE:
                     using (SolidBrush b = new SolidBrush(Color.Blue))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height);
@@ -219,21 +186,20 @@ namespace crtcpl
             }
         }
 
-        private void TestPatternForm_MouseClick(object sender, MouseEventArgs e)
+        internal void SetTestPattern(TestPatternMode mode)
         {
-            this.m_TestPatternMode = (this.m_TestPatternMode + 1) % 10;
-            SetTestPattern();
-        }
+            if (!Enum.IsDefined(typeof(TestPatternMode), mode))
+                throw new ArgumentOutOfRangeException(nameof(mode));
 
-        private void SetTestPattern()
-        {
+            this.m_TestPatternMode = mode;
+
             if (this.m_TestPattern != null)
             {
                 this.m_TestPattern.Dispose();
                 this.m_TestPattern = null;
             }
 
-            if (this.m_TestPatternMode == 0)
+            if (this.m_TestPatternMode == TestPatternMode.ScreenAdjust)
             {
                 this.m_TestPattern = new Bitmap(24, 24);
                 using (Graphics g = Graphics.FromImage(this.m_TestPattern))
@@ -257,13 +223,13 @@ namespace crtcpl
                 goto end;
             }
 
-            if (this.m_TestPatternMode == 1)
+            if (this.m_TestPatternMode == TestPatternMode.SMPTE)
             {
                 this.m_TestPattern = ImageRes.ImageRes.SMPTECARD;
                 goto end;
             }
 
-            if (this.m_TestPatternMode == 2)
+            if (this.m_TestPatternMode == TestPatternMode.FuBK)
             {
                 this.m_TestPattern = ImageRes.ImageRes.FUBKCARD;
                 goto end;
@@ -271,6 +237,39 @@ namespace crtcpl
 
         end:
             Invalidate();
+        }
+
+        private void TestPatternForm_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+                if (f.GetType() == typeof(AppletForm))
+                {
+                    if (f.Visible)
+                    {
+                        f.TopMost = false;
+                        f.Hide();
+                    }
+                    else
+                    {
+                        f.Show();
+                        f.Focus();
+                        f.TopMost = true;
+                    }
+                    return;
+                }
+        }
+
+        private void TestPatternForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                foreach (Form f in Application.OpenForms)
+                    if (f.GetType() == typeof(AppletForm))
+                    {
+                        f.Show();
+                        f.Focus();
+                        f.TopMost = true;
+                        return;
+                    }
         }
     }
 }

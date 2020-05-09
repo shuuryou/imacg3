@@ -7,6 +7,8 @@ namespace crtcpl
 {
     public partial class AppletForm : Form
     {
+        private readonly TestPatternForm m_TestPatternForm = new TestPatternForm();
+
         public AppletForm()
         {
             InitializeComponent();
@@ -55,6 +57,7 @@ namespace crtcpl
                 this.components.Dispose();
                 UCCom.ConnectionClosed -= UCCom_ConnectionClosed;
                 UCCom.ConnectionOpened -= UCCom_ConnectionOpened;
+                m_TestPatternForm.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -340,6 +343,32 @@ namespace crtcpl
             }
 
             this.applyButton.Enabled = true;
+        }
+
+        private void showTestPatternToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (showTestPatternToolStripMenuItem.Checked)
+            {
+                m_TestPatternForm.Show();
+                this.TopMost = true;
+            }
+            else
+            {
+                m_TestPatternForm.Hide();
+                this.TopMost = false;
+            }
+        }
+
+        private void testPatternSelectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int tag = int.Parse(((ToolStripMenuItem)sender).Tag.ToString(), NumberStyles.None);
+            TestPatternForm.TestPatternMode mode = (TestPatternForm.TestPatternMode)tag;
+
+            foreach (ToolStripMenuItem item in testPatternSelectionToolStripMenuItem.DropDownItems)
+                if (item != sender)
+                    item.Checked = false;
+
+            m_TestPatternForm.SetTestPattern(mode);
         }
     }
 }

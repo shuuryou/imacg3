@@ -663,4 +663,40 @@
   <data name="okButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
+    <value>Afficher un motif de te&amp;st</value>
+  </data>
+  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Défaut</value>
+  </data>
+  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mire &amp;SMPTE</value>
+  </data>
+  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mire &amp;FuBK</value>
+  </data>
+  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>N/&amp;B (verticale)</value>
+  </data>
+  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>N/B (&amp;horizontale)</value>
+  </data>
+  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;RGB (verticale)</value>
+  </data>
+  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>R&amp;GB (horizontale)</value>
+  </data>
+  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Écran roug&amp;e</value>
+  </data>
+  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Écra&amp;n vert</value>
+  </data>
+  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Écran bleu</value>
+  </data>
+  <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sélec&amp;tion de la mire</value>
+  </data>
 </root>

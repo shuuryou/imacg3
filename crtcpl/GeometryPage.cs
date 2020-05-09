@@ -14,20 +14,9 @@ namespace crtcpl
             m_CurrentParallelogram,
             m_CurrentRotation;
 
-        private readonly TestPatternForm m_TestPatternForm = new TestPatternForm();
-
         public GeometryPage()
         {
             InitializeComponent();
-        }
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (this.components != null))
-            {
-                this.components.Dispose();
-                this.m_TestPatternForm.Dispose();
-            }
-            base.Dispose(disposing);
         }
 
         public void SetValues(int horizontal, int height, int vertical, int keystone, int pincushion, int width, int parallelogram, int rotation)
@@ -271,31 +260,6 @@ namespace crtcpl
             this.rightButton.Image = ImageRes.ImageRes.RES006;
 
             ResumeLayout();
-        }
-
-        private void showTestPatternToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (this.showTestPatternToolStripMenuItem.Checked)
-            {
-                this.m_TestPatternForm.Hide();
-                this.showTestPatternToolStripMenuItem.Checked = false;
-                this.ParentForm.TopMost = false;
-                return;
-            }
-
-            this.m_TestPatternForm.Show();
-            this.showTestPatternToolStripMenuItem.Checked = true;
-
-            this.ParentForm.TopMost = true;
-            this.ParentForm.Focus();
-        }
-
-        private void GeometryPage_VisibleChanged(object sender, EventArgs e)
-        {
-            if (!this.Visible && this.showTestPatternToolStripMenuItem.Checked)
-            {
-                showTestPatternToolStripMenuItem_Click(null, EventArgs.Empty); // Turn off the test pattern
-            }
         }
 
         private void pcRadioButton_CheckedChanged(object sender, EventArgs e)

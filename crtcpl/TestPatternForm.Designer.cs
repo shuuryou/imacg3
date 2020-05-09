@@ -33,8 +33,9 @@
             this.Text = "TestPatternForm";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPatternForm_FormClosing);
+            this.Click += new System.EventHandler(this.TestPatternForm_Click);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TestPatternForm_Paint);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TestPatternForm_MouseClick);
             this.ResumeLayout(false);
 
         }

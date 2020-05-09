@@ -33,9 +33,23 @@
             this.colorsRadioButton = new System.Windows.Forms.RadioButton();
             this.advancedRadioButton = new System.Windows.Forms.RadioButton();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showTestPatternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testPatternSelectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenAdjustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sMPTEColorBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuBKTestCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bWverticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bWhorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rGBverticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rGBhorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greenScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.buttonTableLayoutPanel.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -51,12 +65,12 @@
             // 
             // pagePanel
             // 
-            resources.ApplyResources(this.pagePanel, "pagePanel");
             this.tableLayoutPanel.SetColumnSpan(this.pagePanel, 4);
             this.pagePanel.Controls.Add(this.ADVANCED);
             this.pagePanel.Controls.Add(this.COLORS);
             this.pagePanel.Controls.Add(this.GEOMETRY);
             this.pagePanel.Controls.Add(this.SCREEN);
+            resources.ApplyResources(this.pagePanel, "pagePanel");
             this.pagePanel.Name = "pagePanel";
             // 
             // ADVANCED
@@ -109,8 +123,8 @@
             // 
             // cancelButton
             // 
-            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -167,12 +181,125 @@
             this.imageList.Images.SetKeyName(2, "TAB3");
             this.imageList.Images.SetKeyName(3, "TAB4");
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showTestPatternToolStripMenuItem,
+            this.testPatternSelectionToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            // 
+            // showTestPatternToolStripMenuItem
+            // 
+            this.showTestPatternToolStripMenuItem.CheckOnClick = true;
+            this.showTestPatternToolStripMenuItem.Name = "showTestPatternToolStripMenuItem";
+            resources.ApplyResources(this.showTestPatternToolStripMenuItem, "showTestPatternToolStripMenuItem");
+            this.showTestPatternToolStripMenuItem.Click += new System.EventHandler(this.showTestPatternToolStripMenuItem_Click);
+            // 
+            // testPatternSelectionToolStripMenuItem
+            // 
+            this.testPatternSelectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.screenAdjustToolStripMenuItem,
+            this.sMPTEColorBarToolStripMenuItem,
+            this.fuBKTestCardToolStripMenuItem,
+            this.bWverticalToolStripMenuItem,
+            this.bWhorizontalToolStripMenuItem,
+            this.rGBverticalToolStripMenuItem,
+            this.rGBhorizontalToolStripMenuItem,
+            this.redScreenToolStripMenuItem,
+            this.greenScreenToolStripMenuItem,
+            this.blueScreenToolStripMenuItem});
+            this.testPatternSelectionToolStripMenuItem.Name = "testPatternSelectionToolStripMenuItem";
+            resources.ApplyResources(this.testPatternSelectionToolStripMenuItem, "testPatternSelectionToolStripMenuItem");
+            // 
+            // screenAdjustToolStripMenuItem
+            // 
+            this.screenAdjustToolStripMenuItem.CheckOnClick = true;
+            this.screenAdjustToolStripMenuItem.Name = "screenAdjustToolStripMenuItem";
+            resources.ApplyResources(this.screenAdjustToolStripMenuItem, "screenAdjustToolStripMenuItem");
+            this.screenAdjustToolStripMenuItem.Tag = "0";
+            this.screenAdjustToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // sMPTEColorBarToolStripMenuItem
+            // 
+            this.sMPTEColorBarToolStripMenuItem.CheckOnClick = true;
+            this.sMPTEColorBarToolStripMenuItem.Name = "sMPTEColorBarToolStripMenuItem";
+            resources.ApplyResources(this.sMPTEColorBarToolStripMenuItem, "sMPTEColorBarToolStripMenuItem");
+            this.sMPTEColorBarToolStripMenuItem.Tag = "1";
+            this.sMPTEColorBarToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // fuBKTestCardToolStripMenuItem
+            // 
+            this.fuBKTestCardToolStripMenuItem.CheckOnClick = true;
+            this.fuBKTestCardToolStripMenuItem.Name = "fuBKTestCardToolStripMenuItem";
+            resources.ApplyResources(this.fuBKTestCardToolStripMenuItem, "fuBKTestCardToolStripMenuItem");
+            this.fuBKTestCardToolStripMenuItem.Tag = "2";
+            this.fuBKTestCardToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // bWverticalToolStripMenuItem
+            // 
+            this.bWverticalToolStripMenuItem.CheckOnClick = true;
+            this.bWverticalToolStripMenuItem.Name = "bWverticalToolStripMenuItem";
+            resources.ApplyResources(this.bWverticalToolStripMenuItem, "bWverticalToolStripMenuItem");
+            this.bWverticalToolStripMenuItem.Tag = "3";
+            this.bWverticalToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // bWhorizontalToolStripMenuItem
+            // 
+            this.bWhorizontalToolStripMenuItem.CheckOnClick = true;
+            this.bWhorizontalToolStripMenuItem.Name = "bWhorizontalToolStripMenuItem";
+            resources.ApplyResources(this.bWhorizontalToolStripMenuItem, "bWhorizontalToolStripMenuItem");
+            this.bWhorizontalToolStripMenuItem.Tag = "4";
+            this.bWhorizontalToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // rGBverticalToolStripMenuItem
+            // 
+            this.rGBverticalToolStripMenuItem.CheckOnClick = true;
+            this.rGBverticalToolStripMenuItem.Name = "rGBverticalToolStripMenuItem";
+            resources.ApplyResources(this.rGBverticalToolStripMenuItem, "rGBverticalToolStripMenuItem");
+            this.rGBverticalToolStripMenuItem.Tag = "5";
+            this.rGBverticalToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // rGBhorizontalToolStripMenuItem
+            // 
+            this.rGBhorizontalToolStripMenuItem.CheckOnClick = true;
+            this.rGBhorizontalToolStripMenuItem.Name = "rGBhorizontalToolStripMenuItem";
+            resources.ApplyResources(this.rGBhorizontalToolStripMenuItem, "rGBhorizontalToolStripMenuItem");
+            this.rGBhorizontalToolStripMenuItem.Tag = "6";
+            this.rGBhorizontalToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // redScreenToolStripMenuItem
+            // 
+            this.redScreenToolStripMenuItem.CheckOnClick = true;
+            this.redScreenToolStripMenuItem.Name = "redScreenToolStripMenuItem";
+            resources.ApplyResources(this.redScreenToolStripMenuItem, "redScreenToolStripMenuItem");
+            this.redScreenToolStripMenuItem.Tag = "7";
+            this.redScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // greenScreenToolStripMenuItem
+            // 
+            this.greenScreenToolStripMenuItem.CheckOnClick = true;
+            this.greenScreenToolStripMenuItem.Name = "greenScreenToolStripMenuItem";
+            resources.ApplyResources(this.greenScreenToolStripMenuItem, "greenScreenToolStripMenuItem");
+            this.greenScreenToolStripMenuItem.Tag = "8";
+            this.greenScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // blueScreenToolStripMenuItem
+            // 
+            this.blueScreenToolStripMenuItem.CheckOnClick = true;
+            this.blueScreenToolStripMenuItem.Name = "blueScreenToolStripMenuItem";
+            resources.ApplyResources(this.blueScreenToolStripMenuItem, "blueScreenToolStripMenuItem");
+            this.blueScreenToolStripMenuItem.Tag = "9";
+            this.blueScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
             // AppletForm
             // 
             this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
+            this.ContextMenuStrip = this.contextMenuStrip;
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -184,6 +311,7 @@
             this.tableLayoutPanel.PerformLayout();
             this.pagePanel.ResumeLayout(false);
             this.buttonTableLayoutPanel.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -205,6 +333,19 @@
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem showTestPatternToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testPatternSelectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem screenAdjustToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sMPTEColorBarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fuBKTestCardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bWverticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bWhorizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rGBverticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rGBhorizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem redScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greenScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueScreenToolStripMenuItem;
     }
 }
 
