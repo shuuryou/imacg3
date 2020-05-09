@@ -131,7 +131,9 @@ namespace crtcpl
         private void defaultsButton_Click(object sender, EventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             try
             {
@@ -172,7 +174,9 @@ namespace crtcpl
         private void applyButton_Click(object sender, EventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             try
             {
@@ -202,7 +206,9 @@ namespace crtcpl
         private void GEOMETRY_GeometryChanged(object sender, GeometryPageEventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             byte what;
 
@@ -255,7 +261,9 @@ namespace crtcpl
         private void COLORS_ColorChanged(object sender, ColorsPageEventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             byte what;
 
@@ -293,7 +301,9 @@ namespace crtcpl
         private void SCREEN_ContrastChanged(object sender, ScreenPageEventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             try
             {
@@ -313,7 +323,9 @@ namespace crtcpl
         private void SCREEN_BrightnessChanged(object sender, ScreenPageEventArgs e)
         {
             if (!UCCom.IsOpen)
+            {
                 return;
+            }
 
             try
             {

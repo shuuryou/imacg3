@@ -16,8 +16,7 @@ namespace crtcpl
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            bool result;
-            Mutex m = new Mutex(true, "crtcpl", out result);
+            Mutex m = new Mutex(true, "crtcpl", out bool result);
 
             if (!result)
             {
@@ -29,10 +28,14 @@ namespace crtcpl
                     foreach (Process p in procs)
                     {
                         if (p.Id == Process.GetCurrentProcess().Id)
+                        {
                             continue;
+                        }
 
                         if (p.MainWindowHandle == IntPtr.Zero)
+                        {
                             continue;
+                        }
 
                         const int SW_SHOW = 5;
 

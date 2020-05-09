@@ -19,7 +19,9 @@ namespace crtcpl
             base.OnPaint(e);
 
             if (e == null)
+            {
                 return;
+            }
 
             using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, Color.Black, Color.Red, 0F))
             {

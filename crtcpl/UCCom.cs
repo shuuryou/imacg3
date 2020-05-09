@@ -90,7 +90,7 @@ namespace crtcpl
                 s_ResponseBufferLength += actualLength;
 
                 if (s_ResponseBufferLength < 7) // Smallest possible response
-                    {
+                {
                     goto done;
                 }
 
