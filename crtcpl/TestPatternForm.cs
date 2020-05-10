@@ -131,23 +131,6 @@ namespace crtcpl
                 case TestPatternMode.VRGB:
                     using (SolidBrush b = new SolidBrush(Color.Red))
                     {
-                        e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height / 3);
-                    }
-
-                    using (SolidBrush b = new SolidBrush(Color.Lime))
-                    {
-                        e.Graphics.FillRectangle(b, 0, this.Height / 3, this.Width, this.Height / 3);
-                    }
-
-                    using (SolidBrush b = new SolidBrush(Color.Blue))
-                    {
-                        e.Graphics.FillRectangle(b, 0, (this.Height / 3) * 2, this.Width, this.Height / 3);
-                    }
-
-                    return;
-                case TestPatternMode.HRGB:
-                    using (SolidBrush b = new SolidBrush(Color.Red))
-                    {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width / 3, this.Height);
                     }
 
@@ -159,6 +142,23 @@ namespace crtcpl
                     using (SolidBrush b = new SolidBrush(Color.Blue))
                     {
                         e.Graphics.FillRectangle(b, (this.Width / 3) * 2, 0, this.Width / 3, this.Height);
+                    }
+
+                    return;
+                case TestPatternMode.HRGB:
+                    using (SolidBrush b = new SolidBrush(Color.Red))
+                    {
+                        e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height / 3);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.Lime))
+                    {
+                        e.Graphics.FillRectangle(b, 0, this.Height / 3, this.Width, this.Height / 3);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.Blue))
+                    {
+                        e.Graphics.FillRectangle(b, 0, (this.Height / 3) * 2, this.Width, this.Height / 3);
                     }
 
                     return;
