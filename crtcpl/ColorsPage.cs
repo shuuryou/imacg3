@@ -53,12 +53,12 @@ namespace crtcpl
 
         private void redTrackBar_Scroll(object sender, EventArgs e)
         {
-            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Red, this.blueTrackBar.Value));
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Red, this.redTrackBar.Value));
         }
 
         private void greenTrackBar_Scroll(object sender, EventArgs e)
         {
-            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Green, this.blueTrackBar.Value));
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Green, this.greenTrackBar.Value));
         }
 
         private void blueTrackBar_Scroll(object sender, EventArgs e)
