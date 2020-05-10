@@ -46,6 +46,7 @@
             this.redScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.greenScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.buttonTableLayoutPanel.SuspendLayout();
@@ -185,7 +186,8 @@
             // 
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showTestPatternToolStripMenuItem,
-            this.testPatternSelectionToolStripMenuItem});
+            this.testPatternSelectionToolStripMenuItem,
+            this.showSettingsanalyzerToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
@@ -293,6 +295,13 @@
             this.blueScreenToolStripMenuItem.Tag = "9";
             this.blueScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
             // 
+            // showSettingsanalyzerToolStripMenuItem
+            // 
+            this.showSettingsanalyzerToolStripMenuItem.CheckOnClick = true;
+            this.showSettingsanalyzerToolStripMenuItem.Name = "showSettingsanalyzerToolStripMenuItem";
+            resources.ApplyResources(this.showSettingsanalyzerToolStripMenuItem, "showSettingsanalyzerToolStripMenuItem");
+            this.showSettingsanalyzerToolStripMenuItem.Click += new System.EventHandler(this.showSettingsanalyzerToolStripMenuItem_Click);
+            // 
             // AppletForm
             // 
             this.AcceptButton = this.okButton;
@@ -346,6 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem redScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem greenScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showSettingsanalyzerToolStripMenuItem;
     }
 }
 

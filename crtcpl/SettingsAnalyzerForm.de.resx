@@ -117,70 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="defaultsButton.Text" xml:space="preserve">
-    <value>復元(&amp;D)</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>キャンセル</value>
-  </data>
-  <data name="applyButton.Text" xml:space="preserve">
-    <value>適用(&amp;A)</value>
-  </data>
-  <data name="screenRadioButton.Text" xml:space="preserve">
-    <value>画面</value>
-  </data>
-  <data name="geometryRadioButton.Text" xml:space="preserve">
-    <value>形状(&amp;G)</value>
-  </data>
-  <data name="colorsRadioButton.Text" xml:space="preserve">
-    <value>色(&amp;C)</value>
-  </data>
-  <data name="advancedRadioButton.Text" xml:space="preserve">
-    <value>詳細(&amp;V)</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>画面設定</value>
+    <value>Einstellungsanalyse</value>
   </data>
-  <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
-    <value>テストパターンを表示(&amp;S)</value>
+  <data name="titleColumn.Text" xml:space="preserve">
+    <value>Einstellung</value>
   </data>
-  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
-    <value>既定のパターン(&amp;D)</value>
+  <data name="decColumn.Text" xml:space="preserve">
+    <value>Wert (Dez)</value>
   </data>
-  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
-    <value>SMPTEのカラーバー(&amp;S)</value>
+  <data name="refreshButton.Text" xml:space="preserve">
+    <value>Aktualisie&amp;ren</value>
   </data>
-  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
-    <value>FuBKのテストパターン(&amp;F)</value>
-  </data>
-  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
-    <value>水平の白黒バー(&amp;B)</value>
-  </data>
-  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
-    <value>垂直の白黒バー(&amp;B)</value>
-  </data>
-  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
-    <value>水平のRGBバー(&amp;R)</value>
-  </data>
-  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
-    <value>垂直のRGBバー(&amp;G)</value>
-  </data>
-  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>赤(&amp;E)</value>
-  </data>
-  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>緑(&amp;N)</value>
-  </data>
-  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>青(&amp;L)</value>
-  </data>
-  <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
-    <value>テストパターンの選択(&amp;T)</value>
-  </data>
-  <data name="showSettingsanalyzerToolStripMenuItem.Text" xml:space="preserve">
-    <value>設定アナライザーを表示(&amp;A)</value>
+  <data name="hexColumn.Text" xml:space="preserve">
+    <value>Wert (Hex)</value>
   </data>
 </root>

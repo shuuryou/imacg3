@@ -720,4 +720,7 @@
   <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Testbild-Auswahl</value>
   </data>
+  <data name="showSettingsanalyzerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einstellungs&amp;analyse einblenden</value>
+  </data>
 </root>

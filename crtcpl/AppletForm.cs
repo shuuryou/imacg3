@@ -8,7 +8,7 @@ namespace crtcpl
     public partial class AppletForm : Form
     {
         private readonly TestPatternForm m_TestPatternForm = new TestPatternForm();
-
+        private readonly SettingsAnalyzerForm m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
         public AppletForm()
         {
             InitializeComponent();
@@ -58,6 +58,7 @@ namespace crtcpl
                 UCCom.ConnectionClosed -= UCCom_ConnectionClosed;
                 UCCom.ConnectionOpened -= UCCom_ConnectionOpened;
                 m_TestPatternForm.Dispose();
+                m_SettingsAnalyzerForm.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -116,6 +117,7 @@ namespace crtcpl
             this.defaultsButton.Enabled = true;
             this.applyButton.Enabled = false;
             this.okButton.Enabled = true;
+            this.showSettingsanalyzerToolStripMenuItem.Enabled = true;
 
             UpdatePagesFromSRAM();
         }
@@ -128,6 +130,8 @@ namespace crtcpl
             this.defaultsButton.Enabled = false;
             this.applyButton.Enabled = false;
             this.okButton.Enabled = false;
+            this.showSettingsanalyzerToolStripMenuItem.Enabled = false;
+
             advancedRadioButton_CheckedChanged(null, EventArgs.Empty);
         }
 
@@ -369,6 +373,18 @@ namespace crtcpl
                     item.Checked = false;
 
             m_TestPatternForm.SetTestPattern(mode);
+        }
+
+        private void showSettingsanalyzerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (showSettingsanalyzerToolStripMenuItem.Checked)
+            {
+                m_SettingsAnalyzerForm.Show();
+            }
+            else
+            {
+                m_SettingsAnalyzerForm.Hide();
+            }
         }
     }
 }

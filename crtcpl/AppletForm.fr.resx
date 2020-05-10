@@ -664,7 +664,7 @@
     <value>OK</value>
   </data>
   <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
-    <value>Afficher un motif de te&amp;st</value>
+    <value>Afficher une mir&amp;e</value>
   </data>
   <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Défaut</value>
@@ -698,5 +698,8 @@
   </data>
   <data name="testPatternSelectionToolStripMenuItem.Text" xml:space="preserve">
     <value>Sélec&amp;tion de la mire</value>
+  </data>
+  <data name="showSettingsanalyzerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Afficher l'&amp;analyseur de paramètres</value>
   </data>
 </root>
