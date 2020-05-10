@@ -30,7 +30,6 @@ namespace crtcpl
             listView.Items.Add("CONFIG_OFFSET_RESERVED4");
             listView.Items.Add("CONFIG_OFFSET_RESERVED5");
             listView.Items.Add("CONFIG_OFFSET_RESERVED6");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED6");
             listView.Items.Add("CONFIG_OFFSET_CHECKSUM");
 
             foreach (ListViewItem item in listView.Items)
@@ -46,6 +45,7 @@ namespace crtcpl
 
             refreshButton.Enabled = false;
             this.UseWaitCursor = true;
+            listView.BeginUpdate();
             Application.DoEvents();
             
             byte[] sram;
@@ -61,25 +61,23 @@ namespace crtcpl
 
                 for (int i = 0; i < listView.Items.Count; i++)
                 {
-                    listView.Items[i].SubItems[0].Text = "?";
                     listView.Items[i].SubItems[1].Text = "?";
+                    listView.Items[i].SubItems[2].Text = "?";
                 }
 
                 goto end;
             }
 
-            listView.BeginUpdate();
-
             for (int i = 0; i < sram.Length; i++)
             {
-                listView.Items[i].SubItems[0].Text = string.Format(CultureInfo.InvariantCulture, "0x{0:X2}", sram[i]);
-                listView.Items[i].SubItems[1].Text = string.Format(CultureInfo.InvariantCulture, "{0}", sram[i]);
+                listView.Items[i].SubItems[1].Text = string.Format(CultureInfo.InvariantCulture, "0x{0:X2}", sram[i]);
+                listView.Items[i].SubItems[2].Text = string.Format(CultureInfo.InvariantCulture, "{0}", sram[i]);
             }
-            listView.EndUpdate();
 
         end:
             refreshButton.Enabled = true;
             this.UseWaitCursor = false;
+            listView.EndUpdate();
         }
     }
 }
