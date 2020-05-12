@@ -73,9 +73,29 @@ namespace crtcpl.ImageRes {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FUBKCARD {
+        internal static System.Drawing.Bitmap FUBK1024 {
             get {
-                object obj = ResourceManager.GetObject("FUBKCARD", resourceCulture);
+                object obj = ResourceManager.GetObject("FUBK1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FUBK640 {
+            get {
+                object obj = ResourceManager.GetObject("FUBK640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FUBK800 {
+            get {
+                object obj = ResourceManager.GetObject("FUBK800", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +323,29 @@ namespace crtcpl.ImageRes {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SMPTECARD {
+        internal static System.Drawing.Bitmap SMPTE1024 {
             get {
-                object obj = ResourceManager.GetObject("SMPTECARD", resourceCulture);
+                object obj = ResourceManager.GetObject("SMPTE1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SMPTE640 {
+            get {
+                object obj = ResourceManager.GetObject("SMPTE640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SMPTE800 {
+            get {
+                object obj = ResourceManager.GetObject("SMPTE800", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

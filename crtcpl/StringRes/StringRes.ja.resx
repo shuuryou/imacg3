@@ -162,4 +162,7 @@
   <data name="AlreadyRunningTitle" xml:space="preserve">
     <value>画面設定</value>
   </data>
+  <data name="ComErrorBadRate" xml:space="preserve">
+    <value>選択`した送信レートは無効です。</value>
+  </data>
 </root>

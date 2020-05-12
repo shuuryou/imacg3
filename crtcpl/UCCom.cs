@@ -23,12 +23,23 @@ namespace crtcpl
 
         public static ReadOnlyCollection<string> AvailablePorts =
             new ReadOnlyCollection<string>(SerialPort.GetPortNames());
+
+        public static ReadOnlyCollection<int> AvailableBitRates = new
+                ReadOnlyCollection<int>(new int[] {
+                    300, 600, 1200, 2400, 4800, 9600, 19200,
+                    38400, 57600, 115200, 230400, 460800, 921600 });
+
         public static bool IsOpen { get; private set; }
-        public static void Open(string port)
+        public static void Open(string port, int rate)
         {
             if (port == null)
             {
                 throw new ArgumentNullException(nameof(port));
+            }
+
+            if (!AvailableBitRates.Contains(rate))
+            {
+                throw new ArgumentOutOfRangeException(nameof(rate));
             }
 
             if (IsOpen)
@@ -36,7 +47,7 @@ namespace crtcpl
                 return;
             }
 
-            s_SerialPort = new SerialPort(port, 9600, Parity.None, 8, StopBits.One)
+            s_SerialPort = new SerialPort(port, rate, Parity.None, 8, StopBits.One)
             {
                 WriteTimeout = 1000,
                 DtrEnable = false

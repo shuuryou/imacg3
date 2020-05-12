@@ -131,15 +131,27 @@
     <value>166, 21</value>
   </data>
   <data name="connectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 30</value>
+    <value>119, 57</value>
   </data>
   <data name="connectButton.Text" xml:space="preserve">
     <value>&amp;Verbinden</value>
   </data>
   <data name="disconnectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 30</value>
+    <value>200, 57</value>
   </data>
   <data name="disconnectButton.Text" xml:space="preserve">
     <value>&amp;Trennen</value>
+  </data>
+  <data name="rateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="rateLabel.Text" xml:space="preserve">
+    <value>Übertragungs&amp;rate:</value>
+  </data>
+  <data name="rateComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 30</value>
+  </data>
+  <data name="rateComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
   </data>
 </root>

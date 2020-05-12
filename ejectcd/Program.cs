@@ -10,8 +10,7 @@ namespace ejectcd
     {
         public static int Main(string[] args)
         {
-            bool result;
-            Mutex m = new Mutex(true, "ejectcd", out result);
+            Mutex m = new Mutex(true, "ejectcd", out bool result);
 
             if (!result)
             {
@@ -41,7 +40,9 @@ namespace ejectcd
                 foreach (DriveInfo drive in drives)
                 {
                     if (drive.DriveType != DriveType.CDRom)
+                    {
                         continue;
+                    }
 
                     Console.WriteLine("Eject CD-ROM drive {0}.", drive.Name);
 
@@ -71,7 +72,9 @@ namespace ejectcd
                     finally
                     {
                         if (hDrive.ToInt32() != INVALID_HANDLE_VALUE)
+                        {
                             CloseHandle(hDrive);
+                        }
                     }
                 }
 

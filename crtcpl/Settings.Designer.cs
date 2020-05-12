@@ -46,5 +46,17 @@ namespace crtcpl {
                 this["NeedsUpgrade"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("9600")]
+        public int SerialRate {
+            get {
+                return ((int)(this["SerialRate"]));
+            }
+            set {
+                this["SerialRate"] = value;
+            }
+        }
     }
 }

@@ -97,6 +97,11 @@
       <DependentUpon>ColorsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="ImageRes\ImageRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageRes.resx</DependentUpon>
+    </Compile>
     <Compile Include="SettingsAnalyzerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +118,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ImageRes\ImageRes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ImageRes.resx</DependentUpon>
-    </Compile>
     <Compile Include="ScreenPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,12 +146,15 @@
     </Compile>
     <EmbeddedResource Include="AdvancedPage.de.resx">
       <DependentUpon>AdvancedPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvancedPage.fr.resx">
       <DependentUpon>AdvancedPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvancedPage.ja.resx">
       <DependentUpon>AdvancedPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AdvancedPage.resx">
       <DependentUpon>AdvancedPage.cs</DependentUpon>
@@ -228,8 +231,6 @@
       <Link>signing.snk</Link>
     </None>
     <None Include="app.config" />
-    <None Include="ImageRes\fubk.emf" />
-    <None Include="ImageRes\smpte.emf" />
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -237,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ImageRes\appicon.ico" />
+    <Content Include="ImageRes\fubk1024.png" />
+    <Content Include="ImageRes\fubk640.png" />
+    <Content Include="ImageRes\fubk800.png" />
     <Content Include="ImageRes\imac.png" />
     <Content Include="ImageRes\res001.png" />
     <Content Include="ImageRes\res002.png" />
@@ -259,6 +263,9 @@
     <Content Include="ImageRes\res019.png" />
     <Content Include="ImageRes\res020.png" />
     <Content Include="ImageRes\screen.png" />
+    <Content Include="ImageRes\smpte1024.png" />
+    <Content Include="ImageRes\smpte640.png" />
+    <Content Include="ImageRes\smpte800.png" />
     <Content Include="ImageRes\tab1.png" />
     <Content Include="ImageRes\tab2.png" />
     <Content Include="ImageRes\tab3.png" />

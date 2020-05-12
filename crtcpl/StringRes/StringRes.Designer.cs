@@ -133,6 +133,15 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The selected transmission rate is invalid..
+        /// </summary>
+        internal static string ComErrorBadRate {
+            get {
+                return ResourceManager.GetString("ComErrorBadRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This program is not compatible with the attached IVAD controller..
         /// </summary>
         internal static string ComErrorBadVersion {

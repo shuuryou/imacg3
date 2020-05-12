@@ -141,6 +141,9 @@
   <data name="ComErrorBadPort" xml:space="preserve">
     <value>Le port de contrôle sélectionné n'est pas valide.</value>
   </data>
+  <data name="ComErrorBadRate" xml:space="preserve">
+    <value>Le débit d’envoi des données sélectionné n'est pas valide.</value>
+  </data>
   <data name="ComErrorBadVersion" xml:space="preserve">
     <value>Ce programme n'est pas compatible avec le contrôleur IVAD joint.</value>
   </data>

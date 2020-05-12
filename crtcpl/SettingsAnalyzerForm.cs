@@ -11,28 +11,28 @@ namespace crtcpl
         {
             InitializeComponent();
 
-            listView.Items.Add("CONFIG_OFFSET_CONTRAST");
-            listView.Items.Add("CONFIG_OFFSET_HORIZONTAL_POS");
-            listView.Items.Add("CONFIG_OFFSET_HEIGHT");
-            listView.Items.Add("CONFIG_OFFSET_VERTICAL_POS");
-            listView.Items.Add("CONFIG_OFFSET_KEYSTONE");
-            listView.Items.Add("CONFIG_OFFSET_PINCUSHION");
-            listView.Items.Add("CONFIG_OFFSET_WIDTH");
-            listView.Items.Add("CONFIG_OFFSET_PARALLELOGRAM");
-            listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS");
-            listView.Items.Add("CONFIG_OFFSET_ROTATION");
-            listView.Items.Add("CONFIG_OFFSET_RED");
-            listView.Items.Add("CONFIG_OFFSET_GREEN");
-            listView.Items.Add("CONFIG_OFFSET_BLUE");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED1");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED2");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED3");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED4");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED5");
-            listView.Items.Add("CONFIG_OFFSET_RESERVED6");
-            listView.Items.Add("CONFIG_OFFSET_CHECKSUM");
+            this.listView.Items.Add("CONFIG_OFFSET_CONTRAST");
+            this.listView.Items.Add("CONFIG_OFFSET_HORIZONTAL_POS");
+            this.listView.Items.Add("CONFIG_OFFSET_HEIGHT");
+            this.listView.Items.Add("CONFIG_OFFSET_VERTICAL_POS");
+            this.listView.Items.Add("CONFIG_OFFSET_KEYSTONE");
+            this.listView.Items.Add("CONFIG_OFFSET_PINCUSHION");
+            this.listView.Items.Add("CONFIG_OFFSET_WIDTH");
+            this.listView.Items.Add("CONFIG_OFFSET_PARALLELOGRAM");
+            this.listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS");
+            this.listView.Items.Add("CONFIG_OFFSET_ROTATION");
+            this.listView.Items.Add("CONFIG_OFFSET_RED");
+            this.listView.Items.Add("CONFIG_OFFSET_GREEN");
+            this.listView.Items.Add("CONFIG_OFFSET_BLUE");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED1");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED2");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED3");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED4");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED5");
+            this.listView.Items.Add("CONFIG_OFFSET_RESERVED6");
+            this.listView.Items.Add("CONFIG_OFFSET_CHECKSUM");
 
-            foreach (ListViewItem item in listView.Items)
+            foreach (ListViewItem item in this.listView.Items)
             {
                 item.SubItems.Add("?");
                 item.SubItems.Add("?");
@@ -43,11 +43,11 @@ namespace crtcpl
         {
             Trace.Assert(UCCom.IsOpen, "UCCom has no connection at the moment!");
 
-            refreshButton.Enabled = false;
+            this.refreshButton.Enabled = false;
             this.UseWaitCursor = true;
-            listView.BeginUpdate();
+            this.listView.BeginUpdate();
             Application.DoEvents();
-            
+
             byte[] sram;
 
             try
@@ -59,10 +59,10 @@ namespace crtcpl
                 MessageBox.Show(this, string.Format(CultureInfo.CurrentCulture, StringRes.StringRes.CantUpdatePages,
                     ex.Message), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                for (int i = 0; i < listView.Items.Count; i++)
+                for (int i = 0; i < this.listView.Items.Count; i++)
                 {
-                    listView.Items[i].SubItems[1].Text = "?";
-                    listView.Items[i].SubItems[2].Text = "?";
+                    this.listView.Items[i].SubItems[1].Text = "?";
+                    this.listView.Items[i].SubItems[2].Text = "?";
                 }
 
                 goto end;
@@ -70,14 +70,14 @@ namespace crtcpl
 
             for (int i = 0; i < sram.Length; i++)
             {
-                listView.Items[i].SubItems[1].Text = string.Format(CultureInfo.InvariantCulture, "0x{0:X2}", sram[i]);
-                listView.Items[i].SubItems[2].Text = string.Format(CultureInfo.InvariantCulture, "{0}", sram[i]);
+                this.listView.Items[i].SubItems[1].Text = string.Format(CultureInfo.InvariantCulture, "0x{0:X2}", sram[i]);
+                this.listView.Items[i].SubItems[2].Text = string.Format(CultureInfo.InvariantCulture, "{0}", sram[i]);
             }
 
         end:
-            refreshButton.Enabled = true;
+            this.refreshButton.Enabled = true;
             this.UseWaitCursor = false;
-            listView.EndUpdate();
+            this.listView.EndUpdate();
         }
     }
 }

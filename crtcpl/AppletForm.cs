@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -19,6 +20,14 @@ namespace crtcpl
             if (UCCom.IsOpen)
             {
                 UpdatePagesFromSRAM();
+            }
+
+            Rectangle resolution = Screen.FromHandle(this.Handle).Bounds;
+
+            if (resolution.Width != 640 && resolution.Width != 800 && resolution.Width != 1024)
+            {
+                this.fuBKTestCardToolStripMenuItem.Enabled = false;
+                this.sMPTEColorBarToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -57,8 +66,8 @@ namespace crtcpl
                 this.components.Dispose();
                 UCCom.ConnectionClosed -= UCCom_ConnectionClosed;
                 UCCom.ConnectionOpened -= UCCom_ConnectionOpened;
-                m_TestPatternForm.Dispose();
-                m_SettingsAnalyzerForm.Dispose();
+                this.m_TestPatternForm.Dispose();
+                this.m_SettingsAnalyzerForm.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -351,14 +360,14 @@ namespace crtcpl
 
         private void showTestPatternToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (showTestPatternToolStripMenuItem.Checked)
+            if (this.showTestPatternToolStripMenuItem.Checked)
             {
-                m_TestPatternForm.Show();
+                this.m_TestPatternForm.Show();
                 this.TopMost = true;
             }
             else
             {
-                m_TestPatternForm.Hide();
+                this.m_TestPatternForm.Hide();
                 this.TopMost = false;
             }
         }
@@ -368,22 +377,26 @@ namespace crtcpl
             int tag = int.Parse(((ToolStripMenuItem)sender).Tag.ToString(), NumberStyles.None);
             TestPatternForm.TestPatternMode mode = (TestPatternForm.TestPatternMode)tag;
 
-            foreach (ToolStripMenuItem item in testPatternSelectionToolStripMenuItem.DropDownItems)
+            foreach (ToolStripMenuItem item in this.testPatternSelectionToolStripMenuItem.DropDownItems)
+            {
                 if (item != sender)
+                {
                     item.Checked = false;
+                }
+            }
 
-            m_TestPatternForm.SetTestPattern(mode);
+            this.m_TestPatternForm.SetTestPattern(mode);
         }
 
         private void showSettingsanalyzerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (showSettingsanalyzerToolStripMenuItem.Checked)
+            if (this.showSettingsanalyzerToolStripMenuItem.Checked)
             {
-                m_SettingsAnalyzerForm.Show();
+                this.m_SettingsAnalyzerForm.Show();
             }
             else
             {
-                m_SettingsAnalyzerForm.Hide();
+                this.m_SettingsAnalyzerForm.Hide();
             }
         }
     }

@@ -117,13 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="comPortLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 13</value>
+  </data>
   <data name="comPortLabel.Text" xml:space="preserve">
     <value>IVADの制御ポート(&amp;P):</value>
+  </data>
+  <data name="comPortComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 3</value>
+  </data>
+  <data name="comPortComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="connectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 57</value>
   </data>
   <data name="connectButton.Text" xml:space="preserve">
     <value>接続(&amp;C)</value>
   </data>
+  <data name="disconnectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 57</value>
+  </data>
   <data name="disconnectButton.Text" xml:space="preserve">
     <value>切断(&amp;D)</value>
+  </data>
+  <data name="rateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="rateLabel.Text" xml:space="preserve">
+    <value>送信レート(&amp;R):</value>
+  </data>
+  <data name="rateComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 30</value>
+  </data>
+  <data name="rateComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
   </data>
 </root>

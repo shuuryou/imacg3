@@ -33,11 +33,25 @@ namespace crtcpl
                 this.comPortComboBox.Items.Add(port);
             }
 
+            foreach (int rate in UCCom.AvailableBitRates)
+            {
+                this.rateComboBox.Items.Add(rate);
+            }
+
             for (int i = 0; i < this.comPortComboBox.Items.Count; i++)
             {
                 if (((string)this.comPortComboBox.Items[i]).Equals(Settings.Default.SerialPort, StringComparison.OrdinalIgnoreCase))
                 {
                     this.comPortComboBox.SelectedIndex = i;
+                    break;
+                }
+            }
+
+            for (int i = 0; i < this.rateComboBox.Items.Count; i++)
+            {
+                if (((int)this.rateComboBox.Items[i]).Equals(Settings.Default.SerialRate))
+                {
+                    this.rateComboBox.SelectedIndex = i;
                     break;
                 }
             }
@@ -67,11 +81,19 @@ namespace crtcpl
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(this.rateComboBox.Text))
+            {
+                MessageBox.Show(this.ParentForm, StringRes.StringRes.ComErrorBadRate,
+                    StringRes.StringRes.ComErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
             byte[] ret;
 
             try
             {
-                UCCom.Open(this.comPortComboBox.Text);
+                UCCom.Open(this.comPortComboBox.Text, (int)this.rateComboBox.SelectedValue);
                 ret = UCCom.SendCommand(1, 0, 0);
             }
             catch (UCComException ex)
@@ -99,6 +121,7 @@ namespace crtcpl
             }
 
             Settings.Default.SerialPort = this.comPortComboBox.Text;
+            Settings.Default.SerialRate = (int)this.rateComboBox.SelectedItem;
             Settings.Default.Save();
         }
 

@@ -121,8 +121,14 @@
   <data name="APPICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>appicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FUBKCARD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>fubk.emf;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FUBK1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>fubk1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FUBK640" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>fubk640.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FUBK800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>fubk800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMAC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>imac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +196,14 @@
   <data name="SCREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SMPTECARD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>smpte.emf;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SMPTE1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>smpte1024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SMPTE640" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>smpte640.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SMPTE800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>smpte800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TAB1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>tab1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

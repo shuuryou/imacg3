@@ -74,7 +74,7 @@ namespace crtcpl
                     bool bad = false;
                     try
                     {
-                        UCCom.Open(Settings.Default.SerialPort);
+                        UCCom.Open(Settings.Default.SerialPort, Settings.Default.SerialRate);
                         byte[] ret = UCCom.SendCommand(1, 0, 0);
 
                         if (ret == null || ret.Length != 1 || ret[0] != SUPPORTED_EEPROM_VERSION)

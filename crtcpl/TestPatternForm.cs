@@ -189,7 +189,9 @@ namespace crtcpl
         internal void SetTestPattern(TestPatternMode mode)
         {
             if (!Enum.IsDefined(typeof(TestPatternMode), mode))
+            {
                 throw new ArgumentOutOfRangeException(nameof(mode));
+            }
 
             this.m_TestPatternMode = mode;
 
@@ -223,15 +225,43 @@ namespace crtcpl
                 goto end;
             }
 
+            Rectangle resolution = Screen.FromHandle(this.Handle).Bounds;
+
             if (this.m_TestPatternMode == TestPatternMode.SMPTE)
             {
-                this.m_TestPattern = ImageRes.ImageRes.SMPTECARD;
+                switch (resolution.Width)
+                {
+                    case 640:
+                        this.m_TestPattern = ImageRes.ImageRes.SMPTE640;
+                        break;
+                    case 800:
+                        this.m_TestPattern = ImageRes.ImageRes.SMPTE800;
+                        break;
+                    case 1024:
+                    default:
+                        this.m_TestPattern = ImageRes.ImageRes.SMPTE1024;
+                        break;
+                }
+
                 goto end;
             }
 
             if (this.m_TestPatternMode == TestPatternMode.FuBK)
             {
-                this.m_TestPattern = ImageRes.ImageRes.FUBKCARD;
+                switch (resolution.Width)
+                {
+                    case 640:
+                        this.m_TestPattern = ImageRes.ImageRes.FUBK640;
+                        break;
+                    case 800:
+                        this.m_TestPattern = ImageRes.ImageRes.FUBK800;
+                        break;
+                    case 1024:
+                    default:
+                        this.m_TestPattern = ImageRes.ImageRes.FUBK1024;
+                        break;
+                }
+
                 goto end;
             }
 
@@ -242,6 +272,7 @@ namespace crtcpl
         private void TestPatternForm_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
+            {
                 if (f.GetType() == typeof(AppletForm))
                 {
                     if (f.Visible)
@@ -257,12 +288,15 @@ namespace crtcpl
                     }
                     return;
                 }
+            }
         }
 
         private void TestPatternForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
+            {
                 foreach (Form f in Application.OpenForms)
+                {
                     if (f.GetType() == typeof(AppletForm))
                     {
                         f.Show();
@@ -270,6 +304,8 @@ namespace crtcpl
                         f.TopMost = true;
                         return;
                     }
+                }
+            }
         }
     }
 }

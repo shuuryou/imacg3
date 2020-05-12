@@ -141,6 +141,9 @@
   <data name="ComErrorBadPort" xml:space="preserve">
     <value>Der ausgewählte Port ist ungültig.</value>
   </data>
+  <data name="ComErrorBadRate" xml:space="preserve">
+    <value>Die ausgewählte Übertragungsrate ist ungültig.</value>
+  </data>
   <data name="ComErrorBadVersion" xml:space="preserve">
     <value>Dieses Programm ist nicht mit dem angeschlossenen IVAD-Controller kompatibel.</value>
   </data>
