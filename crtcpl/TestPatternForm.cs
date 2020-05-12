@@ -23,7 +23,8 @@ namespace crtcpl
             HRGB = 6,
             RED = 7,
             GREEN = 8,
-            BLUE = 9
+            BLUE = 9,
+            AppleGrayBars = 10,
         }
 
         private TestPatternMode m_TestPatternMode;
@@ -180,6 +181,43 @@ namespace crtcpl
                     using (SolidBrush b = new SolidBrush(Color.Blue))
                     {
                         e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height);
+                    }
+
+                    return;
+                case TestPatternMode.AppleGrayBars:
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(0, 0, 0)))
+                    {
+                        e.Graphics.FillRectangle(b, 0, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(46, 46, 46)))
+                    {
+                        e.Graphics.FillRectangle(b, this.Width / 7, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(86, 86, 86)))
+                    {
+                        e.Graphics.FillRectangle(b, (this.Width / 7) * 2, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(121, 121, 121)))
+                    {
+                        e.Graphics.FillRectangle(b, (this.Width / 7) * 3, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(169, 169, 169)))
+                    {
+                        e.Graphics.FillRectangle(b, (this.Width / 7) * 4, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(199, 199, 199)))
+                    {
+                        e.Graphics.FillRectangle(b, (this.Width / 7) * 5, 0, this.Width / 7, this.Height);
+                    }
+
+                    using (SolidBrush b = new SolidBrush(Color.FromArgb(228, 228, 228)))
+                    {
+                        e.Graphics.FillRectangle(b, (this.Width / 7) * 6, 0, this.Width / 7, this.Height);
                     }
 
                     return;

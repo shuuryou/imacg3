@@ -480,6 +480,18 @@
   <data name="ADVANCED.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;ADVANCED.Name" xml:space="preserve">
+    <value>ADVANCED</value>
+  </data>
+  <data name="&gt;&gt;ADVANCED.Type" xml:space="preserve">
+    <value>crtcpl.AdvancedPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  </data>
+  <data name="&gt;&gt;ADVANCED.Parent" xml:space="preserve">
+    <value>pagePanel</value>
+  </data>
+  <data name="&gt;&gt;ADVANCED.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="COLORS.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 48</value>
   </data>
@@ -491,6 +503,18 @@
   </data>
   <data name="COLORS.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;COLORS.Name" xml:space="preserve">
+    <value>COLORS</value>
+  </data>
+  <data name="&gt;&gt;COLORS.Type" xml:space="preserve">
+    <value>crtcpl.ColorsPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  </data>
+  <data name="&gt;&gt;COLORS.Parent" xml:space="preserve">
+    <value>pagePanel</value>
+  </data>
+  <data name="&gt;&gt;COLORS.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GEOMETRY.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
@@ -507,6 +531,18 @@
   <data name="GEOMETRY.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;GEOMETRY.Name" xml:space="preserve">
+    <value>GEOMETRY</value>
+  </data>
+  <data name="&gt;&gt;GEOMETRY.Type" xml:space="preserve">
+    <value>crtcpl.GeometryPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  </data>
+  <data name="&gt;&gt;GEOMETRY.Parent" xml:space="preserve">
+    <value>pagePanel</value>
+  </data>
+  <data name="&gt;&gt;GEOMETRY.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="SCREEN.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
@@ -518,6 +554,18 @@
   </data>
   <data name="SCREEN.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;SCREEN.Name" xml:space="preserve">
+    <value>SCREEN</value>
+  </data>
+  <data name="&gt;&gt;SCREEN.Type" xml:space="preserve">
+    <value>crtcpl.ScreenPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
+  </data>
+  <data name="&gt;&gt;SCREEN.Parent" xml:space="preserve">
+    <value>pagePanel</value>
+  </data>
+  <data name="&gt;&gt;SCREEN.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="defaultsButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -531,6 +579,18 @@
   <data name="defaultsButton.Text" xml:space="preserve">
     <value>&amp;Defaults</value>
   </data>
+  <data name="&gt;&gt;defaultsButton.Name" xml:space="preserve">
+    <value>defaultsButton</value>
+  </data>
+  <data name="&gt;&gt;defaultsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;defaultsButton.Parent" xml:space="preserve">
+    <value>buttonTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;defaultsButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 3</value>
   </data>
@@ -543,6 +603,18 @@
   <data name="okButton.Text" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
+    <value>okButton</value>
+  </data>
+  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
+    <value>buttonTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>322, 3</value>
   </data>
@@ -554,6 +626,18 @@
   </data>
   <data name="cancelButton.Text" xml:space="preserve">
     <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
+    <value>buttonTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="applyButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -570,75 +654,93 @@
   <data name="applyButton.Text" xml:space="preserve">
     <value>&amp;Apply</value>
   </data>
+  <data name="&gt;&gt;applyButton.Name" xml:space="preserve">
+    <value>applyButton</value>
+  </data>
+  <data name="&gt;&gt;applyButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applyButton.Parent" xml:space="preserve">
+    <value>buttonTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;applyButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="imageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABm
-        DgAAAk1TRnQBSQFMAgEBBAEAAfgBAAH4AQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABIAMAAQEBAAEgBgABIP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8APgADiAH/A4gB/y8A
-        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wOIAf8DqgH/A7sB/wwAA4gB/wMGAf8DAAH/
-        AzkB/wPMAf8DzAH/AzkB/wMAAf8DBgH/A4gB/x8AAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wOIAf8DqQH/A7sB/x8AAf8DAAH/IwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwYB/wMAAf8DAAH/A7sB/wO7Af8DuwH/BAADzAH/ASgCAAL/AgAC/wIAAv8CAAL/AgAB/wGqAgAB/wEA
-        AaoBAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAEoAQAB/wPMAf8LAAH/AwAB/wMA
-        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DBwH/AwAB/wMAAf8DugH/A7sB/wO7Af8IAAOqAf8DOQH/
-        DwAB/wMAAf8MAAM5Af8DqgH/DwAB/wPMAf8CAAHdAf8DzAH/A8wB/wPMAf8DzAH/ARcBzAEXAf8BAAHM
-        AQAB/wEAAcwBAAH/A7sB/wPMAf8DzAH/DAABKAIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wHMAQAB/wHM
-        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAASgBAAH/CwAB/wPH
-        Af8CAAHcAf8BxwHLAccB/wPMAf8DzAH/A8wB/wPMAf8DzAH/A8sB/wPJAf8DyAH/A8cB/xAAAzkB/wMA
-        Af8DOQH/CAADWwH/A1sB/wgAAzkB/wMAAf8DOQH/DwAB/wPMDf8BFwHMARcB/wEAAcwBAAH/AQABzAEA
-        Af8BAAEGAQAB/wEAAaoBAAH/AQABzAEABf8DzAH/CAADiAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8BSgEA
-        A/8BAAP/AQAB/wFKAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wOI
-        Af8HAAH/A8gB/wP4Af8D+gH/A/sB/wPKAf8DOQH/AwAB/wMAAf8DAAH/AwAB/wP6Af8DzAH/FAADOQH/
-        AwAB/wQAA6oB/wMGAf8DBgH/A6oB/wcAAf8DOQH/EwAB/wPMAf8DAAH/AQABSgEAAf8BAAHMAQAB/wEA
-        AcwBAAH/AswBmQL/AswC/wLMAv8CzAH/AQABzAEAAf8BAAHMAQAB/wPMAf8IAAMGAv8CAAL/AgAC/wIA
-        Av8CAAL/AgAC/wHMAQAD/wEAA/8BAAH/AcwB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/
-        AQAB/wEAAf8BAAH/AwYB/wcAAf8DyQH/AwAB/wMAAf8BmQJKAf8BqgKpAv8CzAL/AswC/wLMAf8B/gLL
-        Av8CzAH/A/sB/wPMAf8cAAMXAf8DAAH/AwAB/wMAAf8DAAH/AxcB/xgAAwYB/wFKAcwBSgH/AQABzAEA
-        Af8BAAHMAQAB/wGZAcwBSgL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AQABzAEAAf8BSgHMAUoB/wsA
-        Av8CAAL/AgAC/wIAAv8CAAL/AgAD/wEAA/8BAAP/AQAD/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEA
-        Af8BAAH/AQAB/wEAAf8BAAH/AwAB/wQAAwcB/wPKAf8DAAH/Af4CywH/AwAB/wH6AsgC/wLMAv8CzAL/
-        AswC/wLMAv8CzAH/A/wB/wPMAf8YAAOqAf8DAAH/A4gB/wgAA4gB/wMAAf8DqgH/EAABmQHMAZkB/wEA
-        AcwBAAH/AQABzAEAAf8BAAFKAQAC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AcwB/wHM
-        Af8BAAHMAQAB/wO7Af8EAAM5Av8CAAL/AgAC/wIAAv8CAAL/AQABFwL/AZkK/wGZA/8BAAH/AZkB/wEA
-        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AzkB/wQAAwYB/wPMAf8DAAL/AswB/wH7AskB/wMA
-        Av8CzAL/AswC/wLMAf8B/QLLAv8CzAX/A8wB/wgAA4gB/wMAAf8DAAH/A1sB/wMGAf8DAAH/EwAB/wMG
-        Af8DWwH/AwAB/wMAAf8DiAH/AQABzAEAAf8BAAG7AQAB/wPMAf8DAAL/AswC/wLMAv8CzAL/AswC/wLM
-        Av8CzAL/AswC/wLMBf8BFwHMARcB/wEAAcwBAAH/BAADzAH/AaoCAAL/AgAC/wIAAv8BAAEXAv8BAAP/
-        AQAK/wEAA/8BAAP/AQAB/wHMAf8BAAH/AQAB/wEAAf8BAAH/AQABqgEAAf8DzAH/BAADBgH/A8wB/wMA
-        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8IAAOIAf8DAAH/AwAB/wNbAf8DBgH/
-        AwAB/xMAAf8DBgH/A1sB/wMAAf8DAAH/A4gB/wGZAcwBmQH/AQABzAEAAf8DzAH/AwAC/wLMAv8CzAL/
-        AswC/wLMAv8CzAL/AswC/wLMAv8CzAX/A8wB/wEAAcwBAAH/AQABzAEAAf8EAANKAf8B3QIAAv8CAAL/
-        AQAD/wEAA/8BAAP/AUoC/wFKA/8BAAP/AQAD/wEAA/8BAAH/AUoB/wEAAd0BAAH/A0oB/wgAAwYB/wPM
-        Af8DAAL/AswB/wMAAf8B/ALKAv8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8YAAOqAf8DAAH/A4gB/wgA
-        A4gB/wMAAf8DqgH/FQABzAEAAf8BFwHMARcB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/
-        AswB/wPuAf8BAAHMAQAB/wEAAcwBAAH/DAADiAH/ATkCAAH/AcwBAAP/AQAC/wGZAQAC/wIAAv8CAAL/
-        AQABmQL/AQAD/wEAAcwC/wEAARcBzAH/A4gB/wwAAwUB/wPLAf8DAAH/Af0CywH/AwAB/wMAAv8CzAL/
-        AswC/wLMAf8B/QLLAf8B/QLLAf8D/gH/A8sB/xwAAxcB/wMAAf8DAAH/AwAB/wMAAf8DFwH/GQABKAEA
-        Af8BAAHMAQAB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/ARcBzAEXAf8BAAHMAQAB/wEA
-        AcwBAAH/FwAB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAB7gH/EAADBQH/A8sB/wMA
-        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AfsCyQH/A/4B/wPJAf8UAAM5Af8DAAH/BAADqgH/
-        AwYB/wMGAf8DqgH/BwAB/wM5Af8QAAMGAf8BAAHMAQAB/wEAAVsBAAL/AswC/wLMAv8CzAL/AswC/wLM
-        Af8BmQHMAZkB/wEAAcwBAAH/AQABzAEAAf8BzAH/AcwB/wPMAf8UAAM5Af8CAAL/AgAC/wIAAv8CAAL/
-        AgAC/wIAAv8CAAL/AgAC/wIAAZkB/xAAAwUB/wPKAf8DAAH/AfoCyAH/AfsCyQH/AfwCygL/AswC/wLM
-        Av8CzAL/AswB/wH6AsgB/wP+Af8DyAH/EAADOQH/AwAB/wM5Af8IAANbAf8DWwH/CAADOQH/AwAB/wM5
-        Af8MAAMGAf8BmQHMAZkB/wEAAcwBAAH/A4gB/wOIAf8DiAH/A1sB/wEAAcwBAAH/AQABzAEAAf8BFwGZ
-        ARcB/wOIAf8DzAH/A8wB/xQAA8wB/wIAAaoB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8DFwH/
-        EAADBQH/A7sB/wOJAf8DiQH/A4gB/wOIAf8DiAH/A4gB/wOIAf8DhwH/A4YB/wPMAf8DxwH/EAADqgH/
-        AzkB/w8AAf8DAAH/DAADOQH/A6oB/wwAAwYB/wMAAf8BAAHMAQAB/wEXAcwBFwH/A90B/wEXAcwBFwH/
-        AQABzAEAAf8BAAHMAQAB/wPdAf8D3QH/A90B/wPdAf8D3QH/GAADSgH/AgAB3QH/AgAC/wIAAv8CAAL/
-        AgAC/wIAAv8CAAE5Af8UAAMKAf8DAAH/AxkB/wOGAf8D2gH/A9sB/wPdAf8D3QH/A90B/wPcAf8D3AH/
-        A9wB/wPXAf8nAAH/AwAB/ygAAZkBzAGZAf8BAAHMAQAB/wEAAcwBAAH/AQABzAEAAf8DAAH/AwAB/wMA
-        Af8DBgH/AwYB/wMoAf8DKAH/HAADiAH/AgABOQH/AgABzAH/AgAB7gH/AgABmQH/AxcB/ygAA7kB/wM4
-        Af8DAAH/AwAB/wMAAf8DBgH/AwgB/wMpAf8DKAH/JAADiAH/A4gB/y0AAcwBAAH/AUoBzAFKAf+oAAFC
-        AU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/gQAB/gF/AfABAAHgAQcB8AEAAf4BfwGA
-        AQABgAEBAYABAAHOAXMBgAEDAYABAQGAAQMBxgFjAYABAwIAAYABAwHkAScBgAEDAgABgAEDAfgBHwGA
-        AQMCAAGAAQMB8QGPAQABAQIAAYACAwHAAQABAQIAAYACAwHAAgABgAEBAYABAwHxAY8BgAEBAcABAwGA
-        AQMB+AEfAYABAwHgAQcBgAEDAeQBJwGAAQMB4AEHAYABAwHGAWMBgAEDAeABBwGAAQMBzgFzAYABAwHw
-        AQ8BgAEDAf4BfwHgAQMB+AEfAfgBAwH+AX8B8wX/Cw==
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABk
+        DgAAAk1TRnQBSQFMAgEBBAIAAQEBAAEBARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
+        ASADAAEBAQABIAYAASD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AD4AA4gB/wOIAf8vAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DiAH/A6oB/wO7Af8MAAOIAf8DBQH/AwAB/wM4
+        Af8DzAH/A8wB/wM4Af8DAAH/AwUB/wOIAf8fAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
+        Af8DiAH/A6kB/wO7Af8fAAH/AwAB/yMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMF
+        Af8DAAH/AwAB/wO7Af8DuwH/A7sB/wQAA8wB/wEnAgAC/wIAAv8CAAL/AgAC/wIAAf8BqgIAAf8BAAGq
+        AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQABJwEAAf8DzAH/CwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwYB/wMAAf8DAAH/A7oB/wO7Af8DuwH/CAADqgH/AzgB/w8A
+        Af8DAAH/DAADOAH/A6oB/w8AAf8DzAH/AgAB3QH/A8wB/wPMAf8DzAH/A8wB/wEWAcwBFgH/AQABzAEA
+        Af8BAAHMAQAB/wO7Af8DzAH/A8wB/wwAAScCAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8BzAEAAf8BzAH/
+        AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAEnAQAB/wsAAf8DxwH/
+        AgAB3AH/AccBywHHAf8DzAH/A8wB/wPMAf8DzAH/A8wB/wPLAf8DyQH/A8gB/wPHAf8QAAM4Af8DAAH/
+        AzgB/wgAA1oB/wNaAf8IAAM4Af8DAAH/AzgB/w8AAf8DzA3/ARYBzAEWAf8BAAHMAQAB/wEAAcwBAAH/
+        AQABBQEAAf8BAAGqAQAB/wEAAcwBAAX/A8wB/wgAA4gC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AUkBAAP/
+        AQAD/wEAAf8BSQH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8DiAH/
+        BwAB/wPIAf8D+AH/A/oB/wP7Af8DygH/AzgB/wMAAf8DAAH/AwAB/wMAAf8D+gH/A8wB/xQAAzgB/wMA
+        Af8EAAOqAf8DBQH/AwUB/wOqAf8HAAH/AzgB/xMAAf8DzAH/AwAB/wEAAUkBAAH/AQABzAEAAf8BAAHM
+        AQAB/wLMAZkC/wLMAv8CzAL/AswB/wEAAcwBAAH/AQABzAEAAf8DzAH/CAADBQL/AgAC/wIAAv8CAAL/
+        AgAC/wIAAv8BzAEAA/8BAAP/AQAB/wHMAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEA
+        Af8BAAH/AQAB/wMFAf8HAAH/A8kB/wMAAf8DAAH/AZkCSQH/AaoCqQL/AswC/wLMAv8CzAH/Af4CywL/
+        AswB/wP7Af8DzAH/HAADFgH/AwAB/wMAAf8DAAH/AwAB/wMWAf8YAAMFAf8BSQHMAUkB/wEAAcwBAAH/
+        AQABzAEAAf8BmQHMAUkC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswB/wEAAcwBAAH/AUkBzAFJAf8LAAL/
+        AgAC/wIAAv8CAAL/AgAC/wIAA/8BAAP/AQAD/wEAA/8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/
+        AQAB/wEAAf8BAAH/AQAB/wMAAf8EAAMGAf8DygH/AwAB/wH+AssB/wMAAf8B+gLIAv8CzAL/AswC/wLM
+        Av8CzAL/AswB/wP8Af8DzAH/GAADqgH/AwAB/wOIAf8IAAOIAf8DAAH/A6oB/xAAAZkBzAGZAf8BAAHM
+        AQAB/wEAAcwBAAH/AQABSQEAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswB/wHMAf8BzAH/
+        AQABzAEAAf8DuwH/BAADOAL/AgAC/wIAAv8CAAL/AgAC/wEAARYC/wGZCv8BmQP/AQAB/wGZAf8BAAH/
+        AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wM4Af8EAAMFAf8DzAH/AwAC/wLMAf8B+wLJAf8DAAL/
+        AswC/wLMAv8CzAH/Af0CywL/AswF/wPMAf8IAAOIAf8DAAH/AwAB/wNaAf8DBQH/AwAB/xMAAf8DBQH/
+        A1oB/wMAAf8DAAH/A4gB/wEAAcwBAAH/AQABuwEAAf8DzAH/AwAC/wLMAv8CzAL/AswC/wLMAv8CzAL/
+        AswC/wLMAv8CzAX/ARYBzAEWAf8BAAHMAQAB/wQAA8wB/wGqAgAC/wIAAv8CAAL/AQABFgL/AQAD/wEA
+        Cv8BAAP/AQAD/wEAAf8BzAH/AQAB/wEAAf8BAAH/AQAB/wEAAaoBAAH/A8wB/wQAAwUB/wPMAf8DAAL/
+        AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMBf8DzAH/CAADiAH/AwAB/wMAAf8DWgH/AwUB/wMA
+        Af8TAAH/AwUB/wNaAf8DAAH/AwAB/wOIAf8BmQHMAZkB/wEAAcwBAAH/A8wB/wMAAv8CzAL/AswC/wLM
+        Av8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8BAAHMAQAB/wEAAcwBAAH/BAADSQH/Ad0CAAL/AgAC/wEA
+        A/8BAAP/AQAD/wFJAv8BSQP/AQAD/wEAA/8BAAP/AQAB/wFJAf8BAAHdAQAB/wNJAf8IAAMFAf8DzAH/
+        AwAC/wLMAf8DAAH/AfwCygL/AswC/wLMAv8CzAL/AswC/wLMBf8DzAH/GAADqgH/AwAB/wOIAf8IAAOI
+        Af8DAAH/A6oB/xUAAcwBAAH/ARYBzAEWAf8DAAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswC/wLM
+        Af8D7gH/AQABzAEAAf8BAAHMAQAB/wwAA4gB/wE4AgAB/wHMAQAD/wEAAv8BmQEAAv8CAAL/AgAC/wEA
+        AZkC/wEAA/8BAAHMAv8BAAEWAcwB/wOIAf8MAAMEAf8DywH/AwAB/wH9AssB/wMAAf8DAAL/AswC/wLM
+        Av8CzAH/Af0CywH/Af0CywH/A/4B/wPLAf8cAAMWAf8DAAH/AwAB/wMAAf8DAAH/AxYB/xkAAScBAAH/
+        AQABzAEAAf8DAAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswB/wEWAcwBFgH/AQABzAEAAf8BAAHM
+        AQAB/xcAAf8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAe4B/xAAAwQB/wPLAf8DAAL/
+        AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswB/wH7AskB/wP+Af8DyQH/FAADOAH/AwAB/wQAA6oB/wMF
+        Af8DBQH/A6oB/wcAAf8DOAH/EAADBQH/AQABzAEAAf8BAAFaAQAC/wLMAv8CzAL/AswC/wLMAv8CzAH/
+        AZkBzAGZAf8BAAHMAQAB/wEAAcwBAAH/AcwB/wHMAf8DzAH/FAADOAH/AgAC/wIAAv8CAAL/AgAC/wIA
+        Av8CAAL/AgAC/wIAAv8CAAGZAf8QAAMEAf8DygH/AwAB/wH6AsgB/wH7AskB/wH8AsoC/wLMAv8CzAL/
+        AswC/wLMAf8B+gLIAf8D/gH/A8gB/xAAAzgB/wMAAf8DOAH/CAADWgH/A1oB/wgAAzgB/wMAAf8DOAH/
+        DAADBQH/AZkBzAGZAf8BAAHMAQAB/wOIAf8DiAH/A4gB/wNaAf8BAAHMAQAB/wEAAcwBAAH/ARYBmQEW
+        Af8DiAH/A8wB/wPMAf8UAAPMAf8CAAGqAf8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AxYB/xAA
+        AwQB/wO7Af8DiQH/A4kB/wOIAf8DiAH/A4gB/wOIAf8DiAH/A4cB/wOGAf8DzAH/A8cB/xAAA6oB/wM4
+        Af8PAAH/AwAB/wwAAzgB/wOqAf8MAAMFAf8DAAH/AQABzAEAAf8BFgHMARYB/wPdAf8BFgHMARYB/wEA
+        AcwBAAH/AQABzAEAAf8D3QH/A90B/wPdAf8D3QH/A90B/xgAA0kB/wIAAd0B/wIAAv8CAAL/AgAC/wIA
+        Av8CAAL/AgABOAH/FAADCQH/AwAB/wMYAf8DhgH/A9oB/wPbAf8D3QH/A90B/wPdAf8D3AH/A9wB/wPc
+        Af8D1wH/JwAB/wMAAf8oAAGZAcwBmQH/AQABzAEAAf8BAAHMAQAB/wEAAcwBAAH/AwAB/wMAAf8DAAH/
+        AwUB/wMFAf8DJwH/AycB/xwAA4gB/wIAATgB/wIAAcwB/wIAAe4B/wIAAZkB/wMWAf8oAAO5Af8DNwH/
+        AwAB/wMAAf8DAAH/AwUB/wMHAf8DKAH/AycB/yQAA4gB/wOIAf8tAAHMAQAB/wFJAcwBSQH/qAABQgFN
+        AT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEBFgAD/4EAAf4BfwHwAQAB4AEHAfABAAH+AX8BgAEA
+        AYABAQGAAQABzgFzAYABAwGAAQEBgAEDAcYBYwGAAQMCAAGAAQMB5AEnAYABAwIAAYABAwH4AR8BgAED
+        AgABgAEDAfEBjwEAAQECAAGAAgMBwAEAAQECAAGAAgMBwAIAAYABAQGAAQMB8QGPAYABAQHAAQMBgAED
+        AfgBHwGAAQMB4AEHAYABAwHkAScBgAEDAeABBwGAAQMBxgFjAYABAwHgAQcBgAEDAc4BcwGAAQMB8AEP
+        AYABAwH+AX8B4AEDAfgBHwH4AQMB/gF/AfMF/ws=
 </value>
   </data>
+  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>120, 17</value>
+  </metadata>
   <data name="showTestPatternToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F1</value>
   </data>
@@ -647,6 +749,72 @@
   </data>
   <data name="showTestPatternToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Show test pattern</value>
+  </data>
+  <data name="screenAdjustToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Default</value>
+  </data>
+  <data name="sMPTEColorBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;SMPTE color bars</value>
+  </data>
+  <data name="fuBKTestCardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;FuBK test card</value>
+  </data>
+  <data name="bWverticalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;B/W (vertical)</value>
+  </data>
+  <data name="bWhorizontalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>B/&amp;W (horizontal)</value>
+  </data>
+  <data name="rGBverticalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;RGB (vertical)</value>
+  </data>
+  <data name="rGBhorizontalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
+    <value>R&amp;GB (horizontal)</value>
+  </data>
+  <data name="redScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>R&amp;ed screen</value>
+  </data>
+  <data name="greenScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gree&amp;n screen</value>
+  </data>
+  <data name="blueScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>B&amp;lue screen</value>
+  </data>
+  <data name="graybarsSCREENAdjustToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="graybarsSCREENAdjustToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gray &amp;bars</value>
   </data>
   <data name="testPatternSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 22</value>
@@ -664,7 +832,7 @@
     <value>Show settings &amp;analyzer</value>
   </data>
   <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 70</value>
+    <value>213, 92</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
     <value>contextMenuStrip</value>
@@ -672,66 +840,9 @@
   <data name="&gt;&gt;contextMenuStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="screenAdjustToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="screenAdjustToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Default</value>
-  </data>
-  <data name="sMPTEColorBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="sMPTEColorBarToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;SMPTE color bars</value>
-  </data>
-  <data name="fuBKTestCardToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;FuBK test card</value>
-  </data>
-  <data name="bWverticalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="bWverticalToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;B/W (vertical)</value>
-  </data>
-  <data name="bWhorizontalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
-    <value>B/&amp;W (horizontal)</value>
-  </data>
-  <data name="rGBverticalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;RGB (vertical)</value>
-  </data>
-  <data name="rGBhorizontalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="rGBhorizontalToolStripMenuItem.Text" xml:space="preserve">
-    <value>R&amp;GB (horizontal)</value>
-  </data>
-  <data name="redScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="redScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>R&amp;ed screen</value>
-  </data>
-  <data name="greenScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="greenScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Gree&amp;n screen</value>
-  </data>
-  <data name="blueScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 22</value>
-  </data>
-  <data name="blueScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>B&amp;lue screen</value>
-  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -1277,19 +1388,16 @@
   <data name="&gt;&gt;showSettingsanalyzerToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;graybarsSCREENAdjustToolStripMenuItem.Name" xml:space="preserve">
+    <value>graybarsSCREENAdjustToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;graybarsSCREENAdjustToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AppletForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>120, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

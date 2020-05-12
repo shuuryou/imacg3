@@ -47,6 +47,7 @@
             this.greenScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graybarsSCREENAdjustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.buttonTableLayoutPanel.SuspendLayout();
@@ -211,7 +212,8 @@
             this.rGBhorizontalToolStripMenuItem,
             this.redScreenToolStripMenuItem,
             this.greenScreenToolStripMenuItem,
-            this.blueScreenToolStripMenuItem});
+            this.blueScreenToolStripMenuItem,
+            this.graybarsSCREENAdjustToolStripMenuItem});
             this.testPatternSelectionToolStripMenuItem.Name = "testPatternSelectionToolStripMenuItem";
             resources.ApplyResources(this.testPatternSelectionToolStripMenuItem, "testPatternSelectionToolStripMenuItem");
             // 
@@ -302,6 +304,13 @@
             resources.ApplyResources(this.showSettingsanalyzerToolStripMenuItem, "showSettingsanalyzerToolStripMenuItem");
             this.showSettingsanalyzerToolStripMenuItem.Click += new System.EventHandler(this.showSettingsanalyzerToolStripMenuItem_Click);
             // 
+            // graybarsSCREENAdjustToolStripMenuItem
+            // 
+            this.graybarsSCREENAdjustToolStripMenuItem.Name = "graybarsSCREENAdjustToolStripMenuItem";
+            resources.ApplyResources(this.graybarsSCREENAdjustToolStripMenuItem, "graybarsSCREENAdjustToolStripMenuItem");
+            this.graybarsSCREENAdjustToolStripMenuItem.Tag = "10";
+            this.graybarsSCREENAdjustToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
             // AppletForm
             // 
             this.AcceptButton = this.okButton;
@@ -356,6 +365,7 @@
         private System.Windows.Forms.ToolStripMenuItem greenScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showSettingsanalyzerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graybarsSCREENAdjustToolStripMenuItem;
     }
 }
 
