@@ -93,9 +93,9 @@ namespace crtcpl
                     }
                     else
                     {
-                        /*Under mono an exception is thrown and the GUI hangsif the serial port is opened
+                        /*Under mono an exception is thrown and the GUI hangs if the serial port is opened
                          * immediately after closing it. It seems there are several threads
-                         * still waiting to die left over that are left from the previous 
+                         * still waiting to die left over from the previous 
                          * serialport instance. Waiting from 5 to 10 seconds before opening
                          * the port works but who has time to wait.....
                          * This works with mono and it could be a temporary workaround
