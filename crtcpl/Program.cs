@@ -102,13 +102,23 @@ namespace crtcpl
             {
                 m.ReleaseMutex();
                 m.Dispose();
+
+                try
+                {
+                    if (UCCom.IsOpen)
+                        UCCom.Close();
+                } catch (Exception) { }
+
+                Application.Exit();
+
+#if MONO
                 /*
                  * With mono, there are some threads that remain when the application is closed
                  * preventing the application from closing and causing it to seem like it's hanging.
-                 * The two following calls remedy this.
-                 **/
-                Application.Exit();
+                 */
+
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
+#endif
             }
         }
     }
