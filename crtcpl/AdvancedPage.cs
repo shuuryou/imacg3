@@ -62,12 +62,14 @@ namespace crtcpl
         private void UCCom_ConnectionClosed(object sender, EventArgs e)
         {
             this.comPortComboBox.Enabled = true;
+            this.rateComboBox.Enabled = true;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
         private void UCCom_ConnectionOpened(object sender, EventArgs e)
         {
             this.comPortComboBox.Enabled = false;
+            this.rateComboBox.Enabled = false;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
@@ -93,7 +95,7 @@ namespace crtcpl
 
             try
             {
-                UCCom.Open(this.comPortComboBox.Text, (int)this.rateComboBox.SelectedValue);
+                UCCom.Open(this.comPortComboBox.Text, (int)this.rateComboBox.Items[this.rateComboBox.SelectedIndex]);
                 ret = UCCom.SendCommand(1, 0, 0);
             }
             catch (UCComException ex)
