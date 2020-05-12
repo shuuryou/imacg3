@@ -56,7 +56,11 @@ namespace crtcpl
                 }
             }
 
-            comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
+            // Fake it once on load since we don't know the state at this point
+            if (UCCom.IsOpen)
+                UCCom_ConnectionOpened(null, EventArgs.Empty);
+            else
+                UCCom_ConnectionClosed(null, EventArgs.Empty);
         }
 
         private void UCCom_ConnectionClosed(object sender, EventArgs e)
