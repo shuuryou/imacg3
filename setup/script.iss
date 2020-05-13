@@ -46,9 +46,9 @@ Source: "..\crtcpl\bin\Release\crtcplres.dll"; DestDir: "{app}"; Flags: ignoreve
 Source: "..\crtcpl\bin\Release\ejectcd.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: ejectcd
 Source: "..\crtcpl\bin\Release\ejectcd.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: ejectcd
 Source: "..\crtcpl\bin\Release\rightclickassist.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: rightclickassist
-Source: "..\crtcpl\bin\Release\de\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
-Source: "..\crtcpl\bin\Release\fr\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
-Source: "..\crtcpl\bin\Release\ja\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
+Source: "..\crtcpl\bin\Release\de\*"; DestDir: "{app}\de\"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
+Source: "..\crtcpl\bin\Release\fr\*"; DestDir: "{app}\fr\"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
+Source: "..\crtcpl\bin\Release\ja\*"; DestDir: "{app}\ja\"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: crtcpl
 
 [Run]
 Filename: "{app}\rightclickassist.exe"; WorkingDir: "{app}"; Flags: postinstall runasoriginaluser nowait; Description: "Start Right Click Assist now"; Components: rightclickassist
