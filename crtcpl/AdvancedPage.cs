@@ -58,22 +58,30 @@ namespace crtcpl
 
             // Fake it once on load since we don't know the state at this point
             if (UCCom.IsOpen)
+            {
                 UCCom_ConnectionOpened(null, EventArgs.Empty);
+            }
             else
+            {
                 UCCom_ConnectionClosed(null, EventArgs.Empty);
+            }
         }
 
         private void UCCom_ConnectionClosed(object sender, EventArgs e)
         {
-            this.comPortComboBox.Enabled = true;
-            this.rateComboBox.Enabled = true;
+            this.comPortLabel.Enabled =
+                this.comPortComboBox.Enabled =
+                this.rateLabel.Enabled =
+                this.rateComboBox.Enabled = true;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
         private void UCCom_ConnectionOpened(object sender, EventArgs e)
         {
-            this.comPortComboBox.Enabled = false;
-            this.rateComboBox.Enabled = false;
+            this.comPortLabel.Enabled =
+                this.comPortComboBox.Enabled =
+                this.rateLabel.Enabled =
+                this.rateComboBox.Enabled = false;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 

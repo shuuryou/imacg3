@@ -82,7 +82,9 @@ namespace crtcpl
                 int actualLength;
 
                 if (!IsOpen || !s_SerialPort.IsOpen)
+                {
                     return;
+                }
 
                 actualLength = s_SerialPort.BaseStream.EndRead(ar);
 

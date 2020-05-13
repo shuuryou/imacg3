@@ -107,8 +107,11 @@ namespace crtcpl
                 try
                 {
                     if (UCCom.IsOpen)
+                    {
                         UCCom.Close();
-                } catch (Exception) { }
+                    }
+                }
+                catch (Exception) { }
 
                 Application.Exit();
 
