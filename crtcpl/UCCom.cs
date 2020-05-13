@@ -66,9 +66,9 @@ namespace crtcpl
                 throw new UCComException(StringRes.StringRes.UCComIOError, e);
             }
 
-            kickoffRead();
-
             IsOpen = true;
+
+            kickoffRead();
 
             ConnectionOpened?.Invoke(null, EventArgs.Empty);
         }

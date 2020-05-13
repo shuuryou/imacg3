@@ -89,6 +89,7 @@ namespace crtcpl
 
                     if (bad)
                     {
+                        UCCom.Close();
                         Settings.Default.SerialPort = null;
                     }
                 }
