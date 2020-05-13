@@ -3,24 +3,24 @@
     public static class Constants
     {
         public const int CONFIG_OFFSET_CONTRAST = 0;
-        public const int CONFIG_OFFSET_HORIZONTAL_POS = 1;
-        public const int CONFIG_OFFSET_HEIGHT = 2;
-        public const int CONFIG_OFFSET_VERTICAL_POS = 3;
-        public const int CONFIG_OFFSET_KEYSTONE = 4;
-        public const int CONFIG_OFFSET_PINCUSHION = 5;
-        public const int CONFIG_OFFSET_WIDTH = 6;
-        public const int CONFIG_OFFSET_PARALLELOGRAM = 7;
-        public const int CONFIG_OFFSET_BRIGHTNESS = 8;
-        public const int CONFIG_OFFSET_ROTATION = 9;
-        public const int CONFIG_OFFSET_RED = 10;
-        public const int CONFIG_OFFSET_GREEN = 11;
-        public const int CONFIG_OFFSET_BLUE = 12;
-        public const int CONFIG_OFFSET_RESERVED1 = 13;
-        public const int CONFIG_OFFSET_RESERVED2 = 14;
-        public const int CONFIG_OFFSET_RESERVED3 = 15;
-        public const int CONFIG_OFFSET_RESERVED4 = 16;
-        public const int CONFIG_OFFSET_RESERVED5 = 17;
-        public const int CONFIG_OFFSET_RESERVED6 = 18;
+        public const int CONFIG_OFFSET_RESERVED1 = 1;
+        public const int CONFIG_OFFSET_RESERVED2 = 2;
+        public const int CONFIG_OFFSET_RESERVED3 = 3;
+        public const int CONFIG_OFFSET_RED = 4;
+        public const int CONFIG_OFFSET_GREEN =5;
+        public const int CONFIG_OFFSET_BLUE = 6;
+        public const int CONFIG_OFFSET_HORIZONTAL_POS = 7;
+        public const int CONFIG_OFFSET_HEIGHT = 8;
+        public const int CONFIG_OFFSET_VERTICAL_POS = 9;
+        public const int CONFIG_OFFSET_RESERVED4 = 10;
+        public const int CONFIG_OFFSET_KEYSTONE = 11;
+        public const int CONFIG_OFFSET_PINCUSHION = 12;
+        public const int CONFIG_OFFSET_WIDTH = 13;
+        public const int CONFIG_OFFSET_RESERVED5 = 14;
+        public const int CONFIG_OFFSET_PARALLELOGRAM =15;
+        public const int CONFIG_OFFSET_RESERVED6 = 16;
+        public const int CONFIG_OFFSET_BRIGHTNESS = 17;
+        public const int CONFIG_OFFSET_ROTATION = 18;
         public const int CONFIG_OFFSET_CHECKSUM = 19;
 
         public const int IVAD_SETTING_CONTRAST = 0x00;
