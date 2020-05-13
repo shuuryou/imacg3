@@ -2,6 +2,8 @@
 {
     public static class Constants
     {
+        // If you change the order here, take care to also change the list
+        // in the constructor of SettingsAnalyzerForm.cs
         public const int CONFIG_OFFSET_CONTRAST = 0;
         public const int CONFIG_OFFSET_RESERVED1 = 1;
         public const int CONFIG_OFFSET_RESERVED2 = 2;

@@ -12,24 +12,24 @@ namespace crtcpl
             InitializeComponent();
 
             this.listView.Items.Add("CONFIG_OFFSET_CONTRAST");
-            this.listView.Items.Add("CONFIG_OFFSET_HORIZONTAL_POS");
-            this.listView.Items.Add("CONFIG_OFFSET_HEIGHT");
-            this.listView.Items.Add("CONFIG_OFFSET_VERTICAL_POS");
-            this.listView.Items.Add("CONFIG_OFFSET_KEYSTONE");
-            this.listView.Items.Add("CONFIG_OFFSET_PINCUSHION");
-            this.listView.Items.Add("CONFIG_OFFSET_WIDTH");
-            this.listView.Items.Add("CONFIG_OFFSET_PARALLELOGRAM");
-            this.listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS");
-            this.listView.Items.Add("CONFIG_OFFSET_ROTATION");
-            this.listView.Items.Add("CONFIG_OFFSET_RED");
-            this.listView.Items.Add("CONFIG_OFFSET_GREEN");
-            this.listView.Items.Add("CONFIG_OFFSET_BLUE");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED1");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED2");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED3");
+            this.listView.Items.Add("CONFIG_OFFSET_RED");
+            this.listView.Items.Add("CONFIG_OFFSET_GREEN");
+            this.listView.Items.Add("CONFIG_OFFSET_BLUE");
+            this.listView.Items.Add("CONFIG_OFFSET_HORIZONTAL_POS");
+            this.listView.Items.Add("CONFIG_OFFSET_HEIGHT");
+            this.listView.Items.Add("CONFIG_OFFSET_VERTICAL_POS");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED4");
+            this.listView.Items.Add("CONFIG_OFFSET_KEYSTONE");
+            this.listView.Items.Add("CONFIG_OFFSET_PINCUSHION");
+            this.listView.Items.Add("CONFIG_OFFSET_WIDTH");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED5");
+            this.listView.Items.Add("CONFIG_OFFSET_PARALLELOGRAM");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED6");
+            this.listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS");
+            this.listView.Items.Add("CONFIG_OFFSET_ROTATION");
             this.listView.Items.Add("CONFIG_OFFSET_CHECKSUM");
 
             foreach (ListViewItem item in this.listView.Items)
