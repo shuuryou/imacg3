@@ -103,12 +103,9 @@ namespace crtcpl
                 return;
             }
 
-            byte[] ret;
-
             try
             {
                 UCCom.Open(this.comPortComboBox.Text, (int)this.rateComboBox.Items[this.rateComboBox.SelectedIndex]);
-                ret = UCCom.SendCommand(1, 0, 0);
             }
             catch (UCComException ex)
             {
@@ -120,16 +117,6 @@ namespace crtcpl
                 MessageBox.Show(this.ParentForm, string.Format(CultureInfo.CurrentCulture,
                     StringRes.StringRes.ComErrorOther, ex.Message), StringRes.StringRes.ComErrorTitle,
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return;
-            }
-
-            if (ret == null || ret.Length != 1 || ret[0] != Program.SUPPORTED_EEPROM_VERSION)
-            {
-                UCCom.Close();
-
-                MessageBox.Show(this.ParentForm, StringRes.StringRes.ComErrorBadVersion,
-                    StringRes.StringRes.ComErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }

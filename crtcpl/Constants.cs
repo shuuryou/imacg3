@@ -2,6 +2,8 @@
 {
     public static class Constants
     {
+        public const byte SUPPORTED_EEPROM_VERSION = 0x02;
+
         // If you change the order here, take care to also change the list
         // in the constructor of SettingsAnalyzerForm.cs
         public const int CONFIG_OFFSET_CONTRAST = 0;

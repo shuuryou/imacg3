@@ -144,9 +144,6 @@
   <data name="ComErrorBadRate" xml:space="preserve">
     <value>Die ausgewählte Übertragungsrate ist ungültig.</value>
   </data>
-  <data name="ComErrorBadVersion" xml:space="preserve">
-    <value>Dieses Programm ist nicht mit dem angeschlossenen IVAD-Controller kompatibel.</value>
-  </data>
   <data name="ComErrorOther" xml:space="preserve">
     <value>Bei der Verbindung mit dem IVAD-Steuerungsport ist ein Fehler aufgetreten. {0}</value>
   </data>
@@ -155,6 +152,9 @@
   </data>
   <data name="UCComBadResponse" xml:space="preserve">
     <value>Es wurde eine ungültige Antwort erhalten.</value>
+  </data>
+  <data name="UCComBadVersion" xml:space="preserve">
+    <value>Dieses Programm ist nicht mit dem angeschlossenen IVAD-Controller kompatibel.</value>
   </data>
   <data name="UCComIOError" xml:space="preserve">
     <value>Der Port befindet sich in einem ungültigen Zustand</value>
