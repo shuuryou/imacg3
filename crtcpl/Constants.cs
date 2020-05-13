@@ -7,7 +7,7 @@
         public const int CONFIG_OFFSET_RESERVED2 = 2;
         public const int CONFIG_OFFSET_RESERVED3 = 3;
         public const int CONFIG_OFFSET_RED = 4;
-        public const int CONFIG_OFFSET_GREEN =5;
+        public const int CONFIG_OFFSET_GREEN = 5;
         public const int CONFIG_OFFSET_BLUE = 6;
         public const int CONFIG_OFFSET_HORIZONTAL_POS = 7;
         public const int CONFIG_OFFSET_HEIGHT = 8;
@@ -17,7 +17,7 @@
         public const int CONFIG_OFFSET_PINCUSHION = 12;
         public const int CONFIG_OFFSET_WIDTH = 13;
         public const int CONFIG_OFFSET_RESERVED5 = 14;
-        public const int CONFIG_OFFSET_PARALLELOGRAM =15;
+        public const int CONFIG_OFFSET_PARALLELOGRAM = 15;
         public const int CONFIG_OFFSET_RESERVED6 = 16;
         public const int CONFIG_OFFSET_BRIGHTNESS = 17;
         public const int CONFIG_OFFSET_ROTATION = 18;

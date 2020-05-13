@@ -8,7 +8,7 @@ namespace crtcpl
 {
     public static class Program
     {
-        public const byte SUPPORTED_EEPROM_VERSION = 0x01;
+        public const byte SUPPORTED_EEPROM_VERSION = 0x02;
 
         [STAThread]
         public static void Main()
