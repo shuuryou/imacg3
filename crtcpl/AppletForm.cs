@@ -368,24 +368,22 @@ namespace crtcpl
 
         private void showTestPatternToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.showTestPatternToolStripMenuItem.Checked)
+            if (!this.showTestPatternToolStripMenuItem.Checked)
             {
                 this.m_TestPatternForm = new TestPatternForm();
-                this.m_TestPatternForm.Show(this);
+                this.m_TestPatternForm.Show();
                 this.TopMost = true;
                 showTestPatternToolStripMenuItem.Checked = true;
                 testPatternSelectionToolStripMenuItem.Enabled = true;
                 testPatternSelectionToolStripMenuItem_Click(screenAdjustToolStripMenuItem, EventArgs.Empty);
+                return;
             }
-            else
-            {
-                this.m_TestPatternForm.Close();
-                this.m_TestPatternForm.Dispose();
-                this.m_TestPatternForm = null;
-                this.TopMost = false;
-                showTestPatternToolStripMenuItem.Checked = false;
-                testPatternSelectionToolStripMenuItem.Enabled = false;
-            }
+            this.m_TestPatternForm.Close();
+            this.m_TestPatternForm.Dispose();
+            this.m_TestPatternForm = null;
+            this.TopMost = false;
+            showTestPatternToolStripMenuItem.Checked = false;
+            testPatternSelectionToolStripMenuItem.Enabled = false;
         }
 
         private void testPatternSelectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -401,19 +399,18 @@ namespace crtcpl
 
         private void showSettingsanalyzerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.showSettingsanalyzerToolStripMenuItem.Checked)
+            if (!this.showSettingsanalyzerToolStripMenuItem.Checked)
             {
                 this.m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
                 this.m_SettingsAnalyzerForm.Show(this);
                 showSettingsanalyzerToolStripMenuItem.Checked = true;
+                return;
             }
-            else
-            {
-                this.m_SettingsAnalyzerForm.Close();
-                this.m_SettingsAnalyzerForm.Dispose();
-                this.m_SettingsAnalyzerForm = null;
-                showSettingsanalyzerToolStripMenuItem.Checked = false;
-            }
+
+            this.m_SettingsAnalyzerForm.Close();
+            this.m_SettingsAnalyzerForm.Dispose();
+            this.m_SettingsAnalyzerForm = null;
+            showSettingsanalyzerToolStripMenuItem.Checked = false;
         }
     }
 }

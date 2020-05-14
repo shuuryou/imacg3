@@ -121,6 +121,19 @@
   <data name="tableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ADVANCED.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 48</value>
+  </data>
+  <data name="ADVANCED.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>303, 31</value>
+  </data>
+  <data name="ADVANCED.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 31</value>
+  </data>
+  <data name="ADVANCED.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;ADVANCED.Name" xml:space="preserve">
     <value>ADVANCED</value>
   </data>
@@ -132,6 +145,18 @@
   </data>
   <data name="&gt;&gt;ADVANCED.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="COLORS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 48</value>
+  </data>
+  <data name="COLORS.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>355, 235</value>
+  </data>
+  <data name="COLORS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 236</value>
+  </data>
+  <data name="COLORS.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;COLORS.Name" xml:space="preserve">
     <value>COLORS</value>
@@ -145,6 +170,22 @@
   <data name="&gt;&gt;COLORS.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GEOMETRY.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="GEOMETRY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 32</value>
+  </data>
+  <data name="GEOMETRY.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>343, 242</value>
+  </data>
+  <data name="GEOMETRY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 242</value>
+  </data>
+  <data name="GEOMETRY.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;GEOMETRY.Name" xml:space="preserve">
     <value>GEOMETRY</value>
   </data>
@@ -156,6 +197,18 @@
   </data>
   <data name="&gt;&gt;GEOMETRY.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="SCREEN.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="SCREEN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="SCREEN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 152</value>
+  </data>
+  <data name="SCREEN.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;SCREEN.Name" xml:space="preserve">
     <value>SCREEN</value>
@@ -169,11 +222,9 @@
   <data name="&gt;&gt;SCREEN.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pagePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pagePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 70</value>
   </data>
@@ -204,6 +255,18 @@
   <data name="buttonTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="defaultsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="defaultsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="defaultsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="defaultsButton.Text" xml:space="preserve">
+    <value>&amp;Defaults</value>
+  </data>
   <data name="&gt;&gt;defaultsButton.Name" xml:space="preserve">
     <value>defaultsButton</value>
   </data>
@@ -215,6 +278,18 @@
   </data>
   <data name="&gt;&gt;defaultsButton.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 3</value>
+  </data>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="&gt;&gt;okButton.Name" xml:space="preserve">
     <value>okButton</value>
@@ -228,6 +303,18 @@
   <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 3</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
     <value>cancelButton</value>
   </data>
@@ -239,6 +326,21 @@
   </data>
   <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="applyButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="applyButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 3</value>
+  </data>
+  <data name="applyButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="applyButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="applyButton.Text" xml:space="preserve">
+    <value>&amp;Apply</value>
   </data>
   <data name="&gt;&gt;applyButton.Name" xml:space="preserve">
     <value>applyButton</value>
@@ -468,204 +570,6 @@
   <data name="tableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="pagePanel" Row="1" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="buttonTableLayoutPanel" Row="2" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="screenRadioButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="geometryRadioButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="colorsRadioButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="advancedRadioButton" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,25,Percent,25,Percent,25,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="ADVANCED.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 48</value>
-  </data>
-  <data name="ADVANCED.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>303, 31</value>
-  </data>
-  <data name="ADVANCED.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 31</value>
-  </data>
-  <data name="ADVANCED.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ADVANCED.Name" xml:space="preserve">
-    <value>ADVANCED</value>
-  </data>
-  <data name="&gt;&gt;ADVANCED.Type" xml:space="preserve">
-    <value>crtcpl.AdvancedPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
-  </data>
-  <data name="&gt;&gt;ADVANCED.Parent" xml:space="preserve">
-    <value>pagePanel</value>
-  </data>
-  <data name="&gt;&gt;ADVANCED.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="COLORS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 48</value>
-  </data>
-  <data name="COLORS.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>355, 235</value>
-  </data>
-  <data name="COLORS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 236</value>
-  </data>
-  <data name="COLORS.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;COLORS.Name" xml:space="preserve">
-    <value>COLORS</value>
-  </data>
-  <data name="&gt;&gt;COLORS.Type" xml:space="preserve">
-    <value>crtcpl.ColorsPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
-  </data>
-  <data name="&gt;&gt;COLORS.Parent" xml:space="preserve">
-    <value>pagePanel</value>
-  </data>
-  <data name="&gt;&gt;COLORS.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GEOMETRY.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="GEOMETRY.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 32</value>
-  </data>
-  <data name="GEOMETRY.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>343, 242</value>
-  </data>
-  <data name="GEOMETRY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 242</value>
-  </data>
-  <data name="GEOMETRY.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GEOMETRY.Name" xml:space="preserve">
-    <value>GEOMETRY</value>
-  </data>
-  <data name="&gt;&gt;GEOMETRY.Type" xml:space="preserve">
-    <value>crtcpl.GeometryPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
-  </data>
-  <data name="&gt;&gt;GEOMETRY.Parent" xml:space="preserve">
-    <value>pagePanel</value>
-  </data>
-  <data name="&gt;&gt;GEOMETRY.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SCREEN.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="SCREEN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="SCREEN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 152</value>
-  </data>
-  <data name="SCREEN.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;SCREEN.Name" xml:space="preserve">
-    <value>SCREEN</value>
-  </data>
-  <data name="&gt;&gt;SCREEN.Type" xml:space="preserve">
-    <value>crtcpl.ScreenPage, crtcpl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8e2fde8f57191864</value>
-  </data>
-  <data name="&gt;&gt;SCREEN.Parent" xml:space="preserve">
-    <value>pagePanel</value>
-  </data>
-  <data name="&gt;&gt;SCREEN.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="defaultsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="defaultsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="defaultsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="defaultsButton.Text" xml:space="preserve">
-    <value>&amp;Defaults</value>
-  </data>
-  <data name="&gt;&gt;defaultsButton.Name" xml:space="preserve">
-    <value>defaultsButton</value>
-  </data>
-  <data name="&gt;&gt;defaultsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;defaultsButton.Parent" xml:space="preserve">
-    <value>buttonTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;defaultsButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 3</value>
-  </data>
-  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
-  </data>
-  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
-    <value>buttonTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 3</value>
-  </data>
-  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
-    <value>cancelButton</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
-    <value>buttonTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="applyButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="applyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 3</value>
-  </data>
-  <data name="applyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="applyButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="applyButton.Text" xml:space="preserve">
-    <value>&amp;Apply</value>
-  </data>
-  <data name="&gt;&gt;applyButton.Name" xml:space="preserve">
-    <value>applyButton</value>
-  </data>
-  <data name="&gt;&gt;applyButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;applyButton.Parent" xml:space="preserve">
-    <value>buttonTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;applyButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -674,63 +578,63 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABm
-        DgAAAk1TRnQBSQFMAgEBBAEAARABAQEQAQEBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        DgAAAk1TRnQBSQFMAgEBBAEAARgBAQEYAQEBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABIAMAAQEBAAEgBgABIP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8APgADiAH/A4gB/y8A
-        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wOIAf8DqgH/A7sB/wwAA4gB/wMDAf8DAAH/
-        AzYB/wPMAf8DzAH/AzYB/wMAAf8DAwH/A4gB/x8AAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wOIAf8DqgH/A7sB/wwAA4gB/wMCAf8DAAH/
+        AzUB/wPMAf8DzAH/AzUB/wMAAf8DAgH/A4gB/x8AAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wOIAf8DqQH/A7sB/x8AAf8DAAH/IwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwMB/wMAAf8DAAH/A7sB/wO7Af8DuwH/BAADzAH/ASUCAAL/AgAC/wIAAv8CAAL/AgAB/wGqAgAB/wEA
-        AaoBAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAElAQAB/wPMAf8LAAH/AwAB/wMA
-        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DBAH/AwAB/wMAAf8DugH/A7sB/wO7Af8IAAOqAf8DNgH/
-        DwAB/wMAAf8MAAM2Af8DqgH/DwAB/wPMAf8CAAHdAf8DzAH/A8wB/wPMAf8DzAH/ARQBzAEUAf8BAAHM
-        AQAB/wEAAcwBAAH/A7sB/wPMAf8DzAH/DAABJQIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wHMAQAB/wHM
-        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAASUBAAH/CwAB/wPH
-        Af8CAAHcAf8BxwHLAccB/wPMAf8DzAH/A8wB/wPMAf8DzAH/A8sB/wPJAf8DyAH/A8cB/xAAAzYB/wMA
-        Af8DNgH/CAADWAH/A1gB/wgAAzYB/wMAAf8DNgH/DwAB/wPMDf8BFAHMARQB/wEAAcwBAAH/AQABzAEA
-        Af8BAAEDAQAB/wEAAaoBAAH/AQABzAEABf8DzAH/CAADiAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8BRwEA
-        A/8BAAP/AQAB/wFHAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wOI
-        Af8HAAH/A8gB/wP4Af8D+gH/A/sB/wPKAf8DNgH/AwAB/wMAAf8DAAH/AwAB/wP6Af8DzAH/FAADNgH/
-        AwAB/wQAA6oB/wMDAf8DAwH/A6oB/wcAAf8DNgH/EwAB/wPMAf8DAAH/AQABRwEAAf8BAAHMAQAB/wEA
-        AcwBAAH/AswBmQL/AswC/wLMAv8CzAH/AQABzAEAAf8BAAHMAQAB/wPMAf8IAAMDAv8CAAL/AgAC/wIA
+        AwIB/wMAAf8DAAH/A7sB/wO7Af8DuwH/BAADzAH/ASQCAAL/AgAC/wIAAv8CAAL/AgAB/wGqAgAB/wEA
+        AaoBAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAEkAQAB/wPMAf8LAAH/AwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAwH/AwAB/wMAAf8DugH/A7sB/wO7Af8IAAOqAf8DNQH/
+        DwAB/wMAAf8MAAM1Af8DqgH/DwAB/wPMAf8CAAHdAf8DzAH/A8wB/wPMAf8DzAH/ARMBzAETAf8BAAHM
+        AQAB/wEAAcwBAAH/A7sB/wPMAf8DzAH/DAABJAIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wHMAQAB/wHM
+        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAASQBAAH/CwAB/wPH
+        Af8CAAHcAf8BxwHLAccB/wPMAf8DzAH/A8wB/wPMAf8DzAH/A8sB/wPJAf8DyAH/A8cB/xAAAzUB/wMA
+        Af8DNQH/CAADVwH/A1cB/wgAAzUB/wMAAf8DNQH/DwAB/wPMDf8BEwHMARMB/wEAAcwBAAH/AQABzAEA
+        Af8BAAECAQAB/wEAAaoBAAH/AQABzAEABf8DzAH/CAADiAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8BRgEA
+        A/8BAAP/AQAB/wFGAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wOI
+        Af8HAAH/A8gB/wP4Af8D+gH/A/sB/wPKAf8DNQH/AwAB/wMAAf8DAAH/AwAB/wP6Af8DzAH/FAADNQH/
+        AwAB/wQAA6oB/wMCAf8DAgH/A6oB/wcAAf8DNQH/EwAB/wPMAf8DAAH/AQABRgEAAf8BAAHMAQAB/wEA
+        AcwBAAH/AswBmQL/AswC/wLMAv8CzAH/AQABzAEAAf8BAAHMAQAB/wPMAf8IAAMCAv8CAAL/AgAC/wIA
         Av8CAAL/AgAC/wHMAQAD/wEAA/8BAAH/AcwB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/
-        AQAB/wEAAf8BAAH/AwMB/wcAAf8DyQH/AwAB/wMAAf8BmQJHAf8BqgKpAv8CzAL/AswC/wLMAf8B/gLL
-        Av8CzAH/A/sB/wPMAf8cAAMUAf8DAAH/AwAB/wMAAf8DAAH/AxQB/xgAAwMB/wFHAcwBRwH/AQABzAEA
-        Af8BAAHMAQAB/wGZAcwBRwL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AQABzAEAAf8BRwHMAUcB/wsA
+        AQAB/wEAAf8BAAH/AwIB/wcAAf8DyQH/AwAB/wMAAf8BmQJGAf8BqgKpAv8CzAL/AswC/wLMAf8B/gLL
+        Av8CzAH/A/sB/wPMAf8cAAMTAf8DAAH/AwAB/wMAAf8DAAH/AxMB/xgAAwIB/wFGAcwBRgH/AQABzAEA
+        Af8BAAHMAQAB/wGZAcwBRgL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AQABzAEAAf8BRgHMAUYB/wsA
         Av8CAAL/AgAC/wIAAv8CAAL/AgAD/wEAA/8BAAP/AQAD/wEAAf8BAAH/AQAB/wEAAf8BAAH/AQAB/wEA
-        Af8BAAH/AQAB/wEAAf8BAAH/AwAB/wQAAwQB/wPKAf8DAAH/Af4CywH/AwAB/wH6AsgC/wLMAv8CzAL/
+        Af8BAAH/AQAB/wEAAf8BAAH/AwAB/wQAAwMB/wPKAf8DAAH/Af4CywH/AwAB/wH6AsgC/wLMAv8CzAL/
         AswC/wLMAv8CzAH/A/wB/wPMAf8YAAOqAf8DAAH/A4gB/wgAA4gB/wMAAf8DqgH/EAABmQHMAZkB/wEA
-        AcwBAAH/AQABzAEAAf8BAAFHAQAC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AcwB/wHM
-        Af8BAAHMAQAB/wO7Af8EAAM2Av8CAAL/AgAC/wIAAv8CAAL/AQABFAL/AZkK/wGZA/8BAAH/AZkB/wEA
-        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AzYB/wQAAwMB/wPMAf8DAAL/AswB/wH7AskB/wMA
-        Av8CzAL/AswC/wLMAf8B/QLLAv8CzAX/A8wB/wgAA4gB/wMAAf8DAAH/A1gB/wMDAf8DAAH/EwAB/wMD
-        Af8DWAH/AwAB/wMAAf8DiAH/AQABzAEAAf8BAAG7AQAB/wPMAf8DAAL/AswC/wLMAv8CzAL/AswC/wLM
-        Av8CzAL/AswC/wLMBf8BFAHMARQB/wEAAcwBAAH/BAADzAH/AaoCAAL/AgAC/wIAAv8BAAEUAv8BAAP/
-        AQAK/wEAA/8BAAP/AQAB/wHMAf8BAAH/AQAB/wEAAf8BAAH/AQABqgEAAf8DzAH/BAADAwH/A8wB/wMA
-        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8IAAOIAf8DAAH/AwAB/wNYAf8DAwH/
-        AwAB/xMAAf8DAwH/A1gB/wMAAf8DAAH/A4gB/wGZAcwBmQH/AQABzAEAAf8DzAH/AwAC/wLMAv8CzAL/
-        AswC/wLMAv8CzAL/AswC/wLMAv8CzAX/A8wB/wEAAcwBAAH/AQABzAEAAf8EAANHAf8B3QIAAv8CAAL/
-        AQAD/wEAA/8BAAP/AUcC/wFHA/8BAAP/AQAD/wEAA/8BAAH/AUcB/wEAAd0BAAH/A0cB/wgAAwMB/wPM
+        AcwBAAH/AQABzAEAAf8BAAFGAQAC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AcwB/wHM
+        Af8BAAHMAQAB/wO7Af8EAAM1Av8CAAL/AgAC/wIAAv8CAAL/AQABEwL/AZkK/wGZA/8BAAH/AZkB/wEA
+        Af8BAAH/AQAB/wEAAf8BAAH/AQAB/wEAAf8BAAH/AzUB/wQAAwIB/wPMAf8DAAL/AswB/wH7AskB/wMA
+        Av8CzAL/AswC/wLMAf8B/QLLAv8CzAX/A8wB/wgAA4gB/wMAAf8DAAH/A1cB/wMCAf8DAAH/EwAB/wMC
+        Af8DVwH/AwAB/wMAAf8DiAH/AQABzAEAAf8BAAG7AQAB/wPMAf8DAAL/AswC/wLMAv8CzAL/AswC/wLM
+        Av8CzAL/AswC/wLMBf8BEwHMARMB/wEAAcwBAAH/BAADzAH/AaoCAAL/AgAC/wIAAv8BAAETAv8BAAP/
+        AQAK/wEAA/8BAAP/AQAB/wHMAf8BAAH/AQAB/wEAAf8BAAH/AQABqgEAAf8DzAH/BAADAgH/A8wB/wMA
+        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8IAAOIAf8DAAH/AwAB/wNXAf8DAgH/
+        AwAB/xMAAf8DAgH/A1cB/wMAAf8DAAH/A4gB/wGZAcwBmQH/AQABzAEAAf8DzAH/AwAC/wLMAv8CzAL/
+        AswC/wLMAv8CzAL/AswC/wLMAv8CzAX/A8wB/wEAAcwBAAH/AQABzAEAAf8EAANGAf8B3QIAAv8CAAL/
+        AQAD/wEAA/8BAAP/AUYC/wFGA/8BAAP/AQAD/wEAA/8BAAH/AUYB/wEAAd0BAAH/A0YB/wgAAwIB/wPM
         Af8DAAL/AswB/wMAAf8B/ALKAv8CzAL/AswC/wLMAv8CzAL/AswF/wPMAf8YAAOqAf8DAAH/A4gB/wgA
-        A4gB/wMAAf8DqgH/FQABzAEAAf8BFAHMARQB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/
-        AswB/wPuAf8BAAHMAQAB/wEAAcwBAAH/DAADiAH/ATYCAAH/AcwBAAP/AQAC/wGZAQAC/wIAAv8CAAL/
-        AQABmQL/AQAD/wEAAcwC/wEAARQBzAH/A4gB/wwAAwIB/wPLAf8DAAH/Af0CywH/AwAB/wMAAv8CzAL/
-        AswC/wLMAf8B/QLLAf8B/QLLAf8D/gH/A8sB/xwAAxQB/wMAAf8DAAH/AwAB/wMAAf8DFAH/GQABJQEA
-        Af8BAAHMAQAB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/ARQBzAEUAf8BAAHMAQAB/wEA
-        AcwBAAH/FwAB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAB7gH/EAADAgH/A8sB/wMA
-        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AfsCyQH/A/4B/wPJAf8UAAM2Af8DAAH/BAADqgH/
-        AwMB/wMDAf8DqgH/BwAB/wM2Af8QAAMDAf8BAAHMAQAB/wEAAVgBAAL/AswC/wLMAv8CzAL/AswC/wLM
-        Af8BmQHMAZkB/wEAAcwBAAH/AQABzAEAAf8BzAH/AcwB/wPMAf8UAAM2Af8CAAL/AgAC/wIAAv8CAAL/
-        AgAC/wIAAv8CAAL/AgAC/wIAAZkB/xAAAwIB/wPKAf8DAAH/AfoCyAH/AfsCyQH/AfwCygL/AswC/wLM
-        Av8CzAL/AswB/wH6AsgB/wP+Af8DyAH/EAADNgH/AwAB/wM2Af8IAANYAf8DWAH/CAADNgH/AwAB/wM2
-        Af8MAAMDAf8BmQHMAZkB/wEAAcwBAAH/A4gB/wOIAf8DiAH/A1gB/wEAAcwBAAH/AQABzAEAAf8BFAGZ
-        ARQB/wOIAf8DzAH/A8wB/xQAA8wB/wIAAaoB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8DFAH/
-        EAADAgH/A7sB/wOJAf8DiQH/A4gB/wOIAf8DiAH/A4gB/wOIAf8DhwH/A4YB/wPMAf8DxwH/EAADqgH/
-        AzYB/w8AAf8DAAH/DAADNgH/A6oB/wwAAwMB/wMAAf8BAAHMAQAB/wEUAcwBFAH/A90B/wEUAcwBFAH/
-        AQABzAEAAf8BAAHMAQAB/wPdAf8D3QH/A90B/wPdAf8D3QH/GAADRwH/AgAB3QH/AgAC/wIAAv8CAAL/
-        AgAC/wIAAv8CAAE2Af8UAAMHAf8DAAH/AxYB/wOGAf8D2gH/A9sB/wPdAf8D3QH/A90B/wPcAf8D3AH/
+        A4gB/wMAAf8DqgH/FQABzAEAAf8BEwHMARMB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAL/
+        AswB/wPuAf8BAAHMAQAB/wEAAcwBAAH/DAADiAH/ATUCAAH/AcwBAAP/AQAC/wGZAQAC/wIAAv8CAAL/
+        AQABmQL/AQAD/wEAAcwC/wEAARMBzAH/A4gB/wwAAwEB/wPLAf8DAAH/Af0CywH/AwAB/wMAAv8CzAL/
+        AswC/wLMAf8B/QLLAf8B/QLLAf8D/gH/A8sB/xwAAxMB/wMAAf8DAAH/AwAB/wMAAf8DEwH/GQABJAEA
+        Af8BAAHMAQAB/wMAAv8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/ARMBzAETAf8BAAHMAQAB/wEA
+        AcwBAAH/FwAB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAB7gH/EAADAQH/A8sB/wMA
+        Av8CzAL/AswC/wLMAv8CzAL/AswC/wLMAv8CzAH/AfsCyQH/A/4B/wPJAf8UAAM1Af8DAAH/BAADqgH/
+        AwIB/wMCAf8DqgH/BwAB/wM1Af8QAAMCAf8BAAHMAQAB/wEAAVcBAAL/AswC/wLMAv8CzAL/AswC/wLM
+        Af8BmQHMAZkB/wEAAcwBAAH/AQABzAEAAf8BzAH/AcwB/wPMAf8UAAM1Af8CAAL/AgAC/wIAAv8CAAL/
+        AgAC/wIAAv8CAAL/AgAC/wIAAZkB/xAAAwEB/wPKAf8DAAH/AfoCyAH/AfsCyQH/AfwCygL/AswC/wLM
+        Av8CzAL/AswB/wH6AsgB/wP+Af8DyAH/EAADNQH/AwAB/wM1Af8IAANXAf8DVwH/CAADNQH/AwAB/wM1
+        Af8MAAMCAf8BmQHMAZkB/wEAAcwBAAH/A4gB/wOIAf8DiAH/A1cB/wEAAcwBAAH/AQABzAEAAf8BEwGZ
+        ARMB/wOIAf8DzAH/A8wB/xQAA8wB/wIAAaoB/wIAAv8CAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8DEwH/
+        EAADAQH/A7sB/wOJAf8DiQH/A4gB/wOIAf8DiAH/A4gB/wOIAf8DhwH/A4YB/wPMAf8DxwH/EAADqgH/
+        AzUB/w8AAf8DAAH/DAADNQH/A6oB/wwAAwIB/wMAAf8BAAHMAQAB/wETAcwBEwH/A90B/wETAcwBEwH/
+        AQABzAEAAf8BAAHMAQAB/wPdAf8D3QH/A90B/wPdAf8D3QH/GAADRgH/AgAB3QH/AgAC/wIAAv8CAAL/
+        AgAC/wIAAv8CAAE1Af8UAAMGAf8DAAH/AxUB/wOGAf8D2gH/A9sB/wPdAf8D3QH/A90B/wPcAf8D3AH/
         A9wB/wPXAf8nAAH/AwAB/ygAAZkBzAGZAf8BAAHMAQAB/wEAAcwBAAH/AQABzAEAAf8DAAH/AwAB/wMA
-        Af8DAwH/AwMB/wMlAf8DJQH/HAADiAH/AgABNgH/AgABzAH/AgAB7gH/AgABmQH/AxQB/ygAA7kB/wM1
-        Af8DAAH/AwAB/wMAAf8DAwH/AwUB/wMmAf8DJQH/JAADiAH/A4gB/y0AAcwBAAH/AUcBzAFHAf+oAAFC
+        Af8DAgH/AwIB/wMkAf8DJAH/HAADiAH/AgABNQH/AgABzAH/AgAB7gH/AgABmQH/AxMB/ygAA7kB/wM0
+        Af8DAAH/AwAB/wMAAf8DAgH/AwQB/wMlAf8DJAH/JAADiAH/A4gB/y0AAcwBAAH/AUYBzAFGAf+oAAFC
         AU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/gQAB/gF/AfABAAHgAQcB8AEAAf4BfwGA
         AQABgAEBAYABAAHOAXMBgAEDAYABAQGAAQMBxgFjAYABAwIAAYABAwHkAScBgAEDAgABgAEDAfgBHwGA
         AQMCAAGAAQMB8QGPAQABAQIAAYACAwHAAQABAQIAAYACAwHAAgABgAEBAYABAwHxAY8BgAEBAcABAwGA
@@ -832,7 +736,7 @@
     <value>Show settings &amp;analyzer</value>
   </data>
   <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 70</value>
+    <value>213, 92</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip.Name" xml:space="preserve">
     <value>contextMenuStrip</value>
