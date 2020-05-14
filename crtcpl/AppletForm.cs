@@ -373,17 +373,17 @@ namespace crtcpl
                 this.m_TestPatternForm = new TestPatternForm();
                 this.m_TestPatternForm.Show();
                 this.TopMost = true;
-                showTestPatternToolStripMenuItem.Checked = true;
-                testPatternSelectionToolStripMenuItem.Enabled = true;
-                testPatternSelectionToolStripMenuItem_Click(screenAdjustToolStripMenuItem, EventArgs.Empty);
+                this.showTestPatternToolStripMenuItem.Checked = true;
+                this.testPatternSelectionToolStripMenuItem.Enabled = true;
+                testPatternSelectionToolStripMenuItem_Click(this.screenAdjustToolStripMenuItem, EventArgs.Empty);
                 return;
             }
             this.m_TestPatternForm.Close();
             this.m_TestPatternForm.Dispose();
             this.m_TestPatternForm = null;
             this.TopMost = false;
-            showTestPatternToolStripMenuItem.Checked = false;
-            testPatternSelectionToolStripMenuItem.Enabled = false;
+            this.showTestPatternToolStripMenuItem.Checked = false;
+            this.testPatternSelectionToolStripMenuItem.Enabled = false;
         }
 
         private void testPatternSelectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -392,7 +392,9 @@ namespace crtcpl
             TestPatternForm.TestPatternMode mode = (TestPatternForm.TestPatternMode)tag;
 
             foreach (ToolStripMenuItem item in this.testPatternSelectionToolStripMenuItem.DropDownItems)
-                    item.Checked = (item == sender);
+            {
+                item.Checked = (item == sender);
+            }
 
             this.m_TestPatternForm.SetTestPattern(mode);
         }
@@ -403,14 +405,14 @@ namespace crtcpl
             {
                 this.m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
                 this.m_SettingsAnalyzerForm.Show(this);
-                showSettingsanalyzerToolStripMenuItem.Checked = true;
+                this.showSettingsanalyzerToolStripMenuItem.Checked = true;
                 return;
             }
 
             this.m_SettingsAnalyzerForm.Close();
             this.m_SettingsAnalyzerForm.Dispose();
             this.m_SettingsAnalyzerForm = null;
-            showSettingsanalyzerToolStripMenuItem.Checked = false;
+            this.showSettingsanalyzerToolStripMenuItem.Checked = false;
         }
     }
 }
