@@ -47,11 +47,11 @@
             // 
             // listView
             // 
-            resources.ApplyResources(this.listView, "listView");
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.titleColumn,
             this.hexColumn,
             this.decColumn});
+            resources.ApplyResources(this.listView, "listView");
             this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
             this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -83,6 +83,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "SettingsAnalyzerForm";
