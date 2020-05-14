@@ -135,9 +135,6 @@
   <data name="paraRadioButton.Text" xml:space="preserve">
     <value>&amp;Parallélogramme</value>
   </data>
-  <data name="geometryGroupBox.Text" xml:space="preserve">
-    <value>Ajustement de la géométrie</value>
-  </data>
   <data name="pbRadioButton.Text" xml:space="preserve">
     <value>&amp;Balance en coussin</value>
   </data>

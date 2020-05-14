@@ -135,9 +135,6 @@
   <data name="paraRadioButton.Text" xml:space="preserve">
     <value>Par&amp;allelogram</value>
   </data>
-  <data name="geometryGroupBox.Text" xml:space="preserve">
-    <value>Geometrieeinstellungen</value>
-  </data>
   <data name="pbRadioButton.Text" xml:space="preserve">
     <value>Kissen&amp;balance</value>
   </data>
