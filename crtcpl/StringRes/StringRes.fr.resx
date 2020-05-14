@@ -165,4 +165,12 @@
   <data name="UCComUnauthorizedAccess" xml:space="preserve">
     <value>L'accès au port COM est refusé. Un autre programme a probablement déjà le port COM spécifié ouvert.</value>
   </data>
+  <data name="AdvancedControlsAreDangerous" xml:space="preserve">
+    <value>Les paramètres avancés sont destinés au personnel formé et pourraient endommager votre écran s'ils sont mal utilisés.
+
+Êtes-vous sûr de vouloir activer les paramètres avancés?</value>
+  </data>
+  <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
+    <value>Paramètres avancés</value>
+  </data>
 </root>

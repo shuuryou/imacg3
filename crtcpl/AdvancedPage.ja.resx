@@ -154,4 +154,10 @@
   <data name="rateComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 21</value>
   </data>
+  <data name="advancedLabel.Text" xml:space="preserve">
+    <value>詳細な制御(&amp;A):</value>
+  </data>
+  <data name="advancedCheckBox.Text" xml:space="preserve">
+    <value>すべての詳細な制御を有効にする（再起動が必要）</value>
+  </data>
 </root>

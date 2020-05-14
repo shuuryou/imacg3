@@ -138,4 +138,10 @@
   <data name="geometryGroupBox.Text" xml:space="preserve">
     <value>Geometrieeinstellungen</value>
   </data>
+  <data name="pbRadioButton.Text" xml:space="preserve">
+    <value>Kissen&amp;balance</value>
+  </data>
+  <data name="scRadioButton.Text" xml:space="preserve">
+    <value>&amp;S-Korrektur</value>
+  </data>
 </root>

@@ -61,6 +61,24 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The advanced controls were intended for trained professionals and could cause damage to your screen if used incorrectly. Are you sure you want to enable advanced controls?.
+        /// </summary>
+        internal static string AdvancedControlsAreDangerous {
+            get {
+                return ResourceManager.GetString("AdvancedControlsAreDangerous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced Controls.
+        /// </summary>
+        internal static string AdvancedControlsAreDangerousTitle {
+            get {
+                return ResourceManager.GetString("AdvancedControlsAreDangerousTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Another Instance of this program is already running..
         /// </summary>
         internal static string AlreadyRunning {

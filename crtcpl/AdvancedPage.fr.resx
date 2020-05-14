@@ -173,4 +173,10 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 60</value>
   </data>
+  <data name="advancedLabel.Text" xml:space="preserve">
+    <value>Paramètres avancés:</value>
+  </data>
+  <data name="advancedCheckBox.Text" xml:space="preserve">
+    <value>Activer toutes les paramètres avancés (nécessite un redémarrage)</value>
+  </data>
 </root>

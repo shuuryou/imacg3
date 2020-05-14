@@ -9,61 +9,126 @@ namespace crtcpl
         {
             InitializeComponent();
 
-            this.redTrackBar.Minimum = Constants.IVAD_RED_MIN;
-            this.redTrackBar.Maximum = Constants.IVAD_RED_MAX;
-            this.greenTrackBar.Minimum = Constants.IVAD_GREEN_MIN;
-            this.greenTrackBar.Maximum = Constants.IVAD_GREEN_MAX;
-            this.blueTrackBar.Minimum = Constants.IVAD_BLUE_MIN;
-            this.blueTrackBar.Maximum = Constants.IVAD_BLUE_MAX;
+            #region Cutoff
+            this.redCutoffTrackBar.Minimum = Constants.IVAD_RED_CUTOFF_MIN;
+            this.redCutoffTrackBar.Maximum = Constants.IVAD_RED_CUTOFF_MAX;
+
+            this.redDriveTrackBar.Minimum = Constants.IVAD_RED_DRIVE_MIN;
+            this.redDriveTrackBar.Maximum = Constants.IVAD_RED_DRIVE_MAX;
+
+            this.greenCutoffTrackBar.Minimum = Constants.IVAD_GREEN_CUTOFF_MIN;
+            this.greenCutoffTrackBar.Maximum = Constants.IVAD_GREEN_CUTOFF_MAX;
+            #endregion
+
+            #region Drive
+            this.greenDriveTrackBar.Minimum = Constants.IVAD_GREEN_DRIVE_MIN;
+            this.greenDriveTrackBar.Maximum = Constants.IVAD_GREEN_DRIVE_MAX;
+
+            this.blueCutoffTrackBar.Minimum = Constants.IVAD_BLUE_CUTOFF_MIN;
+            this.blueCutoffTrackBar.Maximum = Constants.IVAD_BLUE_CUTOFF_MAX;
+
+            this.blueDriveTrackBar.Minimum = Constants.IVAD_BLUE_DRIVE_MIN;
+            this.blueDriveTrackBar.Maximum = Constants.IVAD_BLUE_DRIVE_MAX;
+            #endregion
         }
 
-        public void SetValues(int r, int g, int b)
+        public void SetValues(int r_cutoff, int g_cutoff, int b_cutoff, int r_drive, int g_drive, int b_drive)
         {
-            if (r < this.redTrackBar.Minimum)
+            #region Cutoff
+            if (r_cutoff < this.redCutoffTrackBar.Minimum)
             {
-                r = this.redTrackBar.Minimum;
+                r_cutoff = this.redCutoffTrackBar.Minimum;
             }
-            else if (r > this.redTrackBar.Maximum)
+            else if (r_cutoff > this.redCutoffTrackBar.Maximum)
             {
-                r = this.redTrackBar.Maximum;
-            }
-
-            if (g < this.greenTrackBar.Minimum)
-            {
-                g = this.greenTrackBar.Minimum;
-            }
-            else if (g > this.greenTrackBar.Maximum)
-            {
-                g = this.greenTrackBar.Maximum;
+                r_cutoff = this.redCutoffTrackBar.Maximum;
             }
 
-            if (b < this.blueTrackBar.Minimum)
+            if (g_cutoff < this.greenCutoffTrackBar.Minimum)
             {
-                b = this.blueTrackBar.Minimum;
+                g_cutoff = this.greenCutoffTrackBar.Minimum;
             }
-            else if (b > this.blueTrackBar.Maximum)
+            else if (g_cutoff > this.greenCutoffTrackBar.Maximum)
             {
-                b = this.blueTrackBar.Maximum;
+                g_cutoff = this.greenCutoffTrackBar.Maximum;
             }
 
-            this.redTrackBar.Value = r;
-            this.greenTrackBar.Value = g;
-            this.blueTrackBar.Value = b;
+            if (b_cutoff < this.blueCutoffTrackBar.Minimum)
+            {
+                b_cutoff = this.blueCutoffTrackBar.Minimum;
+            }
+            else if (b_cutoff > this.blueCutoffTrackBar.Maximum)
+            {
+                b_cutoff = this.blueCutoffTrackBar.Maximum;
+            }
+
+            this.redCutoffTrackBar.Value = r_cutoff;
+            this.greenCutoffTrackBar.Value = g_cutoff;
+            this.blueCutoffTrackBar.Value = b_cutoff;
+            #endregion
+
+            #region Drive
+            if (r_drive < this.redDriveTrackBar.Minimum)
+            {
+                r_drive = this.redDriveTrackBar.Minimum;
+            }
+            else if (r_drive > this.redDriveTrackBar.Maximum)
+            {
+                r_drive = this.redDriveTrackBar.Maximum;
+            }
+
+            if (g_drive < this.greenDriveTrackBar.Minimum)
+            {
+                g_drive = this.greenDriveTrackBar.Minimum;
+            }
+            else if (g_drive > this.greenDriveTrackBar.Maximum)
+            {
+                g_drive = this.greenDriveTrackBar.Maximum;
+            }
+
+            if (b_drive < this.blueDriveTrackBar.Minimum)
+            {
+                b_drive = this.blueDriveTrackBar.Minimum;
+            }
+            else if (b_drive > this.blueDriveTrackBar.Maximum)
+            {
+                b_drive = this.blueDriveTrackBar.Maximum;
+            }
+
+            this.redDriveTrackBar.Value = r_drive;
+            this.greenDriveTrackBar.Value = g_drive;
+            this.blueDriveTrackBar.Value = b_drive;
+            #endregion
         }
 
-        private void redTrackBar_Scroll(object sender, EventArgs e)
+        private void redCutoffTrackBar_Scroll(object sender, EventArgs e)
         {
-            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Red, this.redTrackBar.Value));
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.RedCutoff, ((TrackBar)sender).Value));
         }
 
-        private void greenTrackBar_Scroll(object sender, EventArgs e)
+        private void greenCutoffTrackBar_Scroll(object sender, EventArgs e)
         {
-            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Green, this.greenTrackBar.Value));
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.GreenCutoff, ((TrackBar)sender).Value));
         }
 
-        private void blueTrackBar_Scroll(object sender, EventArgs e)
+        private void blueCutoffTrackBar_Scroll(object sender, EventArgs e)
         {
-            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedColor.Blue, this.blueTrackBar.Value));
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.BlueCutoff, ((TrackBar)sender).Value));
+        }
+
+        private void redDriveTrackBar_Scroll(object sender, EventArgs e)
+        {
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.RedDrive, ((TrackBar)sender).Value));
+        }
+
+        private void greenDriveTrackBar_Scroll(object sender, EventArgs e)
+        {
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.GreenDrive, ((TrackBar)sender).Value));
+        }
+
+        private void blueDriveTrackBar_Scroll(object sender, EventArgs e)
+        {
+            OnColorChanged(new ColorsPageEventArgs(ColorsPageEventArgs.ChangedSetting.BlueDrive, ((TrackBar)sender).Value));
         }
 
         protected virtual void OnColorChanged(ColorsPageEventArgs e)
@@ -72,5 +137,11 @@ namespace crtcpl
         }
 
         public event EventHandler<ColorsPageEventArgs> ColorChanged;
+
+        private void ColorsPage_Load(object sender, EventArgs e)
+        {
+            this.redDriveTrackBar.Enabled = this.greenDriveTrackBar.Enabled =
+                this.blueDriveTrackBar.Enabled = Settings.Default.AdvancedControls;
+        }
     }
 }

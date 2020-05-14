@@ -126,20 +126,398 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="colorGradient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="blueDriveTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="blueDriveTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="blueDriveTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="blueDriveTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 168</value>
+  </data>
+  <data name="blueDriveTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="blueDriveTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;blueDriveTrackBar.Name" xml:space="preserve">
+    <value>blueDriveTrackBar</value>
+  </data>
+  <data name="&gt;&gt;blueDriveTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueDriveTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;blueDriveTrackBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="greenDriveTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="greenDriveTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="greenDriveTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="greenDriveTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 135</value>
+  </data>
+  <data name="greenDriveTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="greenDriveTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;greenDriveTrackBar.Name" xml:space="preserve">
+    <value>greenDriveTrackBar</value>
+  </data>
+  <data name="&gt;&gt;greenDriveTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greenDriveTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;greenDriveTrackBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="redDriveTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="redDriveTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="redDriveTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="redDriveTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 102</value>
+  </data>
+  <data name="redDriveTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="redDriveTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;redDriveTrackBar.Name" xml:space="preserve">
+    <value>redDriveTrackBar</value>
+  </data>
+  <data name="&gt;&gt;redDriveTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;redDriveTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;redDriveTrackBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="greenCutoffTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="greenCutoffTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="greenCutoffTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="greenCutoffTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 36</value>
+  </data>
+  <data name="greenCutoffTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="greenCutoffTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffTrackBar.Name" xml:space="preserve">
+    <value>greenCutoffTrackBar</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffTrackBar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="blueCutoffTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="blueCutoffTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="blueCutoffTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="blueCutoffTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 69</value>
+  </data>
+  <data name="blueCutoffTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="blueCutoffTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffTrackBar.Name" xml:space="preserve">
+    <value>blueCutoffTrackBar</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffTrackBar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="redCutoffTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="redCutoffTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="redCutoffTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="redCutoffTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 3</value>
+  </data>
+  <data name="redCutoffTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 27</value>
+  </data>
+  <data name="redCutoffTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;redCutoffTrackBar.Name" xml:space="preserve">
+    <value>redCutoffTrackBar</value>
+  </data>
+  <data name="&gt;&gt;redCutoffTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;redCutoffTrackBar.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;redCutoffTrackBar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="redCutoffLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="redCutoffLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="redCutoffLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="redCutoffLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="redCutoffLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="redCutoffLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="redCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Red cutoff:</value>
+  </data>
+  <data name="&gt;&gt;redCutoffLabel.Name" xml:space="preserve">
+    <value>redCutoffLabel</value>
+  </data>
+  <data name="&gt;&gt;redCutoffLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;redCutoffLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;redCutoffLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="greenCutoffLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="greenCutoffLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="greenCutoffLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="greenCutoffLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 43</value>
+  </data>
+  <data name="greenCutoffLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="greenCutoffLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="greenCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Green cutoff:</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffLabel.Name" xml:space="preserve">
+    <value>greenCutoffLabel</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;greenCutoffLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="blueCutoffLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="blueCutoffLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="blueCutoffLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="blueCutoffLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="blueCutoffLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="blueCutoffLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="blueCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Blue cutoff:</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffLabel.Name" xml:space="preserve">
+    <value>blueCutoffLabel</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;blueCutoffLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="redDriveLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="redDriveLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="redDriveLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="redDriveLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="redDriveLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="redDriveLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="redDriveLabel.Text" xml:space="preserve">
+    <value>R&amp;ed gain:</value>
+  </data>
+  <data name="&gt;&gt;redDriveLabel.Name" xml:space="preserve">
+    <value>redDriveLabel</value>
+  </data>
+  <data name="&gt;&gt;redDriveLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;redDriveLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;redDriveLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="greenDriveLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="greenDriveLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="greenDriveLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="greenDriveLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 142</value>
+  </data>
+  <data name="greenDriveLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="greenDriveLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="greenDriveLabel.Text" xml:space="preserve">
+    <value>Gree&amp;n gain:</value>
+  </data>
+  <data name="&gt;&gt;greenDriveLabel.Name" xml:space="preserve">
+    <value>greenDriveLabel</value>
+  </data>
+  <data name="&gt;&gt;greenDriveLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greenDriveLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;greenDriveLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="blueDriveLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="blueDriveLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="blueDriveLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="blueDriveLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 175</value>
+  </data>
+  <data name="blueDriveLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="blueDriveLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="blueDriveLabel.Text" xml:space="preserve">
+    <value>B&amp;lue gain:</value>
+  </data>
+  <data name="&gt;&gt;blueDriveLabel.Name" xml:space="preserve">
+    <value>blueDriveLabel</value>
+  </data>
+  <data name="&gt;&gt;blueDriveLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueDriveLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;blueDriveLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="colorGradient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="colorGradient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 183</value>
+    <value>3, 201</value>
   </data>
   <data name="colorGradient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 46</value>
+    <value>370, 44</value>
   </data>
   <data name="colorGradient.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;colorGradient.Name" xml:space="preserve">
     <value>colorGradient</value>
@@ -151,283 +529,16 @@
     <value>tableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;colorGradient.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="blueGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="blueTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="blueTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="blueTrackBar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="blueTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="blueTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>358, 29</value>
-  </data>
-  <data name="blueTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;blueTrackBar.Name" xml:space="preserve">
-    <value>blueTrackBar</value>
-  </data>
-  <data name="&gt;&gt;blueTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;blueTrackBar.Parent" xml:space="preserve">
-    <value>blueTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;blueTrackBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="blueTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="blueTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="blueTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="blueTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 35</value>
-  </data>
-  <data name="blueTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;blueTableLayoutPanel.Name" xml:space="preserve">
-    <value>blueTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;blueTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;blueTableLayoutPanel.Parent" xml:space="preserve">
-    <value>blueGroupBox</value>
-  </data>
-  <data name="&gt;&gt;blueTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="blueTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="blueTrackBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="blueGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 123</value>
-  </data>
-  <data name="blueGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 54</value>
-  </data>
-  <data name="blueGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="blueGroupBox.Text" xml:space="preserve">
-    <value>&amp;Blue Fine Adjustment</value>
-  </data>
-  <data name="&gt;&gt;blueGroupBox.Name" xml:space="preserve">
-    <value>blueGroupBox</value>
-  </data>
-  <data name="&gt;&gt;blueGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;blueGroupBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;blueGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="greenGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="greenTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="greenTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="greenTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="greenTrackBar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="greenTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="greenTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="greenTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>358, 29</value>
-  </data>
-  <data name="greenTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;greenTrackBar.Name" xml:space="preserve">
-    <value>greenTrackBar</value>
-  </data>
-  <data name="&gt;&gt;greenTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;greenTrackBar.Parent" xml:space="preserve">
-    <value>greenTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;greenTrackBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="greenTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="greenTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="greenTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="greenTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 35</value>
-  </data>
-  <data name="greenTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;greenTableLayoutPanel.Name" xml:space="preserve">
-    <value>greenTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;greenTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;greenTableLayoutPanel.Parent" xml:space="preserve">
-    <value>greenGroupBox</value>
-  </data>
-  <data name="&gt;&gt;greenTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="greenTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="greenTrackBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="greenGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
-  </data>
-  <data name="greenGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 54</value>
-  </data>
-  <data name="greenGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="greenGroupBox.Text" xml:space="preserve">
-    <value>&amp;Green Fine Adjustment</value>
-  </data>
-  <data name="&gt;&gt;greenGroupBox.Name" xml:space="preserve">
-    <value>greenGroupBox</value>
-  </data>
-  <data name="&gt;&gt;greenGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;greenGroupBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;greenGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="redGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="redTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="redTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="redTrackBar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="redTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="redTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>358, 29</value>
-  </data>
-  <data name="redTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;redTrackBar.Name" xml:space="preserve">
-    <value>redTrackBar</value>
-  </data>
-  <data name="&gt;&gt;redTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;redTrackBar.Parent" xml:space="preserve">
-    <value>redTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;redTrackBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="redTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="redTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="redTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="redTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 35</value>
-  </data>
-  <data name="redTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;redTableLayoutPanel.Name" xml:space="preserve">
-    <value>redTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;redTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;redTableLayoutPanel.Parent" xml:space="preserve">
-    <value>redGroupBox</value>
-  </data>
-  <data name="&gt;&gt;redTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="redTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="redTrackBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="redGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="redGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 54</value>
-  </data>
-  <data name="redGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="redGroupBox.Text" xml:space="preserve">
-    <value>&amp;Red Fine Adjustment</value>
-  </data>
-  <data name="&gt;&gt;redGroupBox.Name" xml:space="preserve">
-    <value>redGroupBox</value>
-  </data>
-  <data name="&gt;&gt;redGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;redGroupBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;redGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>12</value>
   </data>
   <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="tableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="tableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 232</value>
+    <value>376, 248</value>
   </data>
   <data name="tableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -445,16 +556,13 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="colorGradient" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="blueGroupBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="greenGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="redGroupBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="blueDriveTrackBar" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="greenDriveTrackBar" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="redDriveTrackBar" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="greenCutoffTrackBar" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="blueCutoffTrackBar" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="redCutoffTrackBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="redCutoffLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="greenCutoffLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="blueCutoffLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="redDriveLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="greenDriveLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="blueDriveLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="colorGradient" Row="6" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 236</value>
+    <value>375, 254</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ColorsPage</value>
@@ -462,4 +570,7 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

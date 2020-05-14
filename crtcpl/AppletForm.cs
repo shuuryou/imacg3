@@ -51,12 +51,14 @@ namespace crtcpl
 
             this.SCREEN.SetValues(sram[Constants.CONFIG_OFFSET_BRIGHTNESS], sram[Constants.CONFIG_OFFSET_CONTRAST]);
 
-            this.COLORS.SetValues(sram[Constants.CONFIG_OFFSET_RED], sram[Constants.CONFIG_OFFSET_GREEN], sram[Constants.CONFIG_OFFSET_BLUE]);
+            this.COLORS.SetValues(
+                sram[Constants.CONFIG_OFFSET_RED_CUTOFF], sram[Constants.CONFIG_OFFSET_GREEN_CUTOFF], sram[Constants.CONFIG_OFFSET_BLUE_CUTOFF],
+                sram[Constants.CONFIG_OFFSET_RED_DRIVE], sram[Constants.CONFIG_OFFSET_GREEN_DRIVE], sram[Constants.CONFIG_OFFSET_BLUE_DRIVE]);
 
             this.GEOMETRY.SetValues(sram[Constants.CONFIG_OFFSET_HORIZONTAL_POS], sram[Constants.CONFIG_OFFSET_HEIGHT],
                 sram[Constants.CONFIG_OFFSET_VERTICAL_POS], sram[Constants.CONFIG_OFFSET_KEYSTONE], sram[Constants.CONFIG_OFFSET_PINCUSHION],
-                sram[Constants.CONFIG_OFFSET_WIDTH], sram[Constants.CONFIG_OFFSET_PARALLELOGRAM], sram[Constants.CONFIG_OFFSET_ROTATION]);
-
+                 sram[Constants.CONFIG_OFFSET_PINCUSHION_BALANCE], sram[Constants.CONFIG_OFFSET_S_CORRECTION], sram[Constants.CONFIG_OFFSET_WIDTH],
+                 sram[Constants.CONFIG_OFFSET_PARALLELOGRAM], sram[Constants.CONFIG_OFFSET_ROTATION]);
         }
 
         protected override void Dispose(bool disposing)
@@ -253,6 +255,12 @@ namespace crtcpl
                 case GeometryPageEventArgs.ChangedGemoetry.Pincushion:
                     what = Constants.IVAD_SETTING_PINCUSHION;
                     break;
+                case GeometryPageEventArgs.ChangedGemoetry.PincushionBalance:
+                    what = Constants.IVAD_SETTING_PINCUSHION_BALANCE;
+                    break;
+                case GeometryPageEventArgs.ChangedGemoetry.SCorrection:
+                    what = Constants.IVAD_SETTING_S_CORRECTION;
+                    break;
                 case GeometryPageEventArgs.ChangedGemoetry.Rotation:
                     what = Constants.IVAD_SETTING_ROTATION;
                     break;
@@ -291,19 +299,28 @@ namespace crtcpl
 
             byte what;
 
-            switch (e.Color)
+            switch (e.Setting)
             {
-                case ColorsPageEventArgs.ChangedColor.Red:
-                    what = Constants.IVAD_SETTING_RED;
+                case ColorsPageEventArgs.ChangedSetting.RedCutoff:
+                    what = Constants.IVAD_SETTING_RED_CUTOFF;
                     break;
-                case ColorsPageEventArgs.ChangedColor.Green:
-                    what = Constants.IVAD_SETTING_GREEN;
+                case ColorsPageEventArgs.ChangedSetting.GreenCutoff:
+                    what = Constants.IVAD_SETTING_GREEN_CUTOFF;
                     break;
-                case ColorsPageEventArgs.ChangedColor.Blue:
-                    what = Constants.IVAD_SETTING_BLUE;
+                case ColorsPageEventArgs.ChangedSetting.BlueCutoff:
+                    what = Constants.IVAD_SETTING_BLUE_CUTOFF;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.RedDrive:
+                    what = Constants.IVAD_SETTING_RED_DRIVE;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.GreenDrive:
+                    what = Constants.IVAD_SETTING_GREEN_DRIVE;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.BlueDrive:
+                    what = Constants.IVAD_SETTING_BLUE_DRIVE;
                     break;
                 default:
-                    Trace.Fail("Unknown color changed.");
+                    Trace.Fail("Unknown setting changed.");
                     return;
             }
 

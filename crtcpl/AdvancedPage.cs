@@ -65,6 +65,11 @@ namespace crtcpl
             {
                 UCCom_ConnectionClosed(null, EventArgs.Empty);
             }
+
+            this.advancedCheckBox.Checked = Settings.Default.AdvancedControls;
+
+            // Do this here so the above doesn't trigger the message box
+            this.advancedCheckBox.CheckedChanged += advancedCheckBox_CheckedChanged;
         }
 
         private void UCCom_ConnectionClosed(object sender, EventArgs e)
@@ -135,6 +140,26 @@ namespace crtcpl
         {
             this.connectButton.Enabled = !UCCom.IsOpen && this.comPortComboBox.SelectedIndex != -1;
             this.disconnectButton.Enabled = UCCom.IsOpen;
+        }
+
+        private void advancedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!this.advancedCheckBox.Checked)
+            {
+                return;
+            }
+
+            DialogResult res = MessageBox.Show(this.ParentForm, StringRes.StringRes.AdvancedControlsAreDangerous,
+                    StringRes.StringRes.AdvancedControlsAreDangerousTitle, MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (res != DialogResult.Yes)
+            {
+                this.advancedCheckBox.Checked = false;
+            }
+
+            Settings.Default.AdvancedControls = this.advancedCheckBox.Checked;
+            Settings.Default.Save();
         }
     }
 }

@@ -160,7 +160,7 @@
     <value>水平の白黒バー(&amp;B)</value>
   </data>
   <data name="bWhorizontalToolStripMenuItem.Text" xml:space="preserve">
-    <value>垂直の白黒バー(&amp;B)</value>
+    <value>垂直の白黒バー(&amp;H)</value>
   </data>
   <data name="rGBverticalToolStripMenuItem.Text" xml:space="preserve">
     <value>水平のRGBバー(&amp;R)</value>
@@ -182,5 +182,8 @@
   </data>
   <data name="showSettingsanalyzerToolStripMenuItem.Text" xml:space="preserve">
     <value>設定アナライザーを表示(&amp;A)</value>
+  </data>
+  <data name="graybarsToolStripMenuItem.Text" xml:space="preserve">
+    <value>灰色のバー(&amp;A)</value>
   </data>
 </root>

@@ -304,7 +304,7 @@
     <value>5</value>
   </data>
   <data name="adjustmentTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 3</value>
+    <value>104, 23</value>
   </data>
   <data name="adjustmentTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
@@ -435,6 +435,78 @@
   <data name="&gt;&gt;pcRadioButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pbRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pbRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pbRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 99</value>
+  </data>
+  <data name="pbRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 12</value>
+  </data>
+  <data name="pbRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 17</value>
+  </data>
+  <data name="pbRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pbRadioButton.Text" xml:space="preserve">
+    <value>Pin &amp;balance</value>
+  </data>
+  <data name="&gt;&gt;pbRadioButton.Name" xml:space="preserve">
+    <value>pbRadioButton</value>
+  </data>
+  <data name="&gt;&gt;pbRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbRadioButton.Parent" xml:space="preserve">
+    <value>categoryFlowLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;pbRadioButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="scRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="scRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="scRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="scRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 131</value>
+  </data>
+  <data name="scRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 12</value>
+  </data>
+  <data name="scRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="scRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="scRadioButton.Text" xml:space="preserve">
+    <value>&amp;S correction</value>
+  </data>
+  <data name="&gt;&gt;scRadioButton.Name" xml:space="preserve">
+    <value>scRadioButton</value>
+  </data>
+  <data name="&gt;&gt;scRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scRadioButton.Parent" xml:space="preserve">
+    <value>categoryFlowLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;scRadioButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="rotRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -442,7 +514,7 @@
     <value>True</value>
   </data>
   <data name="rotRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 99</value>
+    <value>3, 163</value>
   </data>
   <data name="rotRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 12</value>
@@ -466,7 +538,7 @@
     <value>categoryFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;rotRadioButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="trapRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -475,7 +547,7 @@
     <value>True</value>
   </data>
   <data name="trapRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 131</value>
+    <value>3, 195</value>
   </data>
   <data name="trapRadioButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 12</value>
@@ -499,7 +571,7 @@
     <value>categoryFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;trapRadioButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="paraRadioButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -508,7 +580,7 @@
     <value>True</value>
   </data>
   <data name="paraRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 163</value>
+    <value>3, 227</value>
   </data>
   <data name="paraRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
@@ -529,16 +601,16 @@
     <value>categoryFlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;paraRadioButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="categoryFlowLayoutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
     <value>TopDown</value>
   </data>
   <data name="categoryFlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 18</value>
+    <value>3, 6</value>
   </data>
   <data name="categoryFlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 183</value>
+    <value>95, 247</value>
   </data>
   <data name="categoryFlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -562,7 +634,7 @@
     <value>1</value>
   </data>
   <data name="geometryTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 219</value>
+    <value>335, 259</value>
   </data>
   <data name="geometryTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -589,7 +661,7 @@
     <value>343, 242</value>
   </data>
   <data name="geometryGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 242</value>
+    <value>343, 280</value>
   </data>
   <data name="geometryGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -616,7 +688,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 242</value>
+    <value>343, 281</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GeometryPage</value>

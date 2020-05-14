@@ -46,7 +46,7 @@
             this.redScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.greenScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.graybarsSCREENAdjustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graybarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
@@ -212,7 +212,7 @@
             this.redScreenToolStripMenuItem,
             this.greenScreenToolStripMenuItem,
             this.blueScreenToolStripMenuItem,
-            this.graybarsSCREENAdjustToolStripMenuItem});
+            this.graybarsToolStripMenuItem});
             this.testPatternSelectionToolStripMenuItem.Name = "testPatternSelectionToolStripMenuItem";
             resources.ApplyResources(this.testPatternSelectionToolStripMenuItem, "testPatternSelectionToolStripMenuItem");
             // 
@@ -288,12 +288,12 @@
             this.blueScreenToolStripMenuItem.Tag = "9";
             this.blueScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
             // 
-            // graybarsSCREENAdjustToolStripMenuItem
+            // graybarsToolStripMenuItem
             // 
-            this.graybarsSCREENAdjustToolStripMenuItem.Name = "graybarsSCREENAdjustToolStripMenuItem";
-            resources.ApplyResources(this.graybarsSCREENAdjustToolStripMenuItem, "graybarsSCREENAdjustToolStripMenuItem");
-            this.graybarsSCREENAdjustToolStripMenuItem.Tag = "10";
-            this.graybarsSCREENAdjustToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            this.graybarsToolStripMenuItem.Name = "graybarsToolStripMenuItem";
+            resources.ApplyResources(this.graybarsToolStripMenuItem, "graybarsToolStripMenuItem");
+            this.graybarsToolStripMenuItem.Tag = "10";
+            this.graybarsToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
             // 
             // showSettingsanalyzerToolStripMenuItem
             // 
@@ -355,7 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem greenScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showSettingsanalyzerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem graybarsSCREENAdjustToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graybarsToolStripMenuItem;
     }
 }
 

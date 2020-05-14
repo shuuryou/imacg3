@@ -27,71 +27,87 @@
 #define PIN_RELAY_SPK_AMP         34
 #define PIN_RELAY_RESERVED        35
 
-#define CONFIG_EEPROM_VERSION        2
+#define CONFIG_EEPROM_VERSION        3
 #define CONFIG_EEPROM_SLOTS          20
 
-#define CONFIG_OFFSET_CONTRAST       0
-#define CONFIG_OFFSET_RESERVED1      1
-#define CONFIG_OFFSET_RESERVED2      2
-#define CONFIG_OFFSET_RESERVED3      3
-#define CONFIG_OFFSET_RED            4
-#define CONFIG_OFFSET_GREEN          5
-#define CONFIG_OFFSET_BLUE           6
-#define CONFIG_OFFSET_HORIZONTAL_POS 7
-#define CONFIG_OFFSET_HEIGHT         8
-#define CONFIG_OFFSET_VERTICAL_POS   9
-#define CONFIG_OFFSET_RESERVED4      10
-#define CONFIG_OFFSET_KEYSTONE       11
-#define CONFIG_OFFSET_PINCUSHION     12
-#define CONFIG_OFFSET_WIDTH          13
-#define CONFIG_OFFSET_RESERVED5      14
-#define CONFIG_OFFSET_PARALLELOGRAM  15
-#define CONFIG_OFFSET_RESERVED6      16
-#define CONFIG_OFFSET_BRIGHTNESS     17
-#define CONFIG_OFFSET_ROTATION       18
-#define CONFIG_OFFSET_CHECKSUM       19
+#define CONFIG_OFFSET_CONTRAST           0
+#define CONFIG_OFFSET_RED_DRIVE          1
+#define CONFIG_OFFSET_GREEN_DRIVE        2
+#define CONFIG_OFFSET_BLUE_DRIVE         3
+#define CONFIG_OFFSET_RED_CUTOFF         4
+#define CONFIG_OFFSET_GREEN_CUTOFF       5
+#define CONFIG_OFFSET_BLUE_CUTOFF        6
+#define CONFIG_OFFSET_HORIZONTAL_POS     7
+#define CONFIG_OFFSET_HEIGHT             8
+#define CONFIG_OFFSET_VERTICAL_POS       9
+#define CONFIG_OFFSET_S_CORRECTION       10
+#define CONFIG_OFFSET_KEYSTONE           11
+#define CONFIG_OFFSET_PINCUSHION         12
+#define CONFIG_OFFSET_WIDTH              13
+#define CONFIG_OFFSET_PINCUSHION_BALANCE 14
+#define CONFIG_OFFSET_PARALLELOGRAM      15
+#define CONFIG_OFFSET_RESERVED6          16
+#define CONFIG_OFFSET_BRIGHTNESS         17
+#define CONFIG_OFFSET_ROTATION           18
+#define CONFIG_OFFSET_CHECKSUM           19
 
-#define IVAD_REGISTER_PROPERTY      0x46
-#define IVAD_SETTING_CONTRAST       0x00
-#define IVAD_SETTING_HORIZONTAL_POS 0x07
-#define IVAD_SETTING_HEIGHT         0x08
-#define IVAD_SETTING_VERTICAL_POS   0x09
-#define IVAD_SETTING_KEYSTONE       0x0B
-#define IVAD_SETTING_PINCUSHION     0x0C
-#define IVAD_SETTING_WIDTH          0x0D
-#define IVAD_SETTING_PARALLELOGRAM  0x0F
-#define IVAD_SETTING_BRIGHTNESS     0x11
-#define IVAD_SETTING_ROTATION       0x12
-#define IVAD_SETTING_RED            0x04
-#define IVAD_SETTING_GREEN          0x05
-#define IVAD_SETTING_BLUE           0x06
+#define IVAD_REGISTER_PROPERTY          0x46
+#define IVAD_SETTING_CONTRAST           0x00
+#define IVAD_SETTING_RED_DRIVE          0x01
+#define IVAD_SETTING_GREEN_DRIVE        0x02
+#define IVAD_SETTING_BLUE_DRIVE         0x03
+#define IVAD_SETTING_RED_CUTOFF         0x04
+#define IVAD_SETTING_GREEN_CUTOFF       0x05
+#define IVAD_SETTING_BLUE_CUTOFF        0x06
+#define IVAD_SETTING_HORIZONTAL_POS     0x07
+#define IVAD_SETTING_HEIGHT             0x08
+#define IVAD_SETTING_VERTICAL_POS       0x09
+#define IVAD_SETTING_S_CORRECTION       0x0A
+#define IVAD_SETTING_KEYSTONE           0x0B
+#define IVAD_SETTING_PINCUSHION         0x0C
+#define IVAD_SETTING_WIDTH              0x0D
+#define IVAD_SETTING_PINCUSHION_BALANCE 0x0E
+#define IVAD_SETTING_PARALLELOGRAM      0x0F
+// #define IVAD_SETTING_RESERVED6       0x10
+#define IVAD_SETTING_BRIGHTNESS         0x11
+#define IVAD_SETTING_ROTATION           0x12
 
-#define IVAD_CONTRAST_MIN         0xB5 // Most dark
-#define IVAD_CONTRAST_MAX         0xFF // Most bright
-#define IVAD_HORIZONTAL_POS_MIN   0x80 // Most left
-#define IVAD_HORIZONTAL_POS_MAX   0xFE // Most right
-#define IVAD_HEIGHT_MIN           0x80 // Most small
-#define IVAD_HEIGHT_MAX           0xFE // Most big
-#define IVAD_VERTICAL_POS_MIN     0x01 // Most low
-#define IVAD_VERTICAL_POS_MAX     0x7F // Most high
-#define IVAD_KEYSTONE_MIN         0x80 // Most thin at top
-#define IVAD_KEYSTONE_MAX         0xFE // Most thin at bottom
-#define IVAD_PINCUSHION_MIN       0x80 // Most left
-#define IVAD_PINCUSHION_MAX       0xFE // Most right
-#define IVAD_WIDTH_MIN            0x01 // Most thin
-#define IVAD_WIDTH_MAX            0x7F // Most thick
-#define IVAD_PARALLELOGRAM_MIN    0x80 // Most left
-#define IVAD_PARALLELOGRAM_MAX    0xFE // Most right
-#define IVAD_BRIGHTNESS_MIN       0x00 // Most dim
-#define IVAD_BRIGHTNESS_MAX       0x32 // Most bright
-#define IVAD_ROTATION_MIN         0x01 // Most left
-#define IVAD_ROTATION_MAX         0x7F // Most right
-#define IVAD_RED_MIN              0x00 // Most low
-#define IVAD_RED_MAX              0xFF // Most high
-#define IVAD_GREEN_MIN            0x00 // Most low
-#define IVAD_GREEN_MAX            0xFF // Most high
-#define IVAD_BLUE_MIN             0x00 // Most low
-#define IVAD_BLUE_MAX             0xFF // Most high
+#define IVAD_CONTRAST_MIN               0xB5 // Most dark
+#define IVAD_CONTRAST_MAX               0xFF // Most bright
+#define IVAD_RED_CUTOFF_MIN             0x00 // Most low
+#define IVAD_RED_CUTOFF_MAX             0xFF // Most high
+#define IVAD_GREEN_CUTOFF_MIN           0x00 // Most low
+#define IVAD_GREEN_CUTOFF_MAX           0xFF // Most high
+#define IVAD_BLUE_CUTOFF_MIN            0x00 // Most low
+#define IVAD_BLUE_CUTOFF_MAX            0xFF // Most high
+#define IVAD_RED_DRIVE_MIN              0x00 // Most low
+#define IVAD_RED_DRIVE_MAX              0xFF // Most high
+#define IVAD_GREEN_DRIVE_MIN            0x00 // Most low
+#define IVAD_GREEN_DRIVE_MAX            0xFF // Most high
+#define IVAD_BLUE_DRIVE_MIN             0x00 // Most low
+#define IVAD_BLUE_DRIVE_MAX             0xFF // Most high
+#define IVAD_HORIZONTAL_POS_MIN         0x80 // Most left
+#define IVAD_HORIZONTAL_POS_MAX         0xFF // Most right
+#define IVAD_HEIGHT_MIN                 0x80 // Most small
+#define IVAD_HEIGHT_MAX                 0xFE // Most big
+#define IVAD_VERTICAL_POS_MIN           0x00 // Most low
+#define IVAD_VERTICAL_POS_MAX           0x7F // Most high
+#define IVAD_S_CORRECTION_MIN           0x80 // Most low
+#define IVAD_S_CORRECTION_MAX           0xFF // Most high
+#define IVAD_KEYSTONE_MIN               0x80 // Most thin at top
+#define IVAD_KEYSTONE_MAX               0xFF // Most thin at bottom
+#define IVAD_PINCUSHION_MIN             0x80 // Most left
+#define IVAD_PINCUSHION_MAX             0xFF // Most right
+#define IVAD_PINCUSHION_BALANCE_MIN     0x00 // Most low
+#define IVAD_PINCUSHION_BALANCE_MAX     0xFF // Most high
+#define IVAD_WIDTH_MIN                  0x00 // Most thin
+#define IVAD_WIDTH_MAX                  0x7F // Most thick
+#define IVAD_PARALLELOGRAM_MIN          0x80 // Most left
+#define IVAD_PARALLELOGRAM_MAX          0xFF // Most right
+#define IVAD_BRIGHTNESS_MIN             0x00 // Most dim
+#define IVAD_BRIGHTNESS_MAX             0x32 // Most bright
+#define IVAD_ROTATION_MIN               0x00 // Most left
+#define IVAD_ROTATION_MAX               0x7F // Most right
 
 #define EDID_IMAC_G3_VANILLA \
     0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0x06, 0x10, 0x05, 0x9d, \

@@ -154,4 +154,10 @@
   <data name="rateComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 21</value>
   </data>
+  <data name="advancedLabel.Text" xml:space="preserve">
+    <value>&amp;Erweiterte Einstellungen:</value>
+  </data>
+  <data name="advancedCheckBox.Text" xml:space="preserve">
+    <value>Alle erweiterten Einstellungen aktivieren (erfordert Neustart)</value>
+  </data>
 </root>

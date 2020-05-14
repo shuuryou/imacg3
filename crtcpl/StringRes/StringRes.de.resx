@@ -165,4 +165,12 @@
   <data name="UCComUnauthorizedAccess" xml:space="preserve">
     <value>Der Zugriff auf den COM-Port wurde verweigert. Ein anderes Programm hat den angegebenen COM-Port wahrscheinlich bereits geöffnet.</value>
   </data>
+  <data name="AdvancedControlsAreDangerous" xml:space="preserve">
+    <value>Die erweiterten Einstellungen sind für geschultes Fachpersonal gedacht und könnten bei falscher Anwendung Schäden an Ihrem Bildschirm verursachen.
+
+Sind Sie sicher, dass Sie die erweiterten Einstellungen aktivieren möchten?</value>
+  </data>
+  <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
+    <value>Erweiterte Einstellungen</value>
+  </data>
 </root>

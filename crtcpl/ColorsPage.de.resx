@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="blueGroupBox.Text" xml:space="preserve">
-    <value>&amp;Blau Feinjustierung</value>
+  <data name="redCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Rot-Sättigung:</value>
   </data>
-  <data name="greenGroupBox.Text" xml:space="preserve">
-    <value>&amp;Grün Feinjustierung</value>
+  <data name="greenCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Grün-Sättigung:</value>
   </data>
-  <data name="redGroupBox.Text" xml:space="preserve">
-    <value>&amp;Rot Feinjustierung</value>
+  <data name="blueCutoffLabel.Text" xml:space="preserve">
+    <value>&amp;Blau-Sättigung:</value>
+  </data>
+  <data name="redDriveLabel.Text" xml:space="preserve">
+    <value>Rot-Int&amp;ensität</value>
+  </data>
+  <data name="greenDriveLabel.Text" xml:space="preserve">
+    <value>Grü&amp;n-Intensität</value>
+  </data>
+  <data name="blueDriveLabel.Text" xml:space="preserve">
+    <value>B&amp;lau-Intensität</value>
   </data>
 </root>

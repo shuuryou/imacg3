@@ -702,4 +702,7 @@
   <data name="showSettingsanalyzerToolStripMenuItem.Text" xml:space="preserve">
     <value>Afficher l'&amp;analyseur de paramètres</value>
   </data>
+  <data name="graybarsToolStripMenuItem.Text" xml:space="preserve">
+    <value>B&amp;arres grises</value>
+  </data>
 </root>
