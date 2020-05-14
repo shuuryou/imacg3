@@ -86,6 +86,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SettingsAnalyzerForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

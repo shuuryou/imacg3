@@ -11,6 +11,11 @@ namespace crtcpl
         {
             InitializeComponent();
 
+#if MONO
+            // Mono doesn't support tool windows properly
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+#endif
+
             this.listView.Items.Add("CONFIG_OFFSET_CONTRAST");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED1");
             this.listView.Items.Add("CONFIG_OFFSET_RESERVED2");
