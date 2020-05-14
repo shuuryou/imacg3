@@ -16,7 +16,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeometryPage));
-            this.geometryGroupBox = new System.Windows.Forms.GroupBox();
             this.geometryTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adjustmentTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.topButton = new System.Windows.Forms.Button();
@@ -34,19 +33,11 @@
             this.rotRadioButton = new System.Windows.Forms.RadioButton();
             this.trapRadioButton = new System.Windows.Forms.RadioButton();
             this.paraRadioButton = new System.Windows.Forms.RadioButton();
-            this.geometryGroupBox.SuspendLayout();
             this.geometryTableLayoutPanel.SuspendLayout();
             this.adjustmentTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenPictureBox)).BeginInit();
             this.categoryFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // geometryGroupBox
-            // 
-            resources.ApplyResources(this.geometryGroupBox, "geometryGroupBox");
-            this.geometryGroupBox.Controls.Add(this.geometryTableLayoutPanel);
-            this.geometryGroupBox.Name = "geometryGroupBox";
-            this.geometryGroupBox.TabStop = false;
             // 
             // geometryTableLayoutPanel
             // 
@@ -183,12 +174,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.geometryGroupBox);
-            this.MinimumSize = new System.Drawing.Size(343, 281);
+            this.Controls.Add(this.geometryTableLayoutPanel);
+            this.MinimumSize = new System.Drawing.Size(338, 256);
             this.Name = "GeometryPage";
             this.Load += new System.EventHandler(this.GeometryPage_Load);
-            this.geometryGroupBox.ResumeLayout(false);
-            this.geometryGroupBox.PerformLayout();
             this.geometryTableLayoutPanel.ResumeLayout(false);
             this.geometryTableLayoutPanel.PerformLayout();
             this.adjustmentTableLayoutPanel.ResumeLayout(false);
@@ -197,6 +186,7 @@
             this.categoryFlowLayoutPanel.ResumeLayout(false);
             this.categoryFlowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,8 +204,6 @@
             }
             base.Dispose(disposing);
         }
-
-        private System.Windows.Forms.GroupBox geometryGroupBox;
         private System.Windows.Forms.TableLayoutPanel geometryTableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel adjustmentTableLayoutPanel;
         private System.Windows.Forms.Button topButton;
