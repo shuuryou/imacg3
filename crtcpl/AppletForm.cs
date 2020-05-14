@@ -373,6 +373,9 @@ namespace crtcpl
                 this.m_TestPatternForm = new TestPatternForm();
                 this.m_TestPatternForm.Show(this);
                 this.TopMost = true;
+                showTestPatternToolStripMenuItem.Checked = true;
+                testPatternSelectionToolStripMenuItem.Enabled = true;
+                testPatternSelectionToolStripMenuItem_Click(screenAdjustToolStripMenuItem, EventArgs.Empty);
             }
             else
             {
@@ -380,6 +383,8 @@ namespace crtcpl
                 this.m_TestPatternForm.Dispose();
                 this.m_TestPatternForm = null;
                 this.TopMost = false;
+                showTestPatternToolStripMenuItem.Checked = false;
+                testPatternSelectionToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -389,12 +394,7 @@ namespace crtcpl
             TestPatternForm.TestPatternMode mode = (TestPatternForm.TestPatternMode)tag;
 
             foreach (ToolStripMenuItem item in this.testPatternSelectionToolStripMenuItem.DropDownItems)
-            {
-                if (item != sender)
-                {
-                    item.Checked = false;
-                }
-            }
+                    item.Checked = (item == sender);
 
             this.m_TestPatternForm.SetTestPattern(mode);
         }
@@ -405,12 +405,14 @@ namespace crtcpl
             {
                 this.m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
                 this.m_SettingsAnalyzerForm.Show(this);
+                showSettingsanalyzerToolStripMenuItem.Checked = true;
             }
             else
             {
                 this.m_SettingsAnalyzerForm.Close();
                 this.m_SettingsAnalyzerForm.Dispose();
                 this.m_SettingsAnalyzerForm = null;
+                showSettingsanalyzerToolStripMenuItem.Checked = false;
             }
         }
     }

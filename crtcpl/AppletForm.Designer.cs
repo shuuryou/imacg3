@@ -46,8 +46,8 @@
             this.redScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.greenScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graybarsSCREENAdjustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.buttonTableLayoutPanel.SuspendLayout();
@@ -195,7 +195,6 @@
             // 
             // showTestPatternToolStripMenuItem
             // 
-            this.showTestPatternToolStripMenuItem.CheckOnClick = true;
             this.showTestPatternToolStripMenuItem.Name = "showTestPatternToolStripMenuItem";
             resources.ApplyResources(this.showTestPatternToolStripMenuItem, "showTestPatternToolStripMenuItem");
             this.showTestPatternToolStripMenuItem.Click += new System.EventHandler(this.showTestPatternToolStripMenuItem_Click);
@@ -219,7 +218,8 @@
             // 
             // screenAdjustToolStripMenuItem
             // 
-            this.screenAdjustToolStripMenuItem.CheckOnClick = true;
+            this.screenAdjustToolStripMenuItem.Checked = true;
+            this.screenAdjustToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.screenAdjustToolStripMenuItem.Name = "screenAdjustToolStripMenuItem";
             resources.ApplyResources(this.screenAdjustToolStripMenuItem, "screenAdjustToolStripMenuItem");
             this.screenAdjustToolStripMenuItem.Tag = "0";
@@ -227,7 +227,6 @@
             // 
             // sMPTEColorBarToolStripMenuItem
             // 
-            this.sMPTEColorBarToolStripMenuItem.CheckOnClick = true;
             this.sMPTEColorBarToolStripMenuItem.Name = "sMPTEColorBarToolStripMenuItem";
             resources.ApplyResources(this.sMPTEColorBarToolStripMenuItem, "sMPTEColorBarToolStripMenuItem");
             this.sMPTEColorBarToolStripMenuItem.Tag = "1";
@@ -235,7 +234,6 @@
             // 
             // fuBKTestCardToolStripMenuItem
             // 
-            this.fuBKTestCardToolStripMenuItem.CheckOnClick = true;
             this.fuBKTestCardToolStripMenuItem.Name = "fuBKTestCardToolStripMenuItem";
             resources.ApplyResources(this.fuBKTestCardToolStripMenuItem, "fuBKTestCardToolStripMenuItem");
             this.fuBKTestCardToolStripMenuItem.Tag = "2";
@@ -243,7 +241,6 @@
             // 
             // bWverticalToolStripMenuItem
             // 
-            this.bWverticalToolStripMenuItem.CheckOnClick = true;
             this.bWverticalToolStripMenuItem.Name = "bWverticalToolStripMenuItem";
             resources.ApplyResources(this.bWverticalToolStripMenuItem, "bWverticalToolStripMenuItem");
             this.bWverticalToolStripMenuItem.Tag = "3";
@@ -251,7 +248,6 @@
             // 
             // bWhorizontalToolStripMenuItem
             // 
-            this.bWhorizontalToolStripMenuItem.CheckOnClick = true;
             this.bWhorizontalToolStripMenuItem.Name = "bWhorizontalToolStripMenuItem";
             resources.ApplyResources(this.bWhorizontalToolStripMenuItem, "bWhorizontalToolStripMenuItem");
             this.bWhorizontalToolStripMenuItem.Tag = "4";
@@ -259,7 +255,6 @@
             // 
             // rGBverticalToolStripMenuItem
             // 
-            this.rGBverticalToolStripMenuItem.CheckOnClick = true;
             this.rGBverticalToolStripMenuItem.Name = "rGBverticalToolStripMenuItem";
             resources.ApplyResources(this.rGBverticalToolStripMenuItem, "rGBverticalToolStripMenuItem");
             this.rGBverticalToolStripMenuItem.Tag = "5";
@@ -267,7 +262,6 @@
             // 
             // rGBhorizontalToolStripMenuItem
             // 
-            this.rGBhorizontalToolStripMenuItem.CheckOnClick = true;
             this.rGBhorizontalToolStripMenuItem.Name = "rGBhorizontalToolStripMenuItem";
             resources.ApplyResources(this.rGBhorizontalToolStripMenuItem, "rGBhorizontalToolStripMenuItem");
             this.rGBhorizontalToolStripMenuItem.Tag = "6";
@@ -275,7 +269,6 @@
             // 
             // redScreenToolStripMenuItem
             // 
-            this.redScreenToolStripMenuItem.CheckOnClick = true;
             this.redScreenToolStripMenuItem.Name = "redScreenToolStripMenuItem";
             resources.ApplyResources(this.redScreenToolStripMenuItem, "redScreenToolStripMenuItem");
             this.redScreenToolStripMenuItem.Tag = "7";
@@ -283,7 +276,6 @@
             // 
             // greenScreenToolStripMenuItem
             // 
-            this.greenScreenToolStripMenuItem.CheckOnClick = true;
             this.greenScreenToolStripMenuItem.Name = "greenScreenToolStripMenuItem";
             resources.ApplyResources(this.greenScreenToolStripMenuItem, "greenScreenToolStripMenuItem");
             this.greenScreenToolStripMenuItem.Tag = "8";
@@ -291,18 +283,10 @@
             // 
             // blueScreenToolStripMenuItem
             // 
-            this.blueScreenToolStripMenuItem.CheckOnClick = true;
             this.blueScreenToolStripMenuItem.Name = "blueScreenToolStripMenuItem";
             resources.ApplyResources(this.blueScreenToolStripMenuItem, "blueScreenToolStripMenuItem");
             this.blueScreenToolStripMenuItem.Tag = "9";
             this.blueScreenToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
-            // 
-            // showSettingsanalyzerToolStripMenuItem
-            // 
-            this.showSettingsanalyzerToolStripMenuItem.CheckOnClick = true;
-            this.showSettingsanalyzerToolStripMenuItem.Name = "showSettingsanalyzerToolStripMenuItem";
-            resources.ApplyResources(this.showSettingsanalyzerToolStripMenuItem, "showSettingsanalyzerToolStripMenuItem");
-            this.showSettingsanalyzerToolStripMenuItem.Click += new System.EventHandler(this.showSettingsanalyzerToolStripMenuItem_Click);
             // 
             // graybarsSCREENAdjustToolStripMenuItem
             // 
@@ -310,6 +294,12 @@
             resources.ApplyResources(this.graybarsSCREENAdjustToolStripMenuItem, "graybarsSCREENAdjustToolStripMenuItem");
             this.graybarsSCREENAdjustToolStripMenuItem.Tag = "10";
             this.graybarsSCREENAdjustToolStripMenuItem.Click += new System.EventHandler(this.testPatternSelectionToolStripMenuItem_Click);
+            // 
+            // showSettingsanalyzerToolStripMenuItem
+            // 
+            this.showSettingsanalyzerToolStripMenuItem.Name = "showSettingsanalyzerToolStripMenuItem";
+            resources.ApplyResources(this.showSettingsanalyzerToolStripMenuItem, "showSettingsanalyzerToolStripMenuItem");
+            this.showSettingsanalyzerToolStripMenuItem.Click += new System.EventHandler(this.showSettingsanalyzerToolStripMenuItem_Click);
             // 
             // AppletForm
             // 
