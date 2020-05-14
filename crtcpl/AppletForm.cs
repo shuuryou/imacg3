@@ -8,8 +8,8 @@ namespace crtcpl
 {
     public partial class AppletForm : Form
     {
-        private readonly TestPatternForm m_TestPatternForm = new TestPatternForm();
-        private readonly SettingsAnalyzerForm m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
+        private TestPatternForm m_TestPatternForm = null;
+        private SettingsAnalyzerForm m_SettingsAnalyzerForm = null;
         public AppletForm()
         {
             InitializeComponent();
@@ -66,8 +66,16 @@ namespace crtcpl
                 this.components.Dispose();
                 UCCom.ConnectionClosed -= UCCom_ConnectionClosed;
                 UCCom.ConnectionOpened -= UCCom_ConnectionOpened;
-                this.m_TestPatternForm.Dispose();
-                this.m_SettingsAnalyzerForm.Dispose();
+
+                if (this.m_TestPatternForm != null)
+                {
+                    this.m_TestPatternForm.Dispose();
+                }
+
+                if (this.m_SettingsAnalyzerForm != null)
+                {
+                    this.m_SettingsAnalyzerForm.Dispose();
+                }
             }
             base.Dispose(disposing);
         }
@@ -362,12 +370,15 @@ namespace crtcpl
         {
             if (this.showTestPatternToolStripMenuItem.Checked)
             {
-                this.m_TestPatternForm.Show();
+                this.m_TestPatternForm = new TestPatternForm();
+                this.m_TestPatternForm.Show(this);
                 this.TopMost = true;
             }
             else
             {
-                this.m_TestPatternForm.Hide();
+                this.m_TestPatternForm.Close();
+                this.m_TestPatternForm.Dispose();
+                this.m_TestPatternForm = null;
                 this.TopMost = false;
             }
         }
@@ -392,11 +403,14 @@ namespace crtcpl
         {
             if (this.showSettingsanalyzerToolStripMenuItem.Checked)
             {
-                this.m_SettingsAnalyzerForm.Show();
+                this.m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
+                this.m_SettingsAnalyzerForm.Show(this);
             }
             else
             {
-                this.m_SettingsAnalyzerForm.Hide();
+                this.m_SettingsAnalyzerForm.Close();
+                this.m_SettingsAnalyzerForm.Dispose();
+                this.m_SettingsAnalyzerForm = null;
             }
         }
     }
