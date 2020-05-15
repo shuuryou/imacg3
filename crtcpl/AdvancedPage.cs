@@ -58,22 +58,35 @@ namespace crtcpl
 
             // Fake it once on load since we don't know the state at this point
             if (UCCom.IsOpen)
+            {
                 UCCom_ConnectionOpened(null, EventArgs.Empty);
+            }
             else
+            {
                 UCCom_ConnectionClosed(null, EventArgs.Empty);
+            }
+
+            this.advancedCheckBox.Checked = Settings.Default.AdvancedControls;
+
+            // Do this here so the above doesn't trigger the message box
+            this.advancedCheckBox.CheckedChanged += advancedCheckBox_CheckedChanged;
         }
 
         private void UCCom_ConnectionClosed(object sender, EventArgs e)
         {
-            this.comPortComboBox.Enabled = true;
-            this.rateComboBox.Enabled = true;
+            this.comPortLabel.Enabled =
+                this.comPortComboBox.Enabled =
+                this.rateLabel.Enabled =
+                this.rateComboBox.Enabled = true;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
         private void UCCom_ConnectionOpened(object sender, EventArgs e)
         {
-            this.comPortComboBox.Enabled = false;
-            this.rateComboBox.Enabled = false;
+            this.comPortLabel.Enabled =
+                this.comPortComboBox.Enabled =
+                this.rateLabel.Enabled =
+                this.rateComboBox.Enabled = false;
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
@@ -100,6 +113,7 @@ namespace crtcpl
             try
             {
                 UCCom.Open(this.comPortComboBox.Text, (int)this.rateComboBox.Items[this.rateComboBox.SelectedIndex]);
+            
                 ret = UCCom.SendCommand(1, 0, 0);
             }
             catch (UCComException ex)
@@ -116,12 +130,12 @@ namespace crtcpl
                 return;
             }
 
-            if (ret == null || ret.Length != 1 || ret[0] != Program.SUPPORTED_EEPROM_VERSION)
-            {
-                UCCom.Close();
 
-                MessageBox.Show(this.ParentForm, StringRes.StringRes.ComErrorBadVersion,
-                    StringRes.StringRes.ComErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
+            {
+                MessageBox.Show(this.ParentForm, string.Format(CultureInfo.CurrentCulture,
+                    StringRes.StringRes.ComErrorBadVersion), StringRes.StringRes.ComErrorTitle,
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
@@ -140,6 +154,26 @@ namespace crtcpl
         {
             this.connectButton.Enabled = !UCCom.IsOpen && this.comPortComboBox.SelectedIndex != -1;
             this.disconnectButton.Enabled = UCCom.IsOpen;
+        }
+
+        private void advancedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!this.advancedCheckBox.Checked)
+            {
+                return;
+            }
+
+            DialogResult res = MessageBox.Show(this.ParentForm, StringRes.StringRes.AdvancedControlsAreDangerous,
+                    StringRes.StringRes.AdvancedControlsAreDangerousTitle, MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (res != DialogResult.Yes)
+            {
+                this.advancedCheckBox.Checked = false;
+            }
+
+            Settings.Default.AdvancedControls = this.advancedCheckBox.Checked;
+            Settings.Default.Save();
         }
     }
 }

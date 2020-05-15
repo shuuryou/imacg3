@@ -23,6 +23,8 @@
             this.disconnectButton = new System.Windows.Forms.Button();
             this.rateLabel = new System.Windows.Forms.Label();
             this.rateComboBox = new System.Windows.Forms.ComboBox();
+            this.advancedLabel = new System.Windows.Forms.Label();
+            this.advancedCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -31,10 +33,12 @@
             resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
             this.tableLayoutPanel.Controls.Add(this.comPortLabel, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.comPortComboBox, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.connectButton, 1, 2);
-            this.tableLayoutPanel.Controls.Add(this.disconnectButton, 2, 2);
             this.tableLayoutPanel.Controls.Add(this.rateLabel, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.rateComboBox, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.advancedLabel, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.connectButton, 1, 2);
+            this.tableLayoutPanel.Controls.Add(this.disconnectButton, 2, 2);
+            this.tableLayoutPanel.Controls.Add(this.advancedCheckBox, 1, 3);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             // 
             // comPortLabel
@@ -78,12 +82,24 @@
             this.rateComboBox.FormattingEnabled = true;
             this.rateComboBox.Name = "rateComboBox";
             // 
+            // advancedLabel
+            // 
+            resources.ApplyResources(this.advancedLabel, "advancedLabel");
+            this.advancedLabel.Name = "advancedLabel";
+            // 
+            // advancedCheckBox
+            // 
+            resources.ApplyResources(this.advancedCheckBox, "advancedCheckBox");
+            this.tableLayoutPanel.SetColumnSpan(this.advancedCheckBox, 2);
+            this.advancedCheckBox.Name = "advancedCheckBox";
+            this.advancedCheckBox.UseVisualStyleBackColor = true;
+            // 
             // AdvancedPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel);
-            this.MinimumSize = new System.Drawing.Size(303, 31);
+            this.MinimumSize = new System.Drawing.Size(376, 108);
             this.Name = "AdvancedPage";
             this.Load += new System.EventHandler(this.AdvancedPage_Load);
             this.tableLayoutPanel.ResumeLayout(false);
@@ -101,5 +117,7 @@
         private System.Windows.Forms.Button disconnectButton;
         private System.Windows.Forms.Label rateLabel;
         private System.Windows.Forms.ComboBox rateComboBox;
+        private System.Windows.Forms.Label advancedLabel;
+        private System.Windows.Forms.CheckBox advancedCheckBox;
     }
 }

@@ -135,7 +135,10 @@
   <data name="paraRadioButton.Text" xml:space="preserve">
     <value>振幅(&amp;A)</value>
   </data>
-  <data name="geometryGroupBox.Text" xml:space="preserve">
-    <value>画面形状調整</value>
+  <data name="pbRadioButton.Text" xml:space="preserve">
+    <value>ピンバランス(&amp;B)</value>
+  </data>
+  <data name="scRadioButton.Text" xml:space="preserve">
+    <value>S補正(&amp;S)</value>
   </data>
 </root>

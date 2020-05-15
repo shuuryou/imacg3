@@ -165,4 +165,12 @@
   <data name="ComErrorBadRate" xml:space="preserve">
     <value>選択`した送信レートは無効です。</value>
   </data>
+  <data name="AdvancedControlsAreDangerous" xml:space="preserve">
+    <value>詳細な制御は訓練を受けた専門家を対象としており、誤って使用すると画面に損傷を与える可能性があります。
+
+よろしいですか？</value>
+  </data>
+  <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
+    <value>詳細な制御</value>
+  </data>
 </root>

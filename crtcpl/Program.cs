@@ -8,8 +8,11 @@ namespace crtcpl
 {
     public static class Program
     {
+<<<<<<< HEAD
         public const byte SUPPORTED_EEPROM_VERSION = 0x02;
 
+=======
+>>>>>>> upstream/master
         [STAThread]
         public static void Main()
         {
@@ -71,23 +74,20 @@ namespace crtcpl
 
                 if (!string.IsNullOrWhiteSpace(Settings.Default.SerialPort))
                 {
-                    bool bad = false;
+                    byte[] ret = null;
+
                     try
                     {
                         UCCom.Open(Settings.Default.SerialPort, Settings.Default.SerialRate);
-                        byte[] ret = UCCom.SendCommand(1, 0, 0);
 
-                        if (ret == null || ret.Length != 1 || ret[0] != SUPPORTED_EEPROM_VERSION)
-                        {
-                            bad = true;
-                        }
+                        ret = UCCom.SendCommand(1, 0, 0);
                     }
                     catch (UCComException)
                     {
-                        bad = true;
+                        Settings.Default.SerialPort = null;
                     }
 
-                    if (bad)
+                    if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
                     {
                         Settings.Default.SerialPort = null;
                     }
@@ -106,19 +106,13 @@ namespace crtcpl
                 try
                 {
                     if (UCCom.IsOpen)
+                    {
                         UCCom.Close();
-                } catch (Exception) { }
+                    }
+                }
+                catch (Exception) { }
 
                 Application.Exit();
-
-#if MONO
-                /*
-                 * With mono, there are some threads that remain when the application is closed
-                 * preventing the application from closing and causing it to seem like it's hanging.
-                 */
-
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
-#endif
             }
         }
     }

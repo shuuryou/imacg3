@@ -66,9 +66,9 @@ namespace crtcpl
                 throw new UCComException(StringRes.StringRes.UCComIOError, e);
             }
 
-            kickoffRead();
-
             IsOpen = true;
+
+            kickoffRead();
 
             ConnectionOpened?.Invoke(null, EventArgs.Empty);
         }
@@ -81,34 +81,12 @@ namespace crtcpl
             {
                 int actualLength;
 
-                try
+                if (!IsOpen || !s_SerialPort.IsOpen)
                 {
-                    actualLength = s_SerialPort.BaseStream.EndRead(ar);
+                    return;
                 }
-                catch (Exception)
-                {
-                    if (!IsOpen)
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        /*Under mono an exception is thrown and the GUI hangs if the serial port is opened
-                         * immediately after closing it. It seems there are several threads
-                         * still waiting to die left over from the previous 
-                         * serialport instance. Waiting from 5 to 10 seconds before opening
-                         * the port works but who has time to wait.....
-                         * This works with mono and it could be a temporary workaround
-                         * until understood better.
-                         */
-#if MONO
-                        goto done;
-#else
-                        throw;
-#endif
 
-                    }
-                }
+                actualLength = s_SerialPort.BaseStream.EndRead(ar);
 
                 Buffer.BlockCopy(buf, 0, s_ResponseBuffer, s_ResponseBufferLength, actualLength);
                 s_ResponseBufferLength += actualLength;

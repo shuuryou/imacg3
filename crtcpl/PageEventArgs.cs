@@ -14,26 +14,29 @@ namespace crtcpl
 
     public class ColorsPageEventArgs : EventArgs
     {
-        public enum ChangedColor
+        public enum ChangedSetting
         {
             None = 0,
-            Red = 1,
-            Green = 2,
-            Blue = 3
+            RedCutoff = 1,
+            GreenCutoff = 2,
+            BlueCutoff = 3,
+            RedDrive = 4,
+            GreenDrive = 5,
+            BlueDrive = 6
         }
 
-        public ColorsPageEventArgs(ChangedColor color, int newValue)
+        public ColorsPageEventArgs(ChangedSetting setting, int newValue)
         {
-            if (color == ChangedColor.None)
+            if (setting == ChangedSetting.None)
             {
-                throw new ArgumentOutOfRangeException(nameof(color));
+                throw new ArgumentOutOfRangeException(nameof(setting));
             }
 
-            this.Color = color;
+            this.Setting = setting;
             this.NewValue = newValue;
         }
 
-        public ChangedColor Color { get; private set; }
+        public ChangedSetting Setting { get; private set; }
 
         public int NewValue { get; private set; }
     }
@@ -48,9 +51,11 @@ namespace crtcpl
             Vertical = 3,
             Keystone = 4,
             Pincushion = 5,
-            Width = 6,
-            Parallelogram = 7,
-            Rotation = 8
+            PincushionBalance = 6,
+            SCorrection = 7,
+            Width = 8,
+            Parallelogram = 9,
+            Rotation = 10
         }
 
         public GeometryPageEventArgs(ChangedGemoetry what, int newValue)

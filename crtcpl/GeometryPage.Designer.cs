@@ -16,7 +16,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeometryPage));
-            this.geometryGroupBox = new System.Windows.Forms.GroupBox();
             this.geometryTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.adjustmentTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.topButton = new System.Windows.Forms.Button();
@@ -29,22 +28,16 @@
             this.hwRadioButton = new System.Windows.Forms.RadioButton();
             this.posRadioButton = new System.Windows.Forms.RadioButton();
             this.pcRadioButton = new System.Windows.Forms.RadioButton();
+            this.pbRadioButton = new System.Windows.Forms.RadioButton();
+            this.scRadioButton = new System.Windows.Forms.RadioButton();
             this.rotRadioButton = new System.Windows.Forms.RadioButton();
             this.trapRadioButton = new System.Windows.Forms.RadioButton();
             this.paraRadioButton = new System.Windows.Forms.RadioButton();
-            this.geometryGroupBox.SuspendLayout();
             this.geometryTableLayoutPanel.SuspendLayout();
             this.adjustmentTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenPictureBox)).BeginInit();
             this.categoryFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // geometryGroupBox
-            // 
-            resources.ApplyResources(this.geometryGroupBox, "geometryGroupBox");
-            this.geometryGroupBox.Controls.Add(this.geometryTableLayoutPanel);
-            this.geometryGroupBox.Name = "geometryGroupBox";
-            this.geometryGroupBox.TabStop = false;
             // 
             // geometryTableLayoutPanel
             // 
@@ -112,6 +105,8 @@
             this.categoryFlowLayoutPanel.Controls.Add(this.hwRadioButton);
             this.categoryFlowLayoutPanel.Controls.Add(this.posRadioButton);
             this.categoryFlowLayoutPanel.Controls.Add(this.pcRadioButton);
+            this.categoryFlowLayoutPanel.Controls.Add(this.pbRadioButton);
+            this.categoryFlowLayoutPanel.Controls.Add(this.scRadioButton);
             this.categoryFlowLayoutPanel.Controls.Add(this.rotRadioButton);
             this.categoryFlowLayoutPanel.Controls.Add(this.trapRadioButton);
             this.categoryFlowLayoutPanel.Controls.Add(this.paraRadioButton);
@@ -140,6 +135,20 @@
             this.pcRadioButton.UseVisualStyleBackColor = true;
             this.pcRadioButton.CheckedChanged += new System.EventHandler(this.pcRadioButton_CheckedChanged);
             // 
+            // pbRadioButton
+            // 
+            resources.ApplyResources(this.pbRadioButton, "pbRadioButton");
+            this.pbRadioButton.Name = "pbRadioButton";
+            this.pbRadioButton.UseVisualStyleBackColor = true;
+            this.pbRadioButton.CheckedChanged += new System.EventHandler(this.pbRadioButton_CheckedChanged);
+            // 
+            // scRadioButton
+            // 
+            resources.ApplyResources(this.scRadioButton, "scRadioButton");
+            this.scRadioButton.Name = "scRadioButton";
+            this.scRadioButton.UseVisualStyleBackColor = true;
+            this.scRadioButton.CheckedChanged += new System.EventHandler(this.scRadioButton_CheckedChanged);
+            // 
             // rotRadioButton
             // 
             resources.ApplyResources(this.rotRadioButton, "rotRadioButton");
@@ -165,12 +174,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.geometryGroupBox);
-            this.MinimumSize = new System.Drawing.Size(343, 242);
+            this.Controls.Add(this.geometryTableLayoutPanel);
+            this.MinimumSize = new System.Drawing.Size(338, 256);
             this.Name = "GeometryPage";
             this.Load += new System.EventHandler(this.GeometryPage_Load);
-            this.geometryGroupBox.ResumeLayout(false);
-            this.geometryGroupBox.PerformLayout();
             this.geometryTableLayoutPanel.ResumeLayout(false);
             this.geometryTableLayoutPanel.PerformLayout();
             this.adjustmentTableLayoutPanel.ResumeLayout(false);
@@ -179,6 +186,7 @@
             this.categoryFlowLayoutPanel.ResumeLayout(false);
             this.categoryFlowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -196,8 +204,6 @@
             }
             base.Dispose(disposing);
         }
-
-        private System.Windows.Forms.GroupBox geometryGroupBox;
         private System.Windows.Forms.TableLayoutPanel geometryTableLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel adjustmentTableLayoutPanel;
         private System.Windows.Forms.Button topButton;
@@ -213,5 +219,7 @@
         private System.Windows.Forms.RadioButton trapRadioButton;
         private System.Windows.Forms.RadioButton paraRadioButton;
         private System.Windows.Forms.Label spacerLabel;
+        private System.Windows.Forms.RadioButton pbRadioButton;
+        private System.Windows.Forms.RadioButton scRadioButton;
     }
 }

@@ -58,5 +58,17 @@ namespace crtcpl {
                 this["SerialRate"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AdvancedControls {
+            get {
+                return ((bool)(this["AdvancedControls"]));
+            }
+            set {
+                this["AdvancedControls"] = value;
+            }
+        }
     }
 }

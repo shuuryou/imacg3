@@ -10,6 +10,8 @@ namespace crtcpl
             m_CurrentVertical,
             m_CurrentKeystone,
             m_CurrentPincushion,
+            m_CurrentPincushionBalance,
+            m_CurrentSCorrection,
             m_CurrentWidth,
             m_CurrentParallelogram,
             m_CurrentRotation;
@@ -19,7 +21,9 @@ namespace crtcpl
             InitializeComponent();
         }
 
-        public void SetValues(int horizontal, int height, int vertical, int keystone, int pincushion, int width, int parallelogram, int rotation)
+        public void SetValues(int horizontal, int height, int vertical, int keystone,
+            int pincushion, int pincushion_balance, int s_correction, int width,
+            int parallelogram, int rotation)
         {
             if (horizontal > Constants.IVAD_HORIZONTAL_POS_MAX)
             {
@@ -66,6 +70,24 @@ namespace crtcpl
                 pincushion = Constants.IVAD_PINCUSHION_MIN;
             }
 
+            if (pincushion_balance > Constants.IVAD_PINCUSHION_BALANCE_MAX)
+            {
+                pincushion_balance = Constants.IVAD_PINCUSHION_BALANCE_MAX;
+            }
+            else if (pincushion_balance < Constants.IVAD_PINCUSHION_BALANCE_MIN)
+            {
+                pincushion_balance = Constants.IVAD_PINCUSHION_BALANCE_MIN;
+            }
+
+            if (s_correction > Constants.IVAD_S_CORRECTION_MAX)
+            {
+                s_correction = Constants.IVAD_S_CORRECTION_MAX;
+            }
+            else if (s_correction < Constants.IVAD_S_CORRECTION_MIN)
+            {
+                s_correction = Constants.IVAD_S_CORRECTION_MIN;
+            }
+
             if (width > Constants.IVAD_WIDTH_MAX)
             {
                 width = Constants.IVAD_WIDTH_MAX;
@@ -98,6 +120,8 @@ namespace crtcpl
             this.m_CurrentVertical = vertical;
             this.m_CurrentKeystone = keystone;
             this.m_CurrentPincushion = pincushion;
+            this.m_CurrentPincushionBalance = pincushion_balance;
+            this.m_CurrentSCorrection = s_correction;
             this.m_CurrentWidth = width;
             this.m_CurrentParallelogram = parallelogram;
             this.m_CurrentRotation = rotation;
@@ -158,7 +182,20 @@ namespace crtcpl
                 this.m_CurrentPincushion = Math.Min(this.m_CurrentPincushion + 1, Constants.IVAD_PINCUSHION_MAX);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Pincushion, this.m_CurrentPincushion));
                 return;
+            }
 
+            if (this.pbRadioButton.Checked)
+            {
+                this.m_CurrentPincushionBalance = Math.Min(this.m_CurrentPincushionBalance + 1, Constants.IVAD_PINCUSHION_BALANCE_MAX);
+                OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.PincushionBalance, this.m_CurrentPincushionBalance));
+                return;
+            }
+
+            if (this.scRadioButton.Checked)
+            {
+                this.m_CurrentSCorrection = Math.Min(this.m_CurrentSCorrection + 1, Constants.IVAD_S_CORRECTION_MAX);
+                OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.SCorrection, this.m_CurrentSCorrection));
+                return;
             }
 
             if (this.rotRadioButton.Checked)
@@ -203,6 +240,20 @@ namespace crtcpl
             {
                 this.m_CurrentPincushion = Math.Max(this.m_CurrentPincushion - 1, Constants.IVAD_PINCUSHION_MIN);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Pincushion, this.m_CurrentPincushion));
+                return;
+            }
+
+            if (this.pbRadioButton.Checked)
+            {
+                this.m_CurrentPincushionBalance = Math.Max(this.m_CurrentPincushionBalance - 1, Constants.IVAD_PINCUSHION_BALANCE_MIN);
+                OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.PincushionBalance, this.m_CurrentPincushionBalance));
+                return;
+            }
+
+            if (this.scRadioButton.Checked)
+            {
+                this.m_CurrentSCorrection = Math.Max(this.m_CurrentSCorrection - 1, Constants.IVAD_S_CORRECTION_MIN);
+                OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.SCorrection, this.m_CurrentSCorrection));
                 return;
             }
 
@@ -262,6 +313,36 @@ namespace crtcpl
             ResumeLayout();
         }
 
+        private void scRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            SuspendLayout();
+
+            this.topButton.Visible = false;
+            this.bottomButton.Visible = false;
+            this.leftButton.Visible = true;
+            this.rightButton.Visible = true;
+
+            this.leftButton.Image = ImageRes.ImageRes.RES013;
+            this.rightButton.Image = ImageRes.ImageRes.RES014;
+
+            ResumeLayout();
+        }
+
+        private void pbRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            SuspendLayout();
+
+            this.topButton.Visible = false;
+            this.bottomButton.Visible = false;
+            this.leftButton.Visible = true;
+            this.rightButton.Visible = true;
+
+            this.leftButton.Image = ImageRes.ImageRes.RES013;
+            this.rightButton.Image = ImageRes.ImageRes.RES014;
+
+            ResumeLayout();
+        }
+
         private void pcRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             SuspendLayout();
@@ -273,7 +354,6 @@ namespace crtcpl
 
             this.leftButton.Image = ImageRes.ImageRes.RES015;
             this.rightButton.Image = ImageRes.ImageRes.RES016;
-
 
             ResumeLayout();
         }
@@ -326,6 +406,8 @@ namespace crtcpl
         private void GeometryPage_Load(object sender, EventArgs e)
         {
             hwRadioButton_CheckedChanged(null, EventArgs.Empty);
+
+            this.pbRadioButton.Enabled = this.scRadioButton.Enabled = Settings.Default.AdvancedControls;
         }
 
         protected virtual void OnGeometryChanged(GeometryPageEventArgs e)

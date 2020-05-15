@@ -8,8 +8,8 @@ namespace crtcpl
 {
     public partial class AppletForm : Form
     {
-        private readonly TestPatternForm m_TestPatternForm = new TestPatternForm();
-        private readonly SettingsAnalyzerForm m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
+        private TestPatternForm m_TestPatternForm = null;
+        private SettingsAnalyzerForm m_SettingsAnalyzerForm = null;
         public AppletForm()
         {
             InitializeComponent();
@@ -51,12 +51,14 @@ namespace crtcpl
 
             this.SCREEN.SetValues(sram[Constants.CONFIG_OFFSET_BRIGHTNESS], sram[Constants.CONFIG_OFFSET_CONTRAST]);
 
-            this.COLORS.SetValues(sram[Constants.CONFIG_OFFSET_RED], sram[Constants.CONFIG_OFFSET_GREEN], sram[Constants.CONFIG_OFFSET_BLUE]);
+            this.COLORS.SetValues(
+                sram[Constants.CONFIG_OFFSET_RED_CUTOFF], sram[Constants.CONFIG_OFFSET_GREEN_CUTOFF], sram[Constants.CONFIG_OFFSET_BLUE_CUTOFF],
+                sram[Constants.CONFIG_OFFSET_RED_DRIVE], sram[Constants.CONFIG_OFFSET_GREEN_DRIVE], sram[Constants.CONFIG_OFFSET_BLUE_DRIVE]);
 
             this.GEOMETRY.SetValues(sram[Constants.CONFIG_OFFSET_HORIZONTAL_POS], sram[Constants.CONFIG_OFFSET_HEIGHT],
                 sram[Constants.CONFIG_OFFSET_VERTICAL_POS], sram[Constants.CONFIG_OFFSET_KEYSTONE], sram[Constants.CONFIG_OFFSET_PINCUSHION],
-                sram[Constants.CONFIG_OFFSET_WIDTH], sram[Constants.CONFIG_OFFSET_PARALLELOGRAM], sram[Constants.CONFIG_OFFSET_ROTATION]);
-
+                 sram[Constants.CONFIG_OFFSET_PINCUSHION_BALANCE], sram[Constants.CONFIG_OFFSET_S_CORRECTION], sram[Constants.CONFIG_OFFSET_WIDTH],
+                 sram[Constants.CONFIG_OFFSET_PARALLELOGRAM], sram[Constants.CONFIG_OFFSET_ROTATION]);
         }
 
         protected override void Dispose(bool disposing)
@@ -66,8 +68,16 @@ namespace crtcpl
                 this.components.Dispose();
                 UCCom.ConnectionClosed -= UCCom_ConnectionClosed;
                 UCCom.ConnectionOpened -= UCCom_ConnectionOpened;
-                this.m_TestPatternForm.Dispose();
-                this.m_SettingsAnalyzerForm.Dispose();
+
+                if (this.m_TestPatternForm != null)
+                {
+                    this.m_TestPatternForm.Dispose();
+                }
+
+                if (this.m_SettingsAnalyzerForm != null)
+                {
+                    this.m_SettingsAnalyzerForm.Dispose();
+                }
             }
             base.Dispose(disposing);
         }
@@ -245,6 +255,12 @@ namespace crtcpl
                 case GeometryPageEventArgs.ChangedGemoetry.Pincushion:
                     what = Constants.IVAD_SETTING_PINCUSHION;
                     break;
+                case GeometryPageEventArgs.ChangedGemoetry.PincushionBalance:
+                    what = Constants.IVAD_SETTING_PINCUSHION_BALANCE;
+                    break;
+                case GeometryPageEventArgs.ChangedGemoetry.SCorrection:
+                    what = Constants.IVAD_SETTING_S_CORRECTION;
+                    break;
                 case GeometryPageEventArgs.ChangedGemoetry.Rotation:
                     what = Constants.IVAD_SETTING_ROTATION;
                     break;
@@ -283,19 +299,28 @@ namespace crtcpl
 
             byte what;
 
-            switch (e.Color)
+            switch (e.Setting)
             {
-                case ColorsPageEventArgs.ChangedColor.Red:
-                    what = Constants.IVAD_SETTING_RED;
+                case ColorsPageEventArgs.ChangedSetting.RedCutoff:
+                    what = Constants.IVAD_SETTING_RED_CUTOFF;
                     break;
-                case ColorsPageEventArgs.ChangedColor.Green:
-                    what = Constants.IVAD_SETTING_GREEN;
+                case ColorsPageEventArgs.ChangedSetting.GreenCutoff:
+                    what = Constants.IVAD_SETTING_GREEN_CUTOFF;
                     break;
-                case ColorsPageEventArgs.ChangedColor.Blue:
-                    what = Constants.IVAD_SETTING_BLUE;
+                case ColorsPageEventArgs.ChangedSetting.BlueCutoff:
+                    what = Constants.IVAD_SETTING_BLUE_CUTOFF;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.RedDrive:
+                    what = Constants.IVAD_SETTING_RED_DRIVE;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.GreenDrive:
+                    what = Constants.IVAD_SETTING_GREEN_DRIVE;
+                    break;
+                case ColorsPageEventArgs.ChangedSetting.BlueDrive:
+                    what = Constants.IVAD_SETTING_BLUE_DRIVE;
                     break;
                 default:
-                    Trace.Fail("Unknown color changed.");
+                    Trace.Fail("Unknown setting changed.");
                     return;
             }
 
@@ -360,16 +385,22 @@ namespace crtcpl
 
         private void showTestPatternToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.showTestPatternToolStripMenuItem.Checked)
+            if (!this.showTestPatternToolStripMenuItem.Checked)
             {
+                this.m_TestPatternForm = new TestPatternForm();
                 this.m_TestPatternForm.Show();
                 this.TopMost = true;
+                this.showTestPatternToolStripMenuItem.Checked = true;
+                this.testPatternSelectionToolStripMenuItem.Enabled = true;
+                testPatternSelectionToolStripMenuItem_Click(this.screenAdjustToolStripMenuItem, EventArgs.Empty);
+                return;
             }
-            else
-            {
-                this.m_TestPatternForm.Hide();
-                this.TopMost = false;
-            }
+            this.m_TestPatternForm.Close();
+            this.m_TestPatternForm.Dispose();
+            this.m_TestPatternForm = null;
+            this.TopMost = false;
+            this.showTestPatternToolStripMenuItem.Checked = false;
+            this.testPatternSelectionToolStripMenuItem.Enabled = false;
         }
 
         private void testPatternSelectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -379,10 +410,7 @@ namespace crtcpl
 
             foreach (ToolStripMenuItem item in this.testPatternSelectionToolStripMenuItem.DropDownItems)
             {
-                if (item != sender)
-                {
-                    item.Checked = false;
-                }
+                item.Checked = (item == sender);
             }
 
             this.m_TestPatternForm.SetTestPattern(mode);
@@ -390,14 +418,18 @@ namespace crtcpl
 
         private void showSettingsanalyzerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.showSettingsanalyzerToolStripMenuItem.Checked)
+            if (!this.showSettingsanalyzerToolStripMenuItem.Checked)
             {
-                this.m_SettingsAnalyzerForm.Show();
+                this.m_SettingsAnalyzerForm = new SettingsAnalyzerForm();
+                this.m_SettingsAnalyzerForm.Show(this);
+                this.showSettingsanalyzerToolStripMenuItem.Checked = true;
+                return;
             }
-            else
-            {
-                this.m_SettingsAnalyzerForm.Hide();
-            }
+
+            this.m_SettingsAnalyzerForm.Close();
+            this.m_SettingsAnalyzerForm.Dispose();
+            this.m_SettingsAnalyzerForm = null;
+            this.showSettingsanalyzerToolStripMenuItem.Checked = false;
         }
     }
 }

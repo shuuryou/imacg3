@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="blueGroupBox.Text" xml:space="preserve">
-    <value>Calibrage fin du &amp;bleu</value>
+  <data name="redCutoffLabel.Text" xml:space="preserve">
+    <value>Coupure &amp;rouge:</value>
   </data>
-  <data name="greenGroupBox.Text" xml:space="preserve">
-    <value>Calibra&amp;ge fin du vert</value>
+  <data name="greenCutoffLabel.Text" xml:space="preserve">
+    <value>Coupure &amp;verte:</value>
   </data>
-  <data name="redGroupBox.Text" xml:space="preserve">
-    <value>Calibrage fin du &amp;rouge</value>
+  <data name="blueCutoffLabel.Text" xml:space="preserve">
+    <value>Coupure &amp;bleue:</value>
+  </data>
+  <data name="redDriveLabel.Text" xml:space="preserve">
+    <value>Augmentation roug&amp;e:</value>
+  </data>
+  <data name="greenDriveLabel.Text" xml:space="preserve">
+    <value>Augmentation &amp;verte:</value>
+  </data>
+  <data name="blueDriveLabel.Text" xml:space="preserve">
+    <value>Augmentation b&amp;leue:</value>
   </data>
 </root>

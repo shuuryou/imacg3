@@ -144,9 +144,6 @@
   <data name="ComErrorBadRate" xml:space="preserve">
     <value>Le débit d’envoi des données sélectionné n'est pas valide.</value>
   </data>
-  <data name="ComErrorBadVersion" xml:space="preserve">
-    <value>Ce programme n'est pas compatible avec le contrôleur IVAD joint.</value>
-  </data>
   <data name="ComErrorOther" xml:space="preserve">
     <value>Une erreur s'est produite lors de la connexion au port de contrôle IVAD. {0}</value>
   </data>
@@ -156,6 +153,9 @@
   <data name="UCComBadResponse" xml:space="preserve">
     <value>Une réponse non valable a été reçue.</value>
   </data>
+  <data name="ComErrorBadVersion" xml:space="preserve">
+    <value>Ce programme n'est pas compatible avec le contrôleur IVAD joint.</value>
+  </data>
   <data name="UCComIOError" xml:space="preserve">
     <value>Le port est dans un état invalide.</value>
   </data>
@@ -164,5 +164,13 @@
   </data>
   <data name="UCComUnauthorizedAccess" xml:space="preserve">
     <value>L'accès au port COM est refusé. Un autre programme a probablement déjà le port COM spécifié ouvert.</value>
+  </data>
+  <data name="AdvancedControlsAreDangerous" xml:space="preserve">
+    <value>Les paramètres avancés sont destinés au personnel formé et pourraient endommager votre écran s'ils sont mal utilisés.
+
+Êtes-vous sûr de vouloir activer les paramètres avancés?</value>
+  </data>
+  <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
+    <value>Paramètres avancés</value>
   </data>
 </root>

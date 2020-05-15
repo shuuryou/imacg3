@@ -30,125 +30,140 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorsPage));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.blueDriveTrackBar = new System.Windows.Forms.TrackBar();
+            this.greenDriveTrackBar = new System.Windows.Forms.TrackBar();
+            this.redDriveTrackBar = new System.Windows.Forms.TrackBar();
+            this.greenCutoffTrackBar = new System.Windows.Forms.TrackBar();
+            this.blueCutoffTrackBar = new System.Windows.Forms.TrackBar();
+            this.redCutoffTrackBar = new System.Windows.Forms.TrackBar();
+            this.redCutoffLabel = new System.Windows.Forms.Label();
+            this.greenCutoffLabel = new System.Windows.Forms.Label();
+            this.blueCutoffLabel = new System.Windows.Forms.Label();
+            this.redDriveLabel = new System.Windows.Forms.Label();
+            this.greenDriveLabel = new System.Windows.Forms.Label();
+            this.blueDriveLabel = new System.Windows.Forms.Label();
             this.colorGradient = new crtcpl.ColorGradient();
-            this.blueGroupBox = new System.Windows.Forms.GroupBox();
-            this.blueTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.blueTrackBar = new System.Windows.Forms.TrackBar();
-            this.greenGroupBox = new System.Windows.Forms.GroupBox();
-            this.greenTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.redGroupBox = new System.Windows.Forms.GroupBox();
-            this.redTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.redTrackBar = new System.Windows.Forms.TrackBar();
-            this.greenTrackBar = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel.SuspendLayout();
-            this.blueGroupBox.SuspendLayout();
-            this.blueTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.blueTrackBar)).BeginInit();
-            this.greenGroupBox.SuspendLayout();
-            this.greenTableLayoutPanel.SuspendLayout();
-            this.redGroupBox.SuspendLayout();
-            this.redTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueDriveTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenDriveTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redDriveTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenCutoffTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueCutoffTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redCutoffTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
             // 
             resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
-            this.tableLayoutPanel.Controls.Add(this.colorGradient, 0, 3);
-            this.tableLayoutPanel.Controls.Add(this.blueGroupBox, 0, 2);
-            this.tableLayoutPanel.Controls.Add(this.greenGroupBox, 0, 1);
-            this.tableLayoutPanel.Controls.Add(this.redGroupBox, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.blueDriveTrackBar, 1, 5);
+            this.tableLayoutPanel.Controls.Add(this.greenDriveTrackBar, 1, 4);
+            this.tableLayoutPanel.Controls.Add(this.redDriveTrackBar, 1, 3);
+            this.tableLayoutPanel.Controls.Add(this.greenCutoffTrackBar, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.blueCutoffTrackBar, 1, 2);
+            this.tableLayoutPanel.Controls.Add(this.redCutoffTrackBar, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.redCutoffLabel, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.greenCutoffLabel, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.blueCutoffLabel, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.redDriveLabel, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.greenDriveLabel, 0, 4);
+            this.tableLayoutPanel.Controls.Add(this.blueDriveLabel, 0, 5);
+            this.tableLayoutPanel.Controls.Add(this.colorGradient, 0, 6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
+            // 
+            // blueDriveTrackBar
+            // 
+            resources.ApplyResources(this.blueDriveTrackBar, "blueDriveTrackBar");
+            this.blueDriveTrackBar.Name = "blueDriveTrackBar";
+            this.blueDriveTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.blueDriveTrackBar.Scroll += new System.EventHandler(this.blueDriveTrackBar_Scroll);
+            // 
+            // greenDriveTrackBar
+            // 
+            resources.ApplyResources(this.greenDriveTrackBar, "greenDriveTrackBar");
+            this.greenDriveTrackBar.Name = "greenDriveTrackBar";
+            this.greenDriveTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.greenDriveTrackBar.Scroll += new System.EventHandler(this.greenDriveTrackBar_Scroll);
+            // 
+            // redDriveTrackBar
+            // 
+            resources.ApplyResources(this.redDriveTrackBar, "redDriveTrackBar");
+            this.redDriveTrackBar.Name = "redDriveTrackBar";
+            this.redDriveTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.redDriveTrackBar.Scroll += new System.EventHandler(this.redDriveTrackBar_Scroll);
+            // 
+            // greenCutoffTrackBar
+            // 
+            resources.ApplyResources(this.greenCutoffTrackBar, "greenCutoffTrackBar");
+            this.greenCutoffTrackBar.Name = "greenCutoffTrackBar";
+            this.greenCutoffTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.greenCutoffTrackBar.Scroll += new System.EventHandler(this.greenCutoffTrackBar_Scroll);
+            // 
+            // blueCutoffTrackBar
+            // 
+            resources.ApplyResources(this.blueCutoffTrackBar, "blueCutoffTrackBar");
+            this.blueCutoffTrackBar.Name = "blueCutoffTrackBar";
+            this.blueCutoffTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.blueCutoffTrackBar.Scroll += new System.EventHandler(this.blueCutoffTrackBar_Scroll);
+            // 
+            // redCutoffTrackBar
+            // 
+            resources.ApplyResources(this.redCutoffTrackBar, "redCutoffTrackBar");
+            this.redCutoffTrackBar.Name = "redCutoffTrackBar";
+            this.redCutoffTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.redCutoffTrackBar.Scroll += new System.EventHandler(this.redCutoffTrackBar_Scroll);
+            // 
+            // redCutoffLabel
+            // 
+            resources.ApplyResources(this.redCutoffLabel, "redCutoffLabel");
+            this.redCutoffLabel.Name = "redCutoffLabel";
+            // 
+            // greenCutoffLabel
+            // 
+            resources.ApplyResources(this.greenCutoffLabel, "greenCutoffLabel");
+            this.greenCutoffLabel.Name = "greenCutoffLabel";
+            // 
+            // blueCutoffLabel
+            // 
+            resources.ApplyResources(this.blueCutoffLabel, "blueCutoffLabel");
+            this.blueCutoffLabel.Name = "blueCutoffLabel";
+            // 
+            // redDriveLabel
+            // 
+            resources.ApplyResources(this.redDriveLabel, "redDriveLabel");
+            this.redDriveLabel.Name = "redDriveLabel";
+            // 
+            // greenDriveLabel
+            // 
+            resources.ApplyResources(this.greenDriveLabel, "greenDriveLabel");
+            this.greenDriveLabel.Name = "greenDriveLabel";
+            // 
+            // blueDriveLabel
+            // 
+            resources.ApplyResources(this.blueDriveLabel, "blueDriveLabel");
+            this.blueDriveLabel.Name = "blueDriveLabel";
             // 
             // colorGradient
             // 
             resources.ApplyResources(this.colorGradient, "colorGradient");
+            this.tableLayoutPanel.SetColumnSpan(this.colorGradient, 2);
             this.colorGradient.Name = "colorGradient";
-            // 
-            // blueGroupBox
-            // 
-            resources.ApplyResources(this.blueGroupBox, "blueGroupBox");
-            this.blueGroupBox.Controls.Add(this.blueTableLayoutPanel);
-            this.blueGroupBox.Name = "blueGroupBox";
-            this.blueGroupBox.TabStop = false;
-            // 
-            // blueTableLayoutPanel
-            // 
-            resources.ApplyResources(this.blueTableLayoutPanel, "blueTableLayoutPanel");
-            this.blueTableLayoutPanel.Controls.Add(this.blueTrackBar, 0, 0);
-            this.blueTableLayoutPanel.Name = "blueTableLayoutPanel";
-            // 
-            // blueTrackBar
-            // 
-            resources.ApplyResources(this.blueTrackBar, "blueTrackBar");
-            this.blueTrackBar.Maximum = 50;
-            this.blueTrackBar.Name = "blueTrackBar";
-            this.blueTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.blueTrackBar.Scroll += new System.EventHandler(this.blueTrackBar_Scroll);
-            // 
-            // greenGroupBox
-            // 
-            resources.ApplyResources(this.greenGroupBox, "greenGroupBox");
-            this.greenGroupBox.Controls.Add(this.greenTableLayoutPanel);
-            this.greenGroupBox.Name = "greenGroupBox";
-            this.greenGroupBox.TabStop = false;
-            // 
-            // greenTableLayoutPanel
-            // 
-            resources.ApplyResources(this.greenTableLayoutPanel, "greenTableLayoutPanel");
-            this.greenTableLayoutPanel.Controls.Add(this.greenTrackBar, 0, 0);
-            this.greenTableLayoutPanel.Name = "greenTableLayoutPanel";
-            // 
-            // redGroupBox
-            // 
-            resources.ApplyResources(this.redGroupBox, "redGroupBox");
-            this.redGroupBox.Controls.Add(this.redTableLayoutPanel);
-            this.redGroupBox.Name = "redGroupBox";
-            this.redGroupBox.TabStop = false;
-            // 
-            // redTableLayoutPanel
-            // 
-            resources.ApplyResources(this.redTableLayoutPanel, "redTableLayoutPanel");
-            this.redTableLayoutPanel.Controls.Add(this.redTrackBar, 0, 0);
-            this.redTableLayoutPanel.Name = "redTableLayoutPanel";
-            // 
-            // redTrackBar
-            // 
-            resources.ApplyResources(this.redTrackBar, "redTrackBar");
-            this.redTrackBar.Maximum = 50;
-            this.redTrackBar.Name = "redTrackBar";
-            this.redTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.redTrackBar.Scroll += new System.EventHandler(this.redTrackBar_Scroll);
-            // 
-            // greenTrackBar
-            // 
-            resources.ApplyResources(this.greenTrackBar, "greenTrackBar");
-            this.greenTrackBar.Maximum = 50;
-            this.greenTrackBar.Name = "greenTrackBar";
-            this.greenTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.greenTrackBar.Scroll += new System.EventHandler(this.greenTrackBar_Scroll);
             // 
             // ColorsPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel);
-            this.MinimumSize = new System.Drawing.Size(355, 235);
+            this.MinimumSize = new System.Drawing.Size(375, 254);
             this.Name = "ColorsPage";
+            this.Load += new System.EventHandler(this.ColorsPage_Load);
             this.tableLayoutPanel.ResumeLayout(false);
-            this.blueGroupBox.ResumeLayout(false);
-            this.blueGroupBox.PerformLayout();
-            this.blueTableLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.blueTrackBar)).EndInit();
-            this.greenGroupBox.ResumeLayout(false);
-            this.greenGroupBox.PerformLayout();
-            this.greenTableLayoutPanel.ResumeLayout(false);
-            this.redGroupBox.ResumeLayout(false);
-            this.redGroupBox.PerformLayout();
-            this.redTableLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
+            this.tableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.blueDriveTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenDriveTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redDriveTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenCutoffTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueCutoffTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redCutoffTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,15 +171,18 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-        private System.Windows.Forms.GroupBox greenGroupBox;
-        private System.Windows.Forms.GroupBox redGroupBox;
-        private System.Windows.Forms.GroupBox blueGroupBox;
-        private System.Windows.Forms.TableLayoutPanel blueTableLayoutPanel;
-        private System.Windows.Forms.TrackBar blueTrackBar;
-        private System.Windows.Forms.TableLayoutPanel greenTableLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel redTableLayoutPanel;
-        private System.Windows.Forms.TrackBar redTrackBar;
         private ColorGradient colorGradient;
-        private System.Windows.Forms.TrackBar greenTrackBar;
+        private System.Windows.Forms.TrackBar blueDriveTrackBar;
+        private System.Windows.Forms.TrackBar greenDriveTrackBar;
+        private System.Windows.Forms.TrackBar redDriveTrackBar;
+        private System.Windows.Forms.TrackBar greenCutoffTrackBar;
+        private System.Windows.Forms.TrackBar blueCutoffTrackBar;
+        private System.Windows.Forms.TrackBar redCutoffTrackBar;
+        private System.Windows.Forms.Label redCutoffLabel;
+        private System.Windows.Forms.Label greenCutoffLabel;
+        private System.Windows.Forms.Label blueCutoffLabel;
+        private System.Windows.Forms.Label redDriveLabel;
+        private System.Windows.Forms.Label greenDriveLabel;
+        private System.Windows.Forms.Label blueDriveLabel;
     }
 }
