@@ -77,6 +77,9 @@ void setup()
   digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
   digitalWrite(PIN_RELAY_RESERVED, HIGH); // OFF
 
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW); // disable useless onboard LED
+
   attachInterrupt(digitalPinToInterrupt(PIN_VGA_VSYNC), vsync_interrupt_proc, RISING);
 
   Serial.begin(9600);
@@ -94,7 +97,7 @@ void setup()
 }
 
 void loop()
-{
+{  
   SIDE_BUTTON_1.loop();
   SIDE_BUTTON_2.loop();
   POWER_BUTTON.loop();
@@ -666,7 +669,6 @@ void ivad_write_settings(bool for_init)
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_BLUE_DRIVE, CURRENT_CONFIG[IVAD_SETTING_BLUE_DRIVE]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_S_CORRECTION, CURRENT_CONFIG[IVAD_SETTING_S_CORRECTION]);
   ivad_write(IVAD_REGISTER_PROPERTY, IVAD_SETTING_PINCUSHION_BALANCE, CURRENT_CONFIG[IVAD_SETTING_PINCUSHION_BALANCE]);
-
 }
 
 int ivad_change_setting(const byte ivad_setting, const byte value)
