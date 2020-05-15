@@ -139,6 +139,7 @@
     <Compile Include="TestPatternForm.Designer.cs">
       <DependentUpon>TestPatternForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCComRockyHill.cs" />
     <Compile Include="UCCom.cs" />
     <Compile Include="Settings.Designer.cs">
       <AutoGen>True</AutoGen>

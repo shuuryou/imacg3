@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !ROCKYHILL
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.IO.Ports;
@@ -347,3 +348,4 @@ namespace crtcpl
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }
+#endif
