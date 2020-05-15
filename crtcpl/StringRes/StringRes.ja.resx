@@ -173,4 +173,10 @@
   <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
     <value>詳細な制御</value>
   </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>すべての設定が既定値にリセットされました。</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>設定</value>
+  </data>
 </root>

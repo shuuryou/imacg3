@@ -17,6 +17,17 @@ namespace crtcpl
                 {
                     Logging.OpenLog();
                 }
+
+                if (arg.Equals("/reset", StringComparison.OrdinalIgnoreCase))
+                {
+                    Logging.WriteLineToLog("Resetting settings.");
+
+                    Settings.Default.Reset();
+                    Settings.Default.Save();
+
+                    MessageBox.Show(StringRes.StringRes.SettingsReset,
+                        StringRes.StringRes.SettingsResetTitle, MessageBoxButtons.OK);
+                }
             }
 
             Logging.WriteBannerToLog("Main");

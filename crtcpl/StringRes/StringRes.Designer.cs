@@ -61,7 +61,9 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The advanced controls were intended for trained professionals and could cause damage to your screen if used incorrectly. Are you sure you want to enable advanced controls?.
+        ///   Looks up a localized string similar to The advanced controls are intended for trained professionals and could cause damage to your screen if used incorrectly.
+        ///
+        ///Are you sure you want to enable advanced controls?.
         /// </summary>
         internal static string AdvancedControlsAreDangerous {
             get {
@@ -174,6 +176,24 @@ namespace crtcpl.StringRes {
         internal static string ComErrorTitle {
             get {
                 return ResourceManager.GetString("ComErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All settings have been reset to their default values..
+        /// </summary>
+        internal static string SettingsReset {
+            get {
+                return ResourceManager.GetString("SettingsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string SettingsResetTitle {
+            get {
+                return ResourceManager.GetString("SettingsResetTitle", resourceCulture);
             }
         }
         

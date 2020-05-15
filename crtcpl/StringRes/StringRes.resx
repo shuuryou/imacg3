@@ -158,6 +158,12 @@ Are you sure you want to enable advanced controls?</value>
   <data name="ComErrorTitle" xml:space="preserve">
     <value>IVAD Control Port</value>
   </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>All settings have been reset to their default values.</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="UCComBadResponse" xml:space="preserve">
     <value>An invalid response was received.</value>
   </data>

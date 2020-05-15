@@ -173,4 +173,10 @@
   <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
     <value>Paramètres avancés</value>
   </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Tous les paramètres ont été réinitialisés aux valeurs par défaut.</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
 </root>
