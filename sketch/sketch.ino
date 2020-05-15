@@ -82,7 +82,7 @@ void setup()
 
   attachInterrupt(digitalPinToInterrupt(PIN_VGA_VSYNC), vsync_interrupt_proc, RISING);
 
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   EEPROMwl.begin(CONFIG_EEPROM_VERSION, CONFIG_EEPROM_SLOTS);
 
