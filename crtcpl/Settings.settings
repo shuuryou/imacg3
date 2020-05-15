@@ -9,7 +9,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="SerialRate" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">9600</Value>
+      <Value Profile="(Default)">115200</Value>
     </Setting>
     <Setting Name="AdvancedControls" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

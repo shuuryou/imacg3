@@ -49,7 +49,7 @@ namespace crtcpl {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("9600")]
+        [global::System.Configuration.DefaultSettingValueAttribute("115200")]
         public int SerialRate {
             get {
                 return ((int)(this["SerialRate"]));

@@ -354,3 +354,5 @@ MigrationBackup/
 *.snk
 *.filters
 setup/Output/install_imac_g3_tools.exe
+sketch/sketch.ino.mega.hex
+sketch/sketch.ino.with_bootloader.mega.hex
