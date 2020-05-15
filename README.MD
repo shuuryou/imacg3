@@ -38,7 +38,8 @@ You should get a few warnings, but no errors.
 
 Please note:
 * Only `crtcpl` is built. The other projects do not support Linux and no Linux support is planned.
-* There are rendering bugs in Mono's WinForms implementation. Most of them have been mitigated to make the program usable but a few visual glitches remain.
+* There are rendering bugs in Mono's WinForms implementation. Most of them have been mitigated to make the program usable but a few visual glitches might remain.
+* Linux being Linux, it considers your Arduino to be a typewriter/modem and will pull the DTR line of the USB serial port high. Doing this will reset the Arduino. To stop this retarded behavior, use `stty -F /dev/ttyACM0 -hupcl`, where `ttyACM0` has to be replaced with whatever the OS assigned as the device for your arduino. Hint: try looking at the output of `dmesg` to find it.
 
 ### Building the Sketch
 
