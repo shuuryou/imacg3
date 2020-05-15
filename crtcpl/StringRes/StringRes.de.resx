@@ -153,7 +153,7 @@
   <data name="UCComBadResponse" xml:space="preserve">
     <value>Es wurde eine ungültige Antwort erhalten.</value>
   </data>
-  <data name="UCComBadVersion" xml:space="preserve">
+  <data name="ComErrorBadVersion" xml:space="preserve">
     <value>Dieses Programm ist nicht mit dem angeschlossenen IVAD-Controller kompatibel.</value>
   </data>
   <data name="UCComIOError" xml:space="preserve">

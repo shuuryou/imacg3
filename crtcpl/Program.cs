@@ -69,11 +69,20 @@ namespace crtcpl
 
                 if (!string.IsNullOrWhiteSpace(Settings.Default.SerialPort))
                 {
+                    byte[] ret = null;
+
                     try
                     {
                         UCCom.Open(Settings.Default.SerialPort, Settings.Default.SerialRate);
+
+                        ret = UCCom.SendCommand(1, 0, 0);
                     }
                     catch (UCComException)
+                    {
+                        Settings.Default.SerialPort = null;
+                    }
+
+                    if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
                     {
                         Settings.Default.SerialPort = null;
                     }

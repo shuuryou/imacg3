@@ -138,7 +138,7 @@
   <data name="ComErrorBadPort" xml:space="preserve">
     <value>選択した制御ポートは無効です。</value>
   </data>
-  <data name="UCComBadVersion" xml:space="preserve">
+  <data name="ComErrorBadVersion" xml:space="preserve">
     <value>このプログラムは、付属のIVADコントローラーと互換性がありません。</value>
   </data>
   <data name="ComErrorOther" xml:space="preserve">
