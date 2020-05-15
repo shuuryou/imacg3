@@ -63,22 +63,20 @@ namespace crtcpl
                 throw new UCComException(StringRes.StringRes.UCComIOError, e);
             }
 
-            byte[] ret = null;
-
+            byte[] ret;
             try
             {
                 ret = SendCommandInternal(1, 0, 0);
+
+                if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
+                {
+                    throw new UCComException(StringRes.StringRes.UCComBadVersion);
+                }
             }
             catch (UCComException)
             {
                 CloseInternal();
                 throw;
-            }
-
-            if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
-            {
-                CloseInternal();
-                throw new UCComException(StringRes.StringRes.UCComBadVersion);
             }
 
             IsOpen = true;
