@@ -150,6 +150,10 @@
       <DependentUpon>AdvancedPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedPage.es.resx">
+      <DependentUpon>AdvancedPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>    
     <EmbeddedResource Include="AdvancedPage.fr.resx">
       <DependentUpon>AdvancedPage.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -164,6 +168,9 @@
     <EmbeddedResource Include="AppletForm.de.resx">
       <DependentUpon>AppletForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppletForm.es.resx">
+      <DependentUpon>AppletForm.cs</DependentUpon>
+    </EmbeddedResource>    
     <EmbeddedResource Include="AppletForm.fr.resx">
       <DependentUpon>AppletForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +183,9 @@
     <EmbeddedResource Include="ColorsPage.de.resx">
       <DependentUpon>ColorsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ColorsPage.es.resx">
+      <DependentUpon>ColorsPage.cs</DependentUpon>
+    </EmbeddedResource>    
     <EmbeddedResource Include="ColorsPage.fr.resx">
       <DependentUpon>ColorsPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +201,9 @@
     <EmbeddedResource Include="GeometryPage.de.resx">
       <DependentUpon>GeometryPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeometryPage.es.resx">
+      <DependentUpon>GeometryPage.cs</DependentUpon>
+    </EmbeddedResource>    
     <EmbeddedResource Include="GeometryPage.fr.resx">
       <DependentUpon>GeometryPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +220,9 @@
     <EmbeddedResource Include="ScreenPage.de.resx">
       <DependentUpon>ScreenPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScreenPage.es.resx">
+      <DependentUpon>ScreenPage.cs</DependentUpon>
+    </EmbeddedResource>    
     <EmbeddedResource Include="ScreenPage.fr.resx">
       <DependentUpon>ScreenPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +236,7 @@
       <DependentUpon>ColorGradient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StringRes\StringRes.de.resx" />
+    <EmbeddedResource Include="StringRes\StringRes.es.resx" />    
     <EmbeddedResource Include="StringRes\StringRes.fr.resx" />
     <EmbeddedResource Include="StringRes\StringRes.ja.resx" />
     <EmbeddedResource Include="StringRes\StringRes.resx">
