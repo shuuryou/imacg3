@@ -24,15 +24,24 @@ sketch|C|An Arduino sketch that can drive the IVAD board of a slot-loading iMac 
 
 Compile the Windows code with Visual Studio 2019. The solution file should open fine and everything should just compile without errors once you create your own `signing.snk` strong key file or disable the signing of the .NET assemblies in the build properties.
 
-### Building the GUI on Linux
+### Building the GUI on Linux (Even on a Raspberry pi)
 
-To compile using Linux (tested using Debian Buster with Mono 5.18.0.240), you can try the following commands. This will build an executable in the `crtcpl/bin/Mono` folder that can be run using Mono.
+To compile using Linux (tested using Debian Buster with Mono 5.18.0.240),Ubuntu 18.04 and Raspian Buster. You can try the following commands. This will build an executable in the `crtcpl/bin/Mono` folder that can be run using Mono.
 
+Debian Buster and Raspian Buster
 ```bash
 apt-get install mono-runtime mono-devel
 sn -k signing.snk
 xbuild /p:Configuration=Mono crtcpl.sln
 ```
+Ubuntu 18.04
+```bash
+apt-get install mono-runtime mono-devel
+sn -k signing.snk
+msbuild /p:Configuration=Mono crtcpl.sln
+```
+xbuild will work as well on Ubuntu 18.04 but it is deprecated and will be removed.
+
 
 You should get a few warnings, but no errors.
 
