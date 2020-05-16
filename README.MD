@@ -47,7 +47,24 @@ The Arduino sketch complies with the standard Arduino development tools. It will
 
 ## Translations
 
-Four languages are currently available: English, Japanese, French and German. Corrections and additions are welcome.
+These languages are currently available:
+* English
+* Spanish (by [Rocky Hill](https://github.com/qbancoffee/imac_g3_ivad_board_init "Rocky Hill"))
+* French
+* German
+* Japanese
+
+Corrections and additions are welcome.
+
+### How to Translate the CRT Control Panel Applet
+
+To add another language, you just have add new RESX files and translate them. This is possible by hand but that's a somewhat painful and involved process. Instead, consider using a dedicated tool like [ResX Translator](https://github.com/HakanL/resxtranslator "ResX Translator"). I used release 2.9, which you can [grab here](https://github.com/HakanL/resxtranslator/releases/tag/v2.9 "grab here").
+
+This tool makes translating (or correcting my English) super easy. Simply open the program, go to **File > Open directory**, select the "crtcpl" folder, and open it. Then just go through all of the files shown, and add your language via **Languages > Add new language**. Now you can translate away.
+
+Once you recompile the code, your translation is available for use. The program should automatically pick the correct language based on your current system language.
+
+To get your translation or changes included in the official distribution, please use the pull request feature from GitHub.
 
 ## Screenshots
 
@@ -87,6 +104,9 @@ Because seeing is believing...
 
 ### Testing an Amplifier Board
 [![My iMac G3 Mod:  Testing an Amplifier Board](https://res.cloudinary.com/marcomontalbano/image/upload/v1588751119/video_to_markdown/images/vimeo--415405633-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/415405633 "My iMac G3 Mod:  Testing an Amplifier Board")
+
+### Installed as an Interactive Piece of Furniture
+[![My iMac G3 Mod: Installed as an Interactive Piece of Furniture](https://res.cloudinary.com/marcomontalbano/image/upload/v1589635273/video_to_markdown/images/vimeo--419256479-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/419256479 "My iMac G3 Mod: Installed as an Interactive Piece of Furniture")
 
 ## Legal
 
