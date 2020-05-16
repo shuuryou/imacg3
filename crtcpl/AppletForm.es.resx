@@ -184,6 +184,6 @@
     <value>&amp;Parámetros de la pantalla</value>
   </data>
   <data name="fuBKTestCardToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pantalla de prueba $FuBK</value>
+    <value>Pantalla de prueba &amp;FuBK</value>
   </data>
 </root>

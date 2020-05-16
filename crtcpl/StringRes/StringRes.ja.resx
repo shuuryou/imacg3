@@ -138,7 +138,7 @@
   <data name="ComErrorBadPort" xml:space="preserve">
     <value>選択した制御ポートは無効です。</value>
   </data>
-  <data name="ComErrorBadVersion" xml:space="preserve">
+  <data name="UCComBadVersion" xml:space="preserve">
     <value>このプログラムは、付属のIVADコントローラーと互換性がありません。</value>
   </data>
   <data name="ComErrorOther" xml:space="preserve">
@@ -172,5 +172,11 @@
   </data>
   <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
     <value>詳細な制御</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>すべての設定が既定値にリセットされました。</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>設定</value>
   </data>
 </root>

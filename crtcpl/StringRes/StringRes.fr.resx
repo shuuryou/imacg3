@@ -153,7 +153,7 @@
   <data name="UCComBadResponse" xml:space="preserve">
     <value>Une réponse non valable a été reçue.</value>
   </data>
-  <data name="ComErrorBadVersion" xml:space="preserve">
+  <data name="UCComBadVersion" xml:space="preserve">
     <value>Ce programme n'est pas compatible avec le contrôleur IVAD joint.</value>
   </data>
   <data name="UCComIOError" xml:space="preserve">
@@ -172,5 +172,11 @@
   </data>
   <data name="AdvancedControlsAreDangerousTitle" xml:space="preserve">
     <value>Paramètres avancés</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Tous les paramètres ont été réinitialisés aux valeurs par défaut.</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>Paramètres</value>
   </data>
 </root>

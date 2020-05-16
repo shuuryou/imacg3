@@ -26,6 +26,7 @@ namespace crtcpl {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string SerialPort {
             get {
                 return ((string)(this["SerialPort"]));
@@ -38,6 +39,7 @@ namespace crtcpl {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool NeedsUpgrade {
             get {
                 return ((bool)(this["NeedsUpgrade"]));
@@ -49,7 +51,8 @@ namespace crtcpl {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("9600")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public int SerialRate {
             get {
                 return ((int)(this["SerialRate"]));
@@ -62,6 +65,7 @@ namespace crtcpl {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool AdvancedControls {
             get {
                 return ((bool)(this["AdvancedControls"]));

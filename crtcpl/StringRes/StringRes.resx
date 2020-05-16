@@ -152,17 +152,23 @@ Are you sure you want to enable advanced controls?</value>
   <data name="ComErrorBadRate" xml:space="preserve">
     <value>The selected transmission rate is invalid.</value>
   </data>
-  <data name="ComErrorBadVersion" xml:space="preserve">
-    <value>This program is not compatible with the attached IVAD controller.</value>
-  </data>
   <data name="ComErrorOther" xml:space="preserve">
     <value>An error occurred while connecting to the IVAD control port. {0}</value>
   </data>
   <data name="ComErrorTitle" xml:space="preserve">
     <value>IVAD Control Port</value>
   </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>All settings have been reset to their default values.</value>
+  </data>
+  <data name="SettingsResetTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="UCComBadResponse" xml:space="preserve">
     <value>An invalid response was received.</value>
+  </data>
+  <data name="UCComBadVersion" xml:space="preserve">
+    <value>This program is not compatible with the attached IVAD controller.</value>
   </data>
   <data name="UCComIOError" xml:space="preserve">
     <value>The port is in an invalid state.</value>

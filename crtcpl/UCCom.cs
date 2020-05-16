@@ -1,8 +1,8 @@
-﻿using System;
+﻿#if !ROCKYHILL
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.IO.Ports;
-using System.Threading;
 
 namespace crtcpl
 {
@@ -17,21 +17,19 @@ namespace crtcpl
     {
         private static SerialPort s_SerialPort;
         private static int s_Counter = 0;
-        private static readonly ManualResetEventSlim s_GotResponse = new ManualResetEventSlim(false);
-        private static readonly byte[] s_ResponseBuffer = new byte[255];
-        private static int s_ResponseBufferLength = 0;
 
         public static ReadOnlyCollection<string> AvailablePorts =
             new ReadOnlyCollection<string>(SerialPort.GetPortNames());
 
         public static ReadOnlyCollection<int> AvailableBitRates = new
-                ReadOnlyCollection<int>(new int[] {
-                    300, 600, 1200, 2400, 4800, 9600, 19200,
-                    38400, 57600, 115200, 230400, 460800, 921600 });
+                ReadOnlyCollection<int>(new int[] { 300, 600, 1200, 2400, 4800, 9600,
+                    14400, 19200, 28800, 31250, 38400, 57600, 115200 });
 
         public static bool IsOpen { get; private set; }
         public static void Open(string port, int rate)
         {
+            Logging.WriteBannerToLog("Open");
+
             if (port == null)
             {
                 throw new ArgumentNullException(nameof(port));
@@ -47,104 +45,111 @@ namespace crtcpl
                 return;
             }
 
+            Logging.WriteLineToLog("Create serial port. Port={0}, Rate={1}", port, rate);
             s_SerialPort = new SerialPort(port, rate, Parity.None, 8, StopBits.One)
             {
                 WriteTimeout = 1000,
-                DtrEnable = false
+                ReadTimeout = 1000,
+                DtrEnable = false // DTR resets Arduino
             };
 
+            Logging.WriteLineToLog("Open the port now.");
             try
             {
                 s_SerialPort.Open();
             }
             catch (UnauthorizedAccessException e)
             {
+                Logging.WriteLineToLog("Exception from serial port: {0}", e);
                 throw new UCComException(StringRes.StringRes.UCComUnauthorizedAccess, e);
             }
             catch (IOException e)
             {
+                Logging.WriteLineToLog("Exception from serial port: {0}", e);
                 throw new UCComException(StringRes.StringRes.UCComIOError, e);
             }
 
-            IsOpen = true;
+            Logging.WriteLineToLog("Compatibility check now.");
+            byte[] ret;
+            try
+            {
+                ret = SendCommandInternal(1, 0, 0);
 
-            kickoffRead();
+                if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
+                {
+                    throw new UCComException(StringRes.StringRes.UCComBadVersion);
+                }
+            }
+            catch (UCComException)
+            {
+                CloseInternal();
+                throw;
+            }
+
+            Logging.WriteLineToLog("Serial port is open.");
+            IsOpen = true;
 
             ConnectionOpened?.Invoke(null, EventArgs.Empty);
         }
 
-        private static void kickoffRead()
-        {
-            byte[] buf = new byte[255];
-
-            s_SerialPort.BaseStream.BeginRead(buf, 0, buf.Length, delegate (IAsyncResult ar)
-            {
-                int actualLength;
-
-                if (!IsOpen || !s_SerialPort.IsOpen)
-                {
-                    return;
-                }
-
-                actualLength = s_SerialPort.BaseStream.EndRead(ar);
-
-                Buffer.BlockCopy(buf, 0, s_ResponseBuffer, s_ResponseBufferLength, actualLength);
-                s_ResponseBufferLength += actualLength;
-
-                if (s_ResponseBufferLength < 7) // Smallest possible response
-                {
-                    goto done;
-                }
-
-                int length = s_ResponseBuffer[2];
-
-                if (s_ResponseBufferLength < 7 + length)
-                {
-                    goto done;
-                }
-
-                if (buf[actualLength - 1] != '\n')
-                {
-                    goto done;
-                }
-
-                s_GotResponse.Set();
-
-            done:
-                kickoffRead();
-            }, null);
-        }
-
         public static void Close()
         {
+            Logging.WriteBannerToLog("Close");
+
             if (!IsOpen)
             {
                 return;
             }
 
-            IsOpen = false;
+            CloseInternal();
 
-            s_SerialPort.Close();
-            s_SerialPort.Dispose();
-            s_SerialPort = null;
-            s_GotResponse.Reset();
+            Logging.WriteLineToLog("Serial port is closed.");
+            IsOpen = false;
 
             ConnectionClosed?.Invoke(null, EventArgs.Empty);
         }
 
+        private static void CloseInternal()
+        {
+            Logging.WriteBannerToLog("CloseInternal");
+
+            if (s_SerialPort != null)
+            {
+                Logging.WriteLineToLog("Dispose serial port.");
+                s_SerialPort.Close();
+                s_SerialPort.Dispose();
+            }
+
+            Logging.WriteLineToLog("Set serial port to null.");
+            s_SerialPort = null;
+        }
+
         public static byte[] SendCommand(byte cmd, byte valA, byte valB)
         {
+            Logging.WriteBannerToLog("SendCommand");
+
             if (!IsOpen)
             {
                 throw new InvalidOperationException("Serial port connection is not open.");
             }
 
+            return SendCommandInternal(cmd, valA, valB);
+        }
+
+        private static byte[] SendCommandInternal(byte cmd, byte valA, byte valB)
+        {
+            Logging.WriteBannerToLog("SendCommandInternal");
+
             int tries = 0;
 
         again:
             tries++;
-            s_ResponseBufferLength = 0;
-            s_GotResponse.Reset();
+
+            if (tries > 3)
+            {
+                Logging.WriteLineToLog("Too many retries. Failing.");
+                throw new UCComException(StringRes.StringRes.UCComNoResponse);
+            }
 
             byte[] payload = new byte[9];
 
@@ -162,66 +167,143 @@ namespace crtcpl
 
             s_SerialPort.Write(payload, 0, payload.Length);
 
-            if (!s_GotResponse.Wait(500))
+            Logging.WriteLineToLog("Send this payload to microcontroller:");
+            Logging.WriteBufferToLog(payload, 0, payload.Length);
+
+            byte[] response = new byte[255];
+            int readsofar = 0;
+            int length;
+
+            Logging.WriteLineToLog("Wait for response now.");
+
+            try
             {
-                if (tries < 3)
+                for (int iterations = 0; ; iterations++)
                 {
-                    goto again;
-                }
-                else
-                {
-                    throw new UCComException(StringRes.StringRes.UCComNoResponse);
+                    Logging.WriteLineToLog("Iteration {0}", iterations);
+
+
+                    int read = s_SerialPort.Read(response, readsofar, response.Length - readsofar);
+                    readsofar += read;
+
+                    Logging.WriteLineToLog("Read so far from serial port: {0} bytes. In this round: {1} bytes.", readsofar, read);
+
+                    if (readsofar == 0)
+                    {
+                        Logging.WriteLineToLog("Read nothing. Resend command.");
+                        goto again;
+                    }
+
+                    if (readsofar < 7)
+                    {
+                        Logging.WriteLineToLog("Read too little to have valid response. Read more.");
+                        continue;
+                    }
+
+                    length = response[2];
+                    Logging.WriteLineToLog("Length from response: {0} bytes", length);
+
+                    if (readsofar < 7 + length)
+                    {
+                        Logging.WriteLineToLog("Read too little according to length. Read more.");
+                        continue;
+                    }
+
+                    if (response[readsofar - 1] != '\n')
+                    {
+                        Logging.WriteLineToLog("Still missing EOL marker.");
+                        continue;
+                    }
+
+                    if (iterations > 1000)
+                    {
+                        Logging.WriteLineToLog("Too many iterations!! Crash now!");
+                        throw new UCComException(StringRes.StringRes.UCComNoResponse);
+                    }
+
+                    // Looks like we have everything
+                    Logging.WriteLineToLog("Got response OK!");
+                    break;
                 }
             }
-
-            payload = s_ResponseBuffer;
-
-            if (payload[0] != 0x06)
+            catch (IOException e)
             {
+                Logging.WriteLineToLog("Exception from serial port: {0}", e.ToString());
+                throw new UCComException(StringRes.StringRes.UCComIOError, e);
+            }
+            catch (TimeoutException)
+            {
+                Logging.WriteLineToLog("Time out from serial port.");
+                goto again;
+            }
+
+            if (response[0] != 0x06)
+            {
+                Logging.WriteLineToLog("Command did not execute successfully.");
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
                     new InvalidOperationException("Command did not execute successfully."));
             }
 
-            if (payload[1] != s_Counter)
+            if (response[1] != s_Counter)
             {
+                Logging.WriteLineToLog("Invalid payload ID. This is not a reponse to the request. Got {0}, but wanted {1}.",
+                    response[1], s_Counter);
+
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
                     new InvalidDataException("Invalid payload ID. This is not a reponse to the request."));
             }
 
-            int length = payload[2];
-
-            if (7 + length > payload.Length)
+            if (7 + length > response.Length)
             {
+                Logging.WriteLineToLog("Reponse is not complete.");
+
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
-                    new InvalidDataException("Reponse is not complete."));
+                 new InvalidDataException("Reponse is not complete."));
             }
 
-            if (payload[2 + length + 1] != 0x03)
+            if (response[2 + length + 1] != 0x03)
             {
+                Logging.WriteLineToLog("Missing end byte A in response.");
+
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
                     new InvalidDataException("Missing end byte A in response."));
             }
 
-            if (payload[2 + length + 2] != Checksum(payload, 0, 2 + length + 1 + 1))
+            byte expected_checksum = Checksum(response, 0, 2 + length + 1 + 1);
+
+            if (response[2 + length + 2] != expected_checksum)
             {
+                Logging.WriteLineToLog("Checksum mismatch in response. Got {0}, but expected {1}.",
+                    response[2 + length + 2], expected_checksum);
+
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
                     new InvalidDataException("Checksum mismatch in response."));
             }
 
-            if (payload[2 + length + 3] != 0x04)
+            if (response[2 + length + 3] != 0x04)
             {
+                Logging.WriteLineToLog("Missing end byte B in response.");
+
                 throw new UCComException(StringRes.StringRes.UCComBadResponse,
                     new InvalidDataException("Missing end byte B in response."));
             }
 
             byte[] ret = new byte[length];
-            Buffer.BlockCopy(payload, 3, ret, 0, length);
+            Buffer.BlockCopy(response, 3, ret, 0, length);
+
+            Logging.WriteLineToLog("The response from microcontroller was:");
+            Logging.WriteBufferToLog(response, 0, readsofar);
+
+            Logging.WriteLineToLog("The command response is:");
+            Logging.WriteBufferToLog(ret, 0, ret.Length);
 
             return ret;
         }
 
         private static byte Checksum(byte[] arr, int offset, int length)
         {
+            Logging.WriteBannerToLog("Checksum");
+
             if (arr == null)
             {
                 throw new ArgumentNullException(nameof(arr));
@@ -246,6 +328,8 @@ namespace crtcpl
 
             int ret = 256 - (sum % 256);
 
+            Logging.WriteLineToLog("The checksum was calculated to be 0x{0:X2}.", ret);
+
             return (byte)ret;
         }
 
@@ -264,3 +348,4 @@ namespace crtcpl
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }
+#endif

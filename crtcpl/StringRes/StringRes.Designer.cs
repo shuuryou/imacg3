@@ -162,15 +162,6 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This program is not compatible with the attached IVAD controller..
-        /// </summary>
-        internal static string ComErrorBadVersion {
-            get {
-                return ResourceManager.GetString("ComErrorBadVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while connecting to the IVAD control port. {0}.
         /// </summary>
         internal static string ComErrorOther {
@@ -189,11 +180,38 @@ namespace crtcpl.StringRes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All settings have been reset to their default values..
+        /// </summary>
+        internal static string SettingsReset {
+            get {
+                return ResourceManager.GetString("SettingsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string SettingsResetTitle {
+            get {
+                return ResourceManager.GetString("SettingsResetTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An invalid response was received..
         /// </summary>
         internal static string UCComBadResponse {
             get {
                 return ResourceManager.GetString("UCComBadResponse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This program is not compatible with the attached IVAD controller..
+        /// </summary>
+        internal static string UCComBadVersion {
+            get {
+                return ResourceManager.GetString("UCComBadVersion", resourceCulture);
             }
         }
         

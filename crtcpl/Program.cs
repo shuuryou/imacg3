@@ -9,8 +9,29 @@ namespace crtcpl
     public static class Program
     {
         [STAThread]
-        public static void Main()
+        public static int Main(string[] args)
         {
+            foreach (string arg in args)
+            {
+                if (arg.Equals("/log", StringComparison.OrdinalIgnoreCase))
+                {
+                    Logging.OpenLog();
+                }
+
+                if (arg.Equals("/reset", StringComparison.OrdinalIgnoreCase))
+                {
+                    Logging.WriteLineToLog("Resetting settings.");
+
+                    Settings.Default.Reset();
+                    Settings.Default.Save();
+
+                    MessageBox.Show(StringRes.StringRes.SettingsReset,
+                        StringRes.StringRes.SettingsResetTitle, MessageBoxButtons.OK);
+                }
+            }
+
+            Logging.WriteBannerToLog("Main");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -18,6 +39,8 @@ namespace crtcpl
 
             if (!result)
             {
+                Logging.WriteLineToLog("Another instance is already running.");
+
                 try
                 {
 #if !MONO
@@ -40,28 +63,37 @@ namespace crtcpl
                         NativeMethods.SetForegroundWindow(p.MainWindowHandle);
                         NativeMethods.ShowWindow(p.MainWindowHandle, SW_SHOW);
 
+                        Logging.WriteLineToLog("Switched to other instance.");
+
                         break;
                     }
 #else
+                    Logging.WriteLineToLog("Show error message.");
+
                     // Sorry, don't know what to do.
                     MessageBox.Show(StringRes.StringRes.AlreadyRunning, StringRes.StringRes.AlreadyRunningTitle,
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 #endif
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    Logging.WriteLineToLog("Exception while switching to other instance: {0}", e);
 #if DEBUG
                     throw;
 #endif
                 }
 
-                return;
+                Logging.WriteLineToLog("Exiting.");
+
+                return 1;
             }
 
             try
             {
                 if (Settings.Default.NeedsUpgrade)
                 {
+                    Logging.WriteLineToLog("Upgrading settings.");
+
                     Settings.Default.Upgrade();
                     Settings.Default.NeedsUpgrade = false;
                     Settings.Default.Save();
@@ -69,34 +101,42 @@ namespace crtcpl
 
                 if (!string.IsNullOrWhiteSpace(Settings.Default.SerialPort))
                 {
-                    byte[] ret = null;
+                    Logging.WriteLineToLog("Try to connect to serial port {0} at rate {1} from settings.",
+                        Settings.Default.SerialPort, Settings.Default.SerialRate);
 
                     try
                     {
                         UCCom.Open(Settings.Default.SerialPort, Settings.Default.SerialRate);
-
-                        ret = UCCom.SendCommand(1, 0, 0);
                     }
-                    catch (UCComException)
+                    catch (UCComException e)
                     {
-                        Settings.Default.SerialPort = null;
-                    }
+                        Logging.WriteLineToLog("Could not open serial port, so set to null. Error: {0}", e);
 
-                    if (ret == null || ret.Length != 1 || ret[0] != Constants.SUPPORTED_EEPROM_VERSION)
-                    {
                         Settings.Default.SerialPort = null;
+                        Settings.Default.SerialRate = -1;
                     }
                 }
+
+                Logging.WriteLineToLog("Main window opening now.");
 
                 using (AppletForm a = new AppletForm())
                 {
                     Application.Run(a);
                 }
+            } catch (Exception e)
+            {
+                Logging.WriteLineToLog("Crashed with exception in Main: {0}", e);
             }
             finally
             {
+                Logging.WriteLineToLog("Final cleanup running.");
+
                 m.ReleaseMutex();
                 m.Dispose();
+
+                Logging.WriteLineToLog("Released and disposed mutex.");
+
+                Logging.WriteLineToLog("Closing serial port.");
 
                 try
                 {
@@ -105,10 +145,17 @@ namespace crtcpl
                         UCCom.Close();
                     }
                 }
-                catch (Exception) { }
-
-                Application.Exit();
+                catch (Exception e)
+                {
+                    Logging.WriteLineToLog("Error closing serial port: {0}", e);
+                }
             }
+
+            Logging.WriteLineToLog("Exiting now...");
+
+            Application.Exit();
+
+            return 0;
         }
     }
 }
