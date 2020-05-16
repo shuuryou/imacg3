@@ -136,7 +136,7 @@
   0x0a, 0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x3d
 
 #define VSYNC_TIMEOUT          5000
-#define VSYNC_PULSES_NEEDED    5
+#define VSYNC_PULSES_NEEDED    5000
 
 #define LED_ORANGE_BLINK_RATE  2000
 

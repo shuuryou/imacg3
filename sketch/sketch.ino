@@ -98,208 +98,208 @@ void setup()
 
 void loop()
 {  
-  SIDE_BUTTON_1.loop();
-  SIDE_BUTTON_2.loop();
-  POWER_BUTTON.loop();
+//  SIDE_BUTTON_1.loop();
+//  SIDE_BUTTON_2.loop();
+//  POWER_BUTTON.loop();
 
-  if (SIDE_BUTTON_1.isReleased())
-  {
-    if (CRT_MASTER_OFF == 0)
-      CRT_MASTER_OFF = 1;
-    else
-      CRT_MASTER_OFF = 0;
+//  if (SIDE_BUTTON_1.isReleased())
+//  {
+//    if (CRT_MASTER_OFF == 0)
+//      CRT_MASTER_OFF = 1;
+//    else
+//      CRT_MASTER_OFF = 0;
+//
+//#ifdef DEBUG
+//    Serial.println(CRT_MASTER_OFF == 0 ? "CRT MASTER OFF: 0" : "CRT MASTER OFF: 1");
+//#endif
+//  }
 
-#ifdef DEBUG
-    Serial.println(CRT_MASTER_OFF == 0 ? "CRT MASTER OFF: 0" : "CRT MASTER OFF: 1");
-#endif
-  }
-
-  if (SIDE_BUTTON_2.isReleased())
-  {
-    // Turn off CRT and reset settings to default
-    emergency_reset();
-
-#ifdef DEBUG
-    Serial.println("EMERGENCY RESET");
-#endif
-  }
+//  if (SIDE_BUTTON_2.isReleased())
+//  {
+//    // Turn off CRT and reset settings to default
+//    emergency_reset();
+//
+//#ifdef DEBUG
+//    Serial.println("EMERGENCY RESET");
+//#endif
+//  }
 
   // Power button
-  {
-    if (POWER_BUTTON.getState() == LOW)
-    {
-#ifdef DEBUG
-      Serial.println("POWER BUTTON");
-#endif
-      digitalWrite(PIN_RELAY_PC, LOW); // ON
-    }
-    else
-    {
-      digitalWrite(PIN_RELAY_PC, HIGH); // OFF
-    }
-  }
+//  {
+//    if (POWER_BUTTON.getState() == LOW)
+//    {
+//#ifdef DEBUG
+//      Serial.println("POWER BUTTON");
+//#endif
+//      digitalWrite(PIN_RELAY_PC, LOW); // ON
+//    }
+//    else
+//    {
+//      digitalWrite(PIN_RELAY_PC, HIGH); // OFF
+//    }
+//  }
 
   // Headphone sense
-  {
-    if (digitalRead(PIN_RELAY_CRT) == HIGH)
-    {
-      // If the CRT is OFF, the speaker amplifier shall be OFF too.
-
-      if (digitalRead(PIN_RELAY_SPK_AMP) == LOW) {
-#ifdef DEBUG
-        Serial.println("CRT OFF -> AMPLIFIER OFF");
-#endif
-        digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
-      }
-
-      // No need to check headphone sense while CRT is off.
-      goto skipHeadphone;
-    }
-
-    if (HEADPHONE_SENSE_LAST_READ == 0 || millis() - HEADPHONE_SENSE_LAST_READ > HEADPHONE_SENSE_READ_DELAY)
-    {
-      int val = max(analogRead(PIN_HEADPHONE_SENSE_1), analogRead(PIN_HEADPHONE_SENSE_2));
-
-      // Software debounce ;/
-      HEADPHONE_SENSE_TOTAL = HEADPHONE_SENSE_TOTAL - HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX];
-      HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX] = val;
-      HEADPHONE_SENSE_TOTAL = HEADPHONE_SENSE_TOTAL + HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX];
-      HEADPHONE_SENSE_READ_IDX = (HEADPHONE_SENSE_READ_IDX + 1) % HEADPHONE_SENSE_NUM_READINGS;
-      HEADPHONE_SENSE_AVERAGE = HEADPHONE_SENSE_TOTAL / HEADPHONE_SENSE_NUM_READINGS;
-      HEADPHONE_SENSE_LAST_READ = millis();
-
-      if (HEADPHONE_SENSE_AVERAGE < HEADPHONE_SENSE_THRESHOLD && digitalRead(PIN_RELAY_SPK_AMP) == HIGH)
-      {
-#ifdef DEBUG
-        Serial.println("HEADPHONE DISCONNECTED");
-#endif
-
-        // Turn ON amplifier
-        digitalWrite(PIN_RELAY_SPK_AMP, LOW); // ON
-        goto skipHeadphone;
-      }
-
-      if (HEADPHONE_SENSE_AVERAGE >= HEADPHONE_SENSE_THRESHOLD && digitalRead(PIN_RELAY_SPK_AMP) == LOW)
-      {
-#ifdef DEBUG
-        Serial.println("HEADPHONE CONNECTED");
-#endif
-
-        // Turn OFF amplifier
-        digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
-        goto skipHeadphone;
-      }
-    }
-skipHeadphone:
-    ;
-  }
+//  {
+//    if (digitalRead(PIN_RELAY_CRT) == HIGH)
+//    {
+//      // If the CRT is OFF, the speaker amplifier shall be OFF too.
+//
+//      if (digitalRead(PIN_RELAY_SPK_AMP) == LOW) {
+//#ifdef DEBUG
+//        Serial.println("CRT OFF -> AMPLIFIER OFF");
+//#endif
+//        digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
+//      }
+//
+//      // No need to check headphone sense while CRT is off.
+//      goto skipHeadphone;
+//    }
+//
+//    if (HEADPHONE_SENSE_LAST_READ == 0 || millis() - HEADPHONE_SENSE_LAST_READ > HEADPHONE_SENSE_READ_DELAY)
+//    {
+//      int val = max(analogRead(PIN_HEADPHONE_SENSE_1), analogRead(PIN_HEADPHONE_SENSE_2));
+//
+//      // Software debounce ;/
+//      HEADPHONE_SENSE_TOTAL = HEADPHONE_SENSE_TOTAL - HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX];
+//      HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX] = val;
+//      HEADPHONE_SENSE_TOTAL = HEADPHONE_SENSE_TOTAL + HEADPHONE_SENSE_READINGS[HEADPHONE_SENSE_READ_IDX];
+//      HEADPHONE_SENSE_READ_IDX = (HEADPHONE_SENSE_READ_IDX + 1) % HEADPHONE_SENSE_NUM_READINGS;
+//      HEADPHONE_SENSE_AVERAGE = HEADPHONE_SENSE_TOTAL / HEADPHONE_SENSE_NUM_READINGS;
+//      HEADPHONE_SENSE_LAST_READ = millis();
+//
+//      if (HEADPHONE_SENSE_AVERAGE < HEADPHONE_SENSE_THRESHOLD && digitalRead(PIN_RELAY_SPK_AMP) == HIGH)
+//      {
+//#ifdef DEBUG
+//        Serial.println("HEADPHONE DISCONNECTED");
+//#endif
+//
+//        // Turn ON amplifier
+//        digitalWrite(PIN_RELAY_SPK_AMP, LOW); // ON
+//        goto skipHeadphone;
+//      }
+//
+//      if (HEADPHONE_SENSE_AVERAGE >= HEADPHONE_SENSE_THRESHOLD && digitalRead(PIN_RELAY_SPK_AMP) == LOW)
+//      {
+//#ifdef DEBUG
+//        Serial.println("HEADPHONE CONNECTED");
+//#endif
+//
+//        // Turn OFF amplifier
+//        digitalWrite(PIN_RELAY_SPK_AMP, HIGH); // OFF
+//        goto skipHeadphone;
+//      }
+//    }
+//skipHeadphone:
+//    ;
+//  }
 
   // VSYNC detect
-  {
-    noInterrupts();
-    unsigned long last    = VSYNC_LAST;
-    unsigned short pulses = VSYNC_PULSES_RECEIVED;
-    interrupts();
-
-    if (last == 0)
-      goto skipVSYNC;
-
-    if (CRT_MASTER_OFF == 1)
-    {
-      if (digitalRead(PIN_RELAY_CRT) == LOW)
-        digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
-
-      goto skipVSYNC;
-    }
-
-    if (millis() - last < VSYNC_TIMEOUT)
-    {
-      // Turn ON CRT
-
-      if (digitalRead(PIN_RELAY_CRT) == LOW) // CRT already ON
-        goto skipVSYNC;
-
-      if (pulses < VSYNC_PULSES_NEEDED)
-      {
-#ifdef DEBUG
-        Serial.println("Not enough vsync pulses yet.");
-#endif
-        goto skipVSYNC;
-      }
-
-      // CRT power ON
-      digitalWrite(PIN_RELAY_CRT, LOW); // ON
-
-#ifdef DEBUG
-      Serial.println("CRT POWER ON");
-#endif
-
-      ivad_initialize();
-      goto skipVSYNC;
-    }
-
-    // millis() - last >= VSYNC_TIMEOUT from here, so turn off CRT
-
-    if (digitalRead(PIN_RELAY_CRT) == HIGH) // CRT already OFF
-      goto skipVSYNC;
-
-    // CRT power OFF
-    digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
-
-#ifdef DEBUG
-    Serial.println("CRT POWER OFF");
-#endif
-
-    noInterrupts();
-    VSYNC_LAST = 0;
-    VSYNC_PULSES_RECEIVED = 0;
-    interrupts();
-
-skipVSYNC:
-    ;
-  }
+//  {
+//    noInterrupts();
+//    unsigned long last    = VSYNC_LAST;
+//    unsigned short pulses = VSYNC_PULSES_RECEIVED;
+//    interrupts();
+//
+//    if (last == 0)
+//      goto skipVSYNC;
+//
+//    if (CRT_MASTER_OFF == 1)
+//    {
+//      if (digitalRead(PIN_RELAY_CRT) == LOW)
+//        digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+//
+//      goto skipVSYNC;
+//    }
+//
+//    if (millis() - last < VSYNC_TIMEOUT)
+//    {
+//      // Turn ON CRT
+//
+//      if (digitalRead(PIN_RELAY_CRT) == LOW) // CRT already ON
+//        goto skipVSYNC;
+//
+//      if (pulses < VSYNC_PULSES_NEEDED)
+//      {
+//#ifdef DEBUG
+//        Serial.println("Not enough vsync pulses yet.");
+//#endif
+//        goto skipVSYNC;
+//      }
+//
+//      // CRT power ON
+//      digitalWrite(PIN_RELAY_CRT, LOW); // ON
+//
+//#ifdef DEBUG
+//      Serial.println("CRT POWER ON");
+//#endif
+//
+//      ivad_initialize();
+//      goto skipVSYNC;
+//    }
+//
+//    // millis() - last >= VSYNC_TIMEOUT from here, so turn off CRT
+//
+//    if (digitalRead(PIN_RELAY_CRT) == HIGH) // CRT already OFF
+//      goto skipVSYNC;
+//
+//    // CRT power OFF
+//    digitalWrite(PIN_RELAY_CRT, HIGH); // OFF
+//
+//#ifdef DEBUG
+//    Serial.println("CRT POWER OFF");
+//#endif
+//
+//    noInterrupts();
+//    VSYNC_LAST = 0;
+//    VSYNC_PULSES_RECEIVED = 0;
+//    interrupts();
+//
+//skipVSYNC:
+//    ;
+//  }
 
   // LED update
-  {
-    if (digitalRead(PIN_RELAY_CRT) == HIGH) // OFF
-    {
-      // CRT is OFF
-
-      digitalWrite(PIN_LED_GREEN, LOW);
-
-      if (CRT_MASTER_OFF == 1)
-      {
-        // CRT master off is indicated with a permanent orange LED
-        digitalWrite(PIN_LED_ORANGE, HIGH);
-        goto skipLED;
-      }
-
-      // CRT in standby mode is indicated with a flashing orange LED
-      if (LED_ORANGE_LAST_UPDATE == 0)
-      {
-        LED_ORANGE_LAST_UPDATE = millis();
-        digitalWrite(PIN_LED_ORANGE, HIGH);
-        goto skipLED;
-      }
-
-      if (millis() - LED_ORANGE_LAST_UPDATE < LED_ORANGE_BLINK_RATE)
-        goto skipLED;
-
-      digitalWrite(PIN_LED_ORANGE, !digitalRead(PIN_LED_ORANGE));
-
-      LED_ORANGE_LAST_UPDATE = millis();
-
-      goto skipLED;
-    }
-
-    // digitalRead(PIN_RELAY_CRT) != HIGH) from here
-    // CRT is ON, which is indicated by a permanent green LED
-
-    digitalWrite(PIN_LED_ORANGE, LOW);
-    digitalWrite(PIN_LED_GREEN, HIGH);
-skipLED:
-    ;
-  }
+//  {
+//    if (digitalRead(PIN_RELAY_CRT) == HIGH) // OFF
+//    {
+//      // CRT is OFF
+//
+//      digitalWrite(PIN_LED_GREEN, LOW);
+//
+//      if (CRT_MASTER_OFF == 1)
+//      {
+//        // CRT master off is indicated with a permanent orange LED
+//        digitalWrite(PIN_LED_ORANGE, HIGH);
+//        goto skipLED;
+//      }
+//
+//      // CRT in standby mode is indicated with a flashing orange LED
+//      if (LED_ORANGE_LAST_UPDATE == 0)
+//      {
+//        LED_ORANGE_LAST_UPDATE = millis();
+//        digitalWrite(PIN_LED_ORANGE, HIGH);
+//        goto skipLED;
+//      }
+//
+//      if (millis() - LED_ORANGE_LAST_UPDATE < LED_ORANGE_BLINK_RATE)
+//        goto skipLED;
+//
+//      digitalWrite(PIN_LED_ORANGE, !digitalRead(PIN_LED_ORANGE));
+//
+//      LED_ORANGE_LAST_UPDATE = millis();
+//
+//      goto skipLED;
+//    }
+//
+//    // digitalRead(PIN_RELAY_CRT) != HIGH) from here
+//    // CRT is ON, which is indicated by a permanent green LED
+//
+//    digitalWrite(PIN_LED_ORANGE, LOW);
+//    digitalWrite(PIN_LED_GREEN, HIGH);
+//skipLED:
+//    ;
+//  }
 
   // Check if IVAD has something to say XXX TODO
   /*
