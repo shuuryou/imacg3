@@ -2,6 +2,11 @@
 
 namespace crtcpl
 {
+    public class AdvancedPageEventArgs : EventArgs
+    {
+
+    }
+
     public class ScreenPageEventArgs : EventArgs
     {
         public ScreenPageEventArgs(int newValue)

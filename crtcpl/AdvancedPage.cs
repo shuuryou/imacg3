@@ -78,6 +78,7 @@ namespace crtcpl
                 this.comPortComboBox.Enabled =
                 this.rateLabel.Enabled =
                 this.rateComboBox.Enabled = true;
+
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
@@ -87,6 +88,7 @@ namespace crtcpl
                 this.comPortComboBox.Enabled =
                 this.rateLabel.Enabled =
                 this.rateComboBox.Enabled = false;
+
             comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
@@ -128,7 +130,7 @@ namespace crtcpl
 
             Settings.Default.SerialPort = this.comPortComboBox.Text;
             Settings.Default.SerialRate = (int)this.rateComboBox.SelectedItem;
-            Settings.Default.Save();
+            OnSettingChanged(new AdvancedPageEventArgs());
         }
 
         private void disconnectButton_Click(object sender, EventArgs e)
@@ -144,6 +146,9 @@ namespace crtcpl
 
         private void advancedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            Settings.Default.AdvancedControls = this.advancedCheckBox.Checked;
+            OnSettingChanged(new AdvancedPageEventArgs());
+
             if (!this.advancedCheckBox.Checked)
             {
                 return;
@@ -157,9 +162,13 @@ namespace crtcpl
             {
                 this.advancedCheckBox.Checked = false;
             }
-
-            Settings.Default.AdvancedControls = this.advancedCheckBox.Checked;
-            Settings.Default.Save();
         }
+
+        protected virtual void OnSettingChanged(AdvancedPageEventArgs e)
+        {
+            SettingChanged?.Invoke(this, e);
+        }
+
+        public event EventHandler<AdvancedPageEventArgs> SettingChanged;
     }
 }

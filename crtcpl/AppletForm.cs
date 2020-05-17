@@ -199,6 +199,8 @@ namespace crtcpl
 
         private void applyButton_Click(object sender, EventArgs e)
         {
+            Settings.Default.Save();
+
             if (!UCCom.IsOpen)
             {
                 return;
@@ -358,6 +360,11 @@ namespace crtcpl
                 return;
             }
 
+            this.applyButton.Enabled = true;
+        }
+
+        private void ADVANCED_SettingChanged(object sender, AdvancedPageEventArgs e)
+        {
             this.applyButton.Enabled = true;
         }
 

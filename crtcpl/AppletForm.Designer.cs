@@ -19,10 +19,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppletForm));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.pagePanel = new System.Windows.Forms.Panel();
-            this.ADVANCED = new crtcpl.AdvancedPage();
-            this.COLORS = new crtcpl.ColorsPage();
-            this.GEOMETRY = new crtcpl.GeometryPage();
-            this.SCREEN = new crtcpl.ScreenPage();
             this.buttonTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.defaultsButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
@@ -48,6 +44,10 @@
             this.blueScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graybarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showSettingsanalyzerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ADVANCED = new crtcpl.AdvancedPage();
+            this.COLORS = new crtcpl.ColorsPage();
+            this.GEOMETRY = new crtcpl.GeometryPage();
+            this.SCREEN = new crtcpl.ScreenPage();
             this.tableLayoutPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.buttonTableLayoutPanel.SuspendLayout();
@@ -74,30 +74,6 @@
             this.pagePanel.Controls.Add(this.SCREEN);
             resources.ApplyResources(this.pagePanel, "pagePanel");
             this.pagePanel.Name = "pagePanel";
-            // 
-            // ADVANCED
-            // 
-            resources.ApplyResources(this.ADVANCED, "ADVANCED");
-            this.ADVANCED.Name = "ADVANCED";
-            // 
-            // COLORS
-            // 
-            resources.ApplyResources(this.COLORS, "COLORS");
-            this.COLORS.Name = "COLORS";
-            this.COLORS.ColorChanged += new System.EventHandler<crtcpl.ColorsPageEventArgs>(this.COLORS_ColorChanged);
-            // 
-            // GEOMETRY
-            // 
-            resources.ApplyResources(this.GEOMETRY, "GEOMETRY");
-            this.GEOMETRY.Name = "GEOMETRY";
-            this.GEOMETRY.GeometryChanged += new System.EventHandler<crtcpl.GeometryPageEventArgs>(this.GEOMETRY_GeometryChanged);
-            // 
-            // SCREEN
-            // 
-            resources.ApplyResources(this.SCREEN, "SCREEN");
-            this.SCREEN.Name = "SCREEN";
-            this.SCREEN.BrightnessChanged += new System.EventHandler<crtcpl.ScreenPageEventArgs>(this.SCREEN_BrightnessChanged);
-            this.SCREEN.ContrastChanged += new System.EventHandler<crtcpl.ScreenPageEventArgs>(this.SCREEN_ContrastChanged);
             // 
             // buttonTableLayoutPanel
             // 
@@ -300,6 +276,31 @@
             this.showSettingsanalyzerToolStripMenuItem.Name = "showSettingsanalyzerToolStripMenuItem";
             resources.ApplyResources(this.showSettingsanalyzerToolStripMenuItem, "showSettingsanalyzerToolStripMenuItem");
             this.showSettingsanalyzerToolStripMenuItem.Click += new System.EventHandler(this.showSettingsanalyzerToolStripMenuItem_Click);
+            // 
+            // ADVANCED
+            // 
+            resources.ApplyResources(this.ADVANCED, "ADVANCED");
+            this.ADVANCED.Name = "ADVANCED";
+            this.ADVANCED.SettingChanged += new System.EventHandler<crtcpl.AdvancedPageEventArgs>(this.ADVANCED_SettingChanged);
+            // 
+            // COLORS
+            // 
+            resources.ApplyResources(this.COLORS, "COLORS");
+            this.COLORS.Name = "COLORS";
+            this.COLORS.ColorChanged += new System.EventHandler<crtcpl.ColorsPageEventArgs>(this.COLORS_ColorChanged);
+            // 
+            // GEOMETRY
+            // 
+            resources.ApplyResources(this.GEOMETRY, "GEOMETRY");
+            this.GEOMETRY.Name = "GEOMETRY";
+            this.GEOMETRY.GeometryChanged += new System.EventHandler<crtcpl.GeometryPageEventArgs>(this.GEOMETRY_GeometryChanged);
+            // 
+            // SCREEN
+            // 
+            resources.ApplyResources(this.SCREEN, "SCREEN");
+            this.SCREEN.Name = "SCREEN";
+            this.SCREEN.BrightnessChanged += new System.EventHandler<crtcpl.ScreenPageEventArgs>(this.SCREEN_BrightnessChanged);
+            this.SCREEN.ContrastChanged += new System.EventHandler<crtcpl.ScreenPageEventArgs>(this.SCREEN_ContrastChanged);
             // 
             // AppletForm
             // 

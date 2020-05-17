@@ -123,7 +123,8 @@ namespace crtcpl
                 {
                     Application.Run(a);
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Logging.WriteLineToLog("Crashed with exception in Main: {0}", e);
             }
