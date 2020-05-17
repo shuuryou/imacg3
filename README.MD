@@ -5,9 +5,7 @@ There is a much better and hackable project available that does almost the same 
 
 **See here: https://github.com/qbancoffee/imac_g3_ivad_board_init**
 
-This repository is mainly here to give back and comply with the author's LGPL license, as I gratefully borrowed quite a lot of his knowledge.
-
-Most of what you see here unfortunately won't work with the above out of the box.
+This repository is mainly here to give back and comply with the author's LGPL license, as I gratefully borrowed quite a lot of his knowledge. He has also kindly made his Arduino sketch fully compatible so you can use  the software offered here without issues.
 
 ## What's Here
 
