@@ -135,7 +135,6 @@ namespace crtcpl
             this.colorsRadioButton.Enabled = true;
             this.defaultsButton.Enabled = true;
             this.applyButton.Enabled = false;
-            this.okButton.Enabled = true;
             this.showSettingsanalyzerToolStripMenuItem.Enabled = true;
 
             UpdatePagesFromSRAM();
@@ -148,7 +147,6 @@ namespace crtcpl
             this.colorsRadioButton.Enabled = false;
             this.defaultsButton.Enabled = false;
             this.applyButton.Enabled = false;
-            this.okButton.Enabled = false;
             this.showSettingsanalyzerToolStripMenuItem.Enabled = false;
 
             advancedRadioButton_CheckedChanged(null, EventArgs.Empty);
