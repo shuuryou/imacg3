@@ -201,7 +201,7 @@ namespace crtcpl
 
             if (!UCCom.IsOpen)
             {
-                return;
+                goto end;
             }
 
             try
@@ -213,9 +213,10 @@ namespace crtcpl
                 MessageBox.Show(this, string.Format(CultureInfo.CurrentCulture, StringRes.StringRes.CantApplyChanges,
                     ex.Message), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return;
+                return; // Not "goto end;" to allow trying again
             }
 
+        end:
             this.applyButton.Enabled = false;
         }
 
