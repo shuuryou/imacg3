@@ -80,8 +80,16 @@
         public const int IVAD_PARALLELOGRAM_MIN = 0x80; // Most left
         public const int IVAD_PARALLELOGRAM_MAX = 0xFF; // Most right
         public const int IVAD_BRIGHTNESS_MIN = 0x00; // Most dim
-        public const int IVAD_BRIGHTNESS_MAX = 0x0A; // Most bright
+        public const int IVAD_BRIGHTNESS_MAX = 0x0A; // Most bright according to Apple Display Service utility
+        public const int IVAD_BRIGHTNESS_MAX_OVERDRIVE = 0x32; // Maximum the IVAD bord will accept in real life
         public const int IVAD_ROTATION_MIN = 0x00; // Most left
         public const int IVAD_ROTATION_MAX = 0x7F; // Most right
+
+        // Regarding IVAD_BRIGHTNESS_MAX_OVERDRIVE:
+        // I did a SCREEN potentiometer adjustment before Rocky Hill discovered the "official" maximum.
+        // I guess that means my master brightness is now too low. If I crank up brightness all the way
+        // to the maximum and then also dial the contrast all the way up, I get bad screen distortion
+        // that goes away very slowly if the CRT is sufficiently warmed up, or instantly if the dials
+        // are turned down again.
     }
 }
