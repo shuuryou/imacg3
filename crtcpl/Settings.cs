@@ -110,14 +110,16 @@ namespace crtcpl
             }
             catch (IOException e)
             {
-                Logging.WriteLineToLog("Unable to load settings: {0}", e);
+                Logging.WriteLineToLog("Unable to save settings: {0}", e);
                 Reset();
             }
             catch (UnauthorizedAccessException e)
             {
-                Logging.WriteLineToLog("Unable to load settings: {0}", e);
+                Logging.WriteLineToLog("Unable to save settings: {0}", e);
                 Reset();
             }
+
+            Logging.WriteLineToLog("Saved settings OK!");
         }
 
         public static void Reset()
