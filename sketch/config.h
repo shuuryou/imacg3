@@ -105,7 +105,8 @@
 #define IVAD_PARALLELOGRAM_MIN          0x80 // Most left
 #define IVAD_PARALLELOGRAM_MAX          0xFF // Most right
 #define IVAD_BRIGHTNESS_MIN             0x00 // Most dim
-#define IVAD_BRIGHTNESS_MAX             0x32 // Most bright
+#define IVAD_BRIGHTNESS_MAX             0x0A; // Most bright according to Apple Display Service utility
+#define IVAD_BRIGHTNESS_MAX_OVERDRIVE   0x32; // Maximum the IVAD bord will accept in real life
 #define IVAD_ROTATION_MIN               0x00 // Most left
 #define IVAD_ROTATION_MAX               0x7F // Most right
 

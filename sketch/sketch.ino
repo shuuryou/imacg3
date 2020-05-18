@@ -789,7 +789,7 @@ int ivad_change_setting(const byte ivad_setting, const byte value)
       break;
     case IVAD_SETTING_BRIGHTNESS:
       if (value < IVAD_BRIGHTNESS_MIN) return 2;
-      if (value > IVAD_BRIGHTNESS_MAX) return 3;
+      if (value > IVAD_BRIGHTNESS_MAX && value > IVAD_BRIGHTNESS_MAX_OVERDRIVE) return 3;
 
       CURRENT_CONFIG[CONFIG_OFFSET_BRIGHTNESS] = value;
       break;
