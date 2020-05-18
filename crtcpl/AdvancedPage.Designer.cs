@@ -19,11 +19,11 @@
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.comPortLabel = new System.Windows.Forms.Label();
             this.comPortComboBox = new System.Windows.Forms.ComboBox();
-            this.connectButton = new System.Windows.Forms.Button();
-            this.disconnectButton = new System.Windows.Forms.Button();
             this.rateLabel = new System.Windows.Forms.Label();
             this.rateComboBox = new System.Windows.Forms.ComboBox();
             this.advancedLabel = new System.Windows.Forms.Label();
+            this.connectButton = new System.Windows.Forms.Button();
+            this.disconnectButton = new System.Windows.Forms.Button();
             this.advancedCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,26 @@
             this.comPortComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comPortComboBox.FormattingEnabled = true;
             this.comPortComboBox.Name = "comPortComboBox";
-            this.comPortComboBox.SelectedIndexChanged += new System.EventHandler(this.comPortComboBox_SelectedIndexChanged);
+            this.comPortComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
+            // 
+            // rateLabel
+            // 
+            resources.ApplyResources(this.rateLabel, "rateLabel");
+            this.rateLabel.Name = "rateLabel";
+            // 
+            // rateComboBox
+            // 
+            resources.ApplyResources(this.rateComboBox, "rateComboBox");
+            this.tableLayoutPanel.SetColumnSpan(this.rateComboBox, 2);
+            this.rateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rateComboBox.FormattingEnabled = true;
+            this.rateComboBox.Name = "rateComboBox";
+            this.rateComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
+            // 
+            // advancedLabel
+            // 
+            resources.ApplyResources(this.advancedLabel, "advancedLabel");
+            this.advancedLabel.Name = "advancedLabel";
             // 
             // connectButton
             // 
@@ -68,24 +87,6 @@
             this.disconnectButton.Name = "disconnectButton";
             this.disconnectButton.UseVisualStyleBackColor = true;
             this.disconnectButton.Click += new System.EventHandler(this.disconnectButton_Click);
-            // 
-            // rateLabel
-            // 
-            resources.ApplyResources(this.rateLabel, "rateLabel");
-            this.rateLabel.Name = "rateLabel";
-            // 
-            // rateComboBox
-            // 
-            resources.ApplyResources(this.rateComboBox, "rateComboBox");
-            this.tableLayoutPanel.SetColumnSpan(this.rateComboBox, 2);
-            this.rateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rateComboBox.FormattingEnabled = true;
-            this.rateComboBox.Name = "rateComboBox";
-            // 
-            // advancedLabel
-            // 
-            resources.ApplyResources(this.advancedLabel, "advancedLabel");
-            this.advancedLabel.Name = "advancedLabel";
             // 
             // advancedCheckBox
             // 

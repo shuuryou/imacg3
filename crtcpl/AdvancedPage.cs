@@ -79,7 +79,7 @@ namespace crtcpl
                 this.rateLabel.Enabled =
                 this.rateComboBox.Enabled = true;
 
-            comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
+            ComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
         private void UCCom_ConnectionOpened(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace crtcpl
                 this.rateLabel.Enabled =
                 this.rateComboBox.Enabled = false;
 
-            comPortComboBox_SelectedIndexChanged(null, EventArgs.Empty);
+            ComboBox_SelectedIndexChanged(null, EventArgs.Empty);
         }
 
         private void connectButton_Click(object sender, EventArgs e)
@@ -138,9 +138,11 @@ namespace crtcpl
             UCCom.Close();
         }
 
-        private void comPortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.connectButton.Enabled = !UCCom.IsOpen && this.comPortComboBox.SelectedIndex != -1;
+            OnSettingChanged(new AdvancedPageEventArgs());
+            this.connectButton.Enabled = !UCCom.IsOpen &&
+                (this.comPortComboBox.SelectedIndex != -1 && this.rateComboBox.SelectedIndex != -1);
             this.disconnectButton.Enabled = UCCom.IsOpen;
         }
 
