@@ -196,7 +196,7 @@ namespace crtcpl
         }
         private void applyButton_Click(object sender, EventArgs e)
         {
-            Settings.Default.Save();
+            Settings.Save();
 
             if (!UCCom.IsOpen)
             {

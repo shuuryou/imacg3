@@ -22,8 +22,8 @@ namespace crtcpl
                 {
                     Logging.WriteLineToLog("Resetting settings.");
 
-                    Settings.Default.Reset();
-                    Settings.Default.Save();
+                    Settings.Reset();
+                    Settings.Save();
 
                     MessageBox.Show(StringRes.StringRes.SettingsReset,
                         StringRes.StringRes.SettingsResetTitle, MessageBoxButtons.OK);
@@ -90,15 +90,6 @@ namespace crtcpl
 
             try
             {
-                if (Settings.Default.NeedsUpgrade)
-                {
-                    Logging.WriteLineToLog("Upgrading settings.");
-
-                    Settings.Default.Upgrade();
-                    Settings.Default.NeedsUpgrade = false;
-                    Settings.Default.Save();
-                }
-
                 if (!string.IsNullOrWhiteSpace(Settings.Default.SerialPort))
                 {
                     Logging.WriteLineToLog("Try to connect to serial port {0} at rate {1} from settings.",
@@ -127,6 +118,7 @@ namespace crtcpl
             catch (Exception e)
             {
                 Logging.WriteLineToLog("Crashed with exception in Main: {0}", e);
+                throw;
             }
             finally
             {

@@ -12,10 +12,13 @@ namespace crtcpl
             this.brightnessTrackBar.Minimum = Constants.IVAD_BRIGHTNESS_MIN;
 
             if (Settings.Default.AdvancedControls)
+            {
                 this.brightnessTrackBar.Maximum = Constants.IVAD_BRIGHTNESS_MAX_OVERDRIVE;
+            }
             else
+            {
                 this.brightnessTrackBar.Maximum = Constants.IVAD_BRIGHTNESS_MAX;
-
+            }
 
             this.contrastTrackBar.Minimum = Constants.IVAD_CONTRAST_MIN;
             this.contrastTrackBar.Maximum = Constants.IVAD_CONTRAST_MAX;
