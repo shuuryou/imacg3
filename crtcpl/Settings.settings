@@ -2,16 +2,16 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="crtcpl" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="SerialPort" Type="System.String" Scope="User">
+    <Setting Name="SerialPort" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="NeedsUpgrade" Type="System.Boolean" Scope="User">
+    <Setting Name="NeedsUpgrade" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="SerialRate" Type="System.Int32" Scope="User">
+    <Setting Name="SerialRate" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">-1</Value>
     </Setting>
-    <Setting Name="AdvancedControls" Type="System.Boolean" Scope="User">
+    <Setting Name="AdvancedControls" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
