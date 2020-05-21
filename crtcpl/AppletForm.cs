@@ -49,7 +49,7 @@ namespace crtcpl
                 return;
             }
 
-            this.SCREEN.SetValues(sram[Constants.CONFIG_OFFSET_BRIGHTNESS], sram[Constants.CONFIG_OFFSET_CONTRAST]);
+            this.SCREEN.SetValues(sram[Constants.CONFIG_OFFSET_BRIGHTNESS], sram[Constants.CONFIG_OFFSET_BRIGHTNESS_DRIVE], sram[Constants.CONFIG_OFFSET_CONTRAST]);
 
             this.COLORS.SetValues(
                 sram[Constants.CONFIG_OFFSET_RED_CUTOFF], sram[Constants.CONFIG_OFFSET_GREEN_CUTOFF], sram[Constants.CONFIG_OFFSET_BLUE_CUTOFF],
@@ -339,6 +339,11 @@ namespace crtcpl
             this.applyButton.Enabled = true;
         }
 
+        private void ADVANCED_SettingChanged(object sender, AdvancedPageEventArgs e)
+        {
+            this.applyButton.Enabled = true;
+        }
+
         private void SCREEN_ContrastChanged(object sender, ScreenPageEventArgs e)
         {
             if (!UCCom.IsOpen)
@@ -361,11 +366,6 @@ namespace crtcpl
             this.applyButton.Enabled = true;
         }
 
-        private void ADVANCED_SettingChanged(object sender, AdvancedPageEventArgs e)
-        {
-            this.applyButton.Enabled = true;
-        }
-
         private void SCREEN_BrightnessChanged(object sender, ScreenPageEventArgs e)
         {
             if (!UCCom.IsOpen)
@@ -376,6 +376,28 @@ namespace crtcpl
             try
             {
                 UCCom.SendCommand(3, Constants.IVAD_SETTING_BRIGHTNESS, (byte)e.NewValue);
+            }
+            catch (UCComException ex)
+            {
+                MessageBox.Show(this, string.Format(CultureInfo.CurrentCulture, StringRes.StringRes.CantPerformChange,
+                    ex.Message), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            this.applyButton.Enabled = true;
+        }
+
+        private void SCREEN_BrightnessDriveChanged(object sender, ScreenPageEventArgs e)
+        {
+            if (!UCCom.IsOpen)
+            {
+                return;
+            }
+
+            try
+            {
+                UCCom.SendCommand(3, Constants.IVAD_SETTING_BRIGHTNESS_DRIVE, (byte)e.NewValue);
             }
             catch (UCComException ex)
             {

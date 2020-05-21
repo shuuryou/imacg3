@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenPage));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.brightnessDriveGroupBox = new System.Windows.Forms.GroupBox();
+            this.brightnessDriveTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.brightnessDriveTrackBar = new System.Windows.Forms.TrackBar();
             this.contrastGroupBox = new System.Windows.Forms.GroupBox();
             this.constrastTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -41,6 +46,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.brightnessTrackBar = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel.SuspendLayout();
+            this.brightnessDriveGroupBox.SuspendLayout();
+            this.brightnessDriveTableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brightnessDriveTrackBar)).BeginInit();
             this.contrastGroupBox.SuspendLayout();
             this.constrastTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,9 +66,46 @@
             // tableLayoutPanel
             // 
             resources.ApplyResources(this.tableLayoutPanel, "tableLayoutPanel");
+            this.tableLayoutPanel.Controls.Add(this.brightnessDriveGroupBox, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.contrastGroupBox, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.brightnessGroupBox, 0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
+            // 
+            // brightnessDriveGroupBox
+            // 
+            resources.ApplyResources(this.brightnessDriveGroupBox, "brightnessDriveGroupBox");
+            this.brightnessDriveGroupBox.Controls.Add(this.brightnessDriveTableLayoutPanel);
+            this.brightnessDriveGroupBox.Name = "brightnessDriveGroupBox";
+            this.brightnessDriveGroupBox.TabStop = false;
+            // 
+            // brightnessDriveTableLayoutPanel
+            // 
+            resources.ApplyResources(this.brightnessDriveTableLayoutPanel, "brightnessDriveTableLayoutPanel");
+            this.brightnessDriveTableLayoutPanel.Controls.Add(this.pictureBox5, 0, 0);
+            this.brightnessDriveTableLayoutPanel.Controls.Add(this.pictureBox6, 2, 0);
+            this.brightnessDriveTableLayoutPanel.Controls.Add(this.brightnessDriveTrackBar, 1, 0);
+            this.brightnessDriveTableLayoutPanel.Name = "brightnessDriveTableLayoutPanel";
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Image = global::crtcpl.ImageRes.ImageRes.RES002;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Image = global::crtcpl.ImageRes.ImageRes.RES001;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // brightnessDriveTrackBar
+            // 
+            resources.ApplyResources(this.brightnessDriveTrackBar, "brightnessDriveTrackBar");
+            this.brightnessDriveTrackBar.Name = "brightnessDriveTrackBar";
+            this.brightnessDriveTrackBar.TickFrequency = 2;
+            this.brightnessDriveTrackBar.Scroll += new System.EventHandler(this.brightnessDriveTrackBar_Scroll);
             // 
             // contrastGroupBox
             // 
@@ -140,6 +187,13 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "ScreenPage";
             this.tableLayoutPanel.ResumeLayout(false);
+            this.brightnessDriveGroupBox.ResumeLayout(false);
+            this.brightnessDriveGroupBox.PerformLayout();
+            this.brightnessDriveTableLayoutPanel.ResumeLayout(false);
+            this.brightnessDriveTableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brightnessDriveTrackBar)).EndInit();
             this.contrastGroupBox.ResumeLayout(false);
             this.contrastGroupBox.PerformLayout();
             this.constrastTableLayoutPanel.ResumeLayout(false);
@@ -172,5 +226,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TrackBar contrastTrackBar;
+        private System.Windows.Forms.GroupBox brightnessDriveGroupBox;
+        private System.Windows.Forms.TableLayoutPanel brightnessDriveTableLayoutPanel;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TrackBar brightnessDriveTrackBar;
     }
 }

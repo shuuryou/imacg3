@@ -10,21 +10,25 @@ namespace crtcpl
             InitializeComponent();
 
             this.brightnessTrackBar.Minimum = Constants.IVAD_BRIGHTNESS_MIN;
+            this.brightnessTrackBar.Maximum = Settings.Default.AdvancedControls ?
+                Constants.IVAD_BRIGHTNESS_MAX_OVERDRIVE : Constants.IVAD_BRIGHTNESS_MAX;
 
-            if (Settings.Default.AdvancedControls)
-            {
-                this.brightnessTrackBar.Maximum = Constants.IVAD_BRIGHTNESS_MAX_OVERDRIVE;
-            }
-            else
-            {
-                this.brightnessTrackBar.Maximum = Constants.IVAD_BRIGHTNESS_MAX;
-            }
+            this.brightnessDriveTrackBar.Minimum = Constants.IVAD_BRIGHTNESS_DRIVE_MIN;
+            this.brightnessDriveTrackBar.Maximum = Constants.IVAD_BRIGHTNESS_DRIVE_MAX;
 
             this.contrastTrackBar.Minimum = Constants.IVAD_CONTRAST_MIN;
             this.contrastTrackBar.Maximum = Constants.IVAD_CONTRAST_MAX;
+
+            this.brightnessDriveGroupBox.Visible =
+                this.brightnessDriveGroupBox.Enabled = Settings.Default.AdvancedControls;
+
+            // It moves on its own later due to WinForms positioning it based on its
+            // Anchor property, but that's relative to its starting position, which
+            // we need to correct once.
+            this.tableLayoutPanel.Top = (this.Height - this.tableLayoutPanel.Height) / 2;
         }
 
-        public void SetValues(int brightness, int contrast)
+        public void SetValues(int brightness, int brightness_drive, int contrast)
         {
             if (brightness < this.brightnessTrackBar.Minimum)
             {
@@ -33,6 +37,15 @@ namespace crtcpl
             else if (brightness > this.brightnessTrackBar.Maximum)
             {
                 brightness = this.brightnessTrackBar.Maximum;
+            }
+
+            if (brightness_drive < this.brightnessDriveTrackBar.Minimum)
+            {
+                brightness_drive = this.brightnessDriveTrackBar.Minimum;
+            }
+            else if (brightness_drive > this.brightnessDriveTrackBar.Maximum)
+            {
+                brightness_drive = this.brightnessDriveTrackBar.Maximum;
             }
 
             if (contrast < this.contrastTrackBar.Minimum)
@@ -45,12 +58,18 @@ namespace crtcpl
             }
 
             this.brightnessTrackBar.Value = brightness;
+            this.brightnessDriveTrackBar.Value = brightness_drive;
             this.contrastTrackBar.Value = contrast;
         }
 
         private void brightnessTrackBar_Scroll(object sender, EventArgs e)
         {
             OnBrighnessChanged(new ScreenPageEventArgs(this.brightnessTrackBar.Value));
+        }
+
+        private void brightnessDriveTrackBar_Scroll(object sender, EventArgs e)
+        {
+            OnBrighnessDriveChanged(new ScreenPageEventArgs(this.brightnessDriveTrackBar.Value));
         }
 
         private void contrastTrackBar_Scroll(object sender, EventArgs e)
@@ -63,12 +82,18 @@ namespace crtcpl
             BrightnessChanged?.Invoke(this, e);
         }
 
+        protected virtual void OnBrighnessDriveChanged(ScreenPageEventArgs e)
+        {
+            BrightnessDriveChanged?.Invoke(this, e);
+        }
+
         protected virtual void OnContrastChanged(ScreenPageEventArgs e)
         {
             ContrastChanged?.Invoke(this, e);
         }
 
         public event EventHandler<ScreenPageEventArgs> BrightnessChanged;
+        public event EventHandler<ScreenPageEventArgs> BrightnessDriveChanged;
         public event EventHandler<ScreenPageEventArgs> ContrastChanged;
     }
 }
