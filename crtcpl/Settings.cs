@@ -101,7 +101,7 @@ namespace crtcpl
 
             try
             {
-                using (FileStream fs = File.OpenWrite(file))
+                using (FileStream fs = File.Create(file))
                 {
                     serializer.Serialize(fs, Default);
                     fs.Flush();
