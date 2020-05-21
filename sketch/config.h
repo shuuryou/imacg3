@@ -46,7 +46,7 @@
 #define CONFIG_OFFSET_WIDTH              13
 #define CONFIG_OFFSET_PINCUSHION_BALANCE 14
 #define CONFIG_OFFSET_PARALLELOGRAM      15
-#define CONFIG_OFFSET_RESERVED6          16
+#define CONFIG_OFFSET_BRIGHTNESS_DRIVE   16
 #define CONFIG_OFFSET_BRIGHTNESS         17
 #define CONFIG_OFFSET_ROTATION           18
 #define CONFIG_OFFSET_CHECKSUM           19
@@ -68,7 +68,7 @@
 #define IVAD_SETTING_WIDTH              0x0D
 #define IVAD_SETTING_PINCUSHION_BALANCE 0x0E
 #define IVAD_SETTING_PARALLELOGRAM      0x0F
-// #define IVAD_SETTING_RESERVED6       0x10
+#define IVAD_SETTING_BRIGHTNESS_DRIVE   0x10
 #define IVAD_SETTING_BRIGHTNESS         0x11
 #define IVAD_SETTING_ROTATION           0x12
 
@@ -104,9 +104,11 @@
 #define IVAD_WIDTH_MAX                  0x7F // Most thick
 #define IVAD_PARALLELOGRAM_MIN          0x80 // Most left
 #define IVAD_PARALLELOGRAM_MAX          0xFF // Most right
+#define IVAD_BRIGHTNESS_DRIVE_MIN       0xC0 // Most dim
+#define IVAD_BRIGHTNESS_DRIVE_MAX       0xFF // Most bright
 #define IVAD_BRIGHTNESS_MIN             0x00 // Most dim
-#define IVAD_BRIGHTNESS_MAX             0x0A; // Most bright according to Apple Display Service utility
-#define IVAD_BRIGHTNESS_MAX_OVERDRIVE   0x32; // Maximum the IVAD bord will accept in real life
+#define IVAD_BRIGHTNESS_MAX             0x0A // Most bright according to Apple Display Service utility
+#define IVAD_BRIGHTNESS_MAX_OVERDRIVE   0x32 // Maximum the IVAD bord will accept in real life
 #define IVAD_ROTATION_MIN               0x00 // Most left
 #define IVAD_ROTATION_MAX               0x7F // Most right
 
