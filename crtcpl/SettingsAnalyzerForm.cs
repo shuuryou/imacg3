@@ -32,7 +32,7 @@ namespace crtcpl
             this.listView.Items.Add("CONFIG_OFFSET_WIDTH");
             this.listView.Items.Add("CONFIG_OFFSET_PINCUSHION_BALANCE");
             this.listView.Items.Add("CONFIG_OFFSET_PARALLELOGRAM");
-            this.listView.Items.Add("CONFIG_OFFSET_RESERVED6");
+            this.listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS_DRIVE");
             this.listView.Items.Add("CONFIG_OFFSET_BRIGHTNESS");
             this.listView.Items.Add("CONFIG_OFFSET_ROTATION");
             this.listView.Items.Add("CONFIG_OFFSET_CHECKSUM");
