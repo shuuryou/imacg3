@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="redCutoffLabel.Text" xml:space="preserve">
-    <value>&amp;Límite rojo:</value>
+    <value>Límite &amp;rojo:</value>
   </data>
   <data name="greenCutoffLabel.Text" xml:space="preserve">
     <value>Límite &amp;verde:</value>
   </data>
   <data name="blueCutoffLabel.Text" xml:space="preserve">
-    <value>&amp;Límite a&amp;zul:</value>
+    <value>Límite a&amp;zul:</value>
   </data>
   <data name="redDriveLabel.Text" xml:space="preserve">
-    <value>Ganancia &amp;roja:</value>
+    <value>Ganancia del r&amp;ojo:</value>
   </data>
   <data name="greenDriveLabel.Text" xml:space="preserve">
-    <value>Ganancia ver&amp;de:</value>
+    <value>Ganancia del ver&amp;de:</value>
   </data>
   <data name="blueDriveLabel.Text" xml:space="preserve">
-    <value>Ganancia azu&amp;l:</value>
+    <value>Ganancia del azu&amp;l:</value>
   </data>
 </root>

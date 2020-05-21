@@ -123,4 +123,7 @@
   <data name="brightnessGroupBox.Text" xml:space="preserve">
     <value>&amp;Brillo</value>
   </data>
+  <data name="brightnessDriveGroupBox.Text" xml:space="preserve">
+    <value>&amp;Ganancia del brillo</value>
+  </data>
 </root>
