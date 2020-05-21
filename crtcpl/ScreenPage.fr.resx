@@ -123,4 +123,7 @@
   <data name="brightnessGroupBox.Text" xml:space="preserve">
     <value>&amp;Luminosité</value>
   </data>
+  <data name="brightnessDriveGroupBox.Text" xml:space="preserve">
+    <value>Au&amp;gmentation de la luminosité</value>
+  </data>
 </root>

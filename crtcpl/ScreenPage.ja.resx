@@ -123,4 +123,7 @@
   <data name="brightnessGroupBox.Text" xml:space="preserve">
     <value>輝度(&amp;B)</value>
   </data>
+  <data name="brightnessDriveGroupBox.Text" xml:space="preserve">
+    <value>輝度のゲイン(&amp;N)</value>
+  </data>
 </root>
