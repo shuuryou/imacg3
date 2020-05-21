@@ -22,7 +22,7 @@
         public const int CONFIG_OFFSET_WIDTH = 13;
         public const int CONFIG_OFFSET_PINCUSHION_BALANCE = 14;
         public const int CONFIG_OFFSET_PARALLELOGRAM = 15;
-        public const int CONFIG_OFFSET_RESERVED6 = 16;
+        public const int CONFIG_OFFSET_BRIGHTNESS_DRIVE = 16;
         public const int CONFIG_OFFSET_BRIGHTNESS = 17;
         public const int CONFIG_OFFSET_ROTATION = 18;
         public const int CONFIG_OFFSET_CHECKSUM = 19;
@@ -43,7 +43,7 @@
         public const int IVAD_SETTING_WIDTH = 0x0D;
         public const int IVAD_SETTING_PINCUSHION_BALANCE = 0x0E;
         public const int IVAD_SETTING_PARALLELOGRAM = 0x0F;
-        // public const int IVAD_SETTING_RESERVED6 = 0x10;
+        public const int IVAD_SETTING_BRIGHTNESS_DRIVE = 0x10;
         public const int IVAD_SETTING_BRIGHTNESS = 0x11;
         public const int IVAD_SETTING_ROTATION = 0x12;
 
@@ -79,6 +79,8 @@
         public const int IVAD_WIDTH_MAX = 0x7F; // Most thick
         public const int IVAD_PARALLELOGRAM_MIN = 0x80; // Most left
         public const int IVAD_PARALLELOGRAM_MAX = 0xFF; // Most right
+        public const int IVAD_BRIGHTNESS_DRIVE_MIN = 0xC0; // Most dim
+        public const int IVAD_BRIGHTNESS_DRIVE_MAX = 0xFF; // Most bright
         public const int IVAD_BRIGHTNESS_MIN = 0x00; // Most dim
         public const int IVAD_BRIGHTNESS_MAX = 0x0A; // Most bright according to Apple Display Service utility
         public const int IVAD_BRIGHTNESS_MAX_OVERDRIVE = 0x32; // Maximum the IVAD bord will accept in real life
