@@ -140,8 +140,22 @@ namespace crtcpl
 
         private void ColorsPage_Load(object sender, EventArgs e)
         {
-            this.redDriveTrackBar.Enabled = this.greenDriveTrackBar.Enabled =
-                this.blueDriveTrackBar.Enabled = Settings.Default.AdvancedControls;
+            Control[] ctrls = new Control[]
+            {
+                this.redDriveLabel, this.redDriveTrackBar,
+                this.greenDriveLabel, this.greenDriveTrackBar,
+                this.blueDriveLabel, this.blueDriveTrackBar
+            };
+
+            foreach (Control ctrl in ctrls)
+            {
+                ctrl.Enabled = Settings.Default.AdvancedControls;
+                ctrl.Visible = Settings.Default.AdvancedControls;
+            }
+
+            // When they become invisible, the color gradient fills up their space.
+            // This is why we do not need to reposition the TableLayoutPanel here
+            // like we have to in ScreenPage.
         }
     }
 }
