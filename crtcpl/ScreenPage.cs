@@ -70,8 +70,9 @@ namespace crtcpl
         private void brightnessDriveTrackBar_Scroll(object sender, EventArgs e)
         {
             // The brightness drive maximum is most dim, while the brightness maximum is most bright.
-            // We subtract drive maximum from drive value to make it act like the brightness slider.
-            OnBrighnessDriveChanged(new ScreenPageEventArgs(this.brightnessDriveTrackBar.Maximum - this.brightnessDriveTrackBar.Value));
+            // We subtract drive maximum from the difference of the drive value to make it act like the brightness slider.
+            OnBrighnessDriveChanged(new ScreenPageEventArgs(this.brightnessDriveTrackBar.Maximum -
+                (this.brightnessDriveTrackBar.Value - this.brightnessDriveTrackBar.Minimum)));
         }
 
         private void contrastTrackBar_Scroll(object sender, EventArgs e)
