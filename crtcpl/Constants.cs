@@ -79,8 +79,8 @@
         public const int IVAD_WIDTH_MAX = 0x7F; // Most thick
         public const int IVAD_PARALLELOGRAM_MIN = 0x80; // Most left
         public const int IVAD_PARALLELOGRAM_MAX = 0xFF; // Most right
-        public const int IVAD_BRIGHTNESS_DRIVE_MIN = 0xC0; // Most dim
-        public const int IVAD_BRIGHTNESS_DRIVE_MAX = 0xFF; // Most bright
+        public const int IVAD_BRIGHTNESS_DRIVE_MIN = 0xC0; // Most bright
+        public const int IVAD_BRIGHTNESS_DRIVE_MAX = 0xFF; // Most dim
         public const int IVAD_BRIGHTNESS_MIN = 0x00; // Most dim
         public const int IVAD_BRIGHTNESS_MAX = 0x0A; // Most bright according to Apple Display Service utility
         public const int IVAD_BRIGHTNESS_MAX_OVERDRIVE = 0x32; // Maximum the IVAD bord will accept in real life
