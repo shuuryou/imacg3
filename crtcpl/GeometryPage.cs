@@ -408,6 +408,7 @@ namespace crtcpl
             hwRadioButton_CheckedChanged(null, EventArgs.Empty);
 
             this.pbRadioButton.Enabled = this.scRadioButton.Enabled = Settings.Default.AdvancedControls;
+            this.pbRadioButton.Visible = this.scRadioButton.Visible = Settings.Default.AdvancedControls;
         }
 
         protected virtual void OnGeometryChanged(GeometryPageEventArgs e)
