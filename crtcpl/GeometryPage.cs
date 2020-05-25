@@ -179,7 +179,7 @@ namespace crtcpl
 
             if (this.pcRadioButton.Checked)
             {
-                this.m_CurrentPincushion = Math.Min(this.m_CurrentPincushion + 1, Constants.IVAD_PINCUSHION_MAX);
+                this.m_CurrentPincushion = Math.Max(this.m_CurrentPincushion - 1, Constants.IVAD_PINCUSHION_MIN);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Pincushion, this.m_CurrentPincushion));
                 return;
             }
@@ -238,7 +238,7 @@ namespace crtcpl
 
             if (this.pcRadioButton.Checked)
             {
-                this.m_CurrentPincushion = Math.Max(this.m_CurrentPincushion - 1, Constants.IVAD_PINCUSHION_MIN);
+                this.m_CurrentPincushion = Math.Min(this.m_CurrentPincushion + 1, Constants.IVAD_PINCUSHION_MAX);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Pincushion, this.m_CurrentPincushion));
                 return;
             }
