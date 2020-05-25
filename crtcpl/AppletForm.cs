@@ -29,6 +29,8 @@ namespace crtcpl
                 this.fuBKTestCardToolStripMenuItem.Enabled = false;
                 this.sMPTEColorBarToolStripMenuItem.Enabled = false;
             }
+
+            this.testPatternSelectionToolStripMenuItem.Enabled = false;
         }
 
         private void UpdatePagesFromSRAM()
