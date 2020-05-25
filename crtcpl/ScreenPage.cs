@@ -58,7 +58,8 @@ namespace crtcpl
             }
 
             this.brightnessTrackBar.Value = brightness;
-            this.brightnessDriveTrackBar.Value = brightness_drive;
+            this.brightnessDriveTrackBar.Value = this.brightnessDriveTrackBar.Maximum -
+                (brightness_drive - this.brightnessDriveTrackBar.Minimum);
             this.contrastTrackBar.Value = contrast;
         }
 
