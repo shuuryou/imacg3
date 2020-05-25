@@ -214,7 +214,7 @@ namespace crtcpl
 
             if (this.paraRadioButton.Checked)
             {
-                this.m_CurrentParallelogram = Math.Max(this.m_CurrentParallelogram - 1, Constants.IVAD_PARALLELOGRAM_MIN);
+                this.m_CurrentParallelogram = Math.Min(this.m_CurrentParallelogram + 1, Constants.IVAD_PARALLELOGRAM_MAX);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Parallelogram, this.m_CurrentParallelogram));
                 return;
             }
@@ -273,7 +273,7 @@ namespace crtcpl
 
             if (this.paraRadioButton.Checked)
             {
-                this.m_CurrentParallelogram = Math.Min(this.m_CurrentParallelogram + 1, Constants.IVAD_PARALLELOGRAM_MAX);
+                this.m_CurrentParallelogram = Math.Max(this.m_CurrentParallelogram - 1, Constants.IVAD_PARALLELOGRAM_MIN);
                 OnGeometryChanged(new GeometryPageEventArgs(GeometryPageEventArgs.ChangedGemoetry.Parallelogram, this.m_CurrentParallelogram));
                 return;
             }
